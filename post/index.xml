@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hugo Hermit</title>
+    <link>https://horizono.github.io/post/</link>
+    <description>Recent content in Posts on Hugo Hermit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 19 Jul 2019 23:57:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://horizono.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://horizono.github.io/post/blog/</link>
+      <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/blog/</guid>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>The &#34;figure&#34; Shortcode</title>
+      <link>https://horizono.github.io/post/the-figure-shortcode/</link>
+      <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/the-figure-shortcode/</guid>
+      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
+https://gohugo.io/content-management/shortcodes/#figure
+This theme has 3 CSS classes made for figure elements:
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
+    </item>
+    
+    <item>
+      <title>Post With Featured Image</title>
+      <link>https://horizono.github.io/post/post-with-featured-image/</link>
+      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
+      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
+For example:
+---images:-https://picsum.photos/1024/768/?random--- This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://horizono.github.io/post/typography/</link>
+      <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/typography/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://horizono.github.io/post/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/post/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://horizono.github.io/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+  </channel>
+</rss>

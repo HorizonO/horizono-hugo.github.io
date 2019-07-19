@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>untagged on Hugo Hermit</title>
+    <link>https://horizono.github.io/tags/untagged/</link>
+    <description>Recent content in untagged on Hugo Hermit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 20 Jul 2019 00:08:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://horizono.github.io/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Post Title</title>
+      <link>https://horizono.github.io/posts/post-title/</link>
+      <pubDate>Sat, 20 Jul 2019 00:08:25 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/posts/post-title/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
