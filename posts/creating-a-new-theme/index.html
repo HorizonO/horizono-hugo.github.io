@@ -1,370 +1,87 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on Hugo Hermit</title>
-		<link>https://horizono.github.io/posts/</link>
-		<description>Recent content in Posts on Hugo Hermit</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Sat, 20 Jul 2019 17:07:20 +0800</lastBuildDate>
-		<atom:link href="https://horizono.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Goisfolovers</title>
-			<link>https://horizono.github.io/posts/goisfolovers/</link>
-			<pubDate>Sat, 20 Jul 2019 17:07:20 +0800</pubDate>
-			
-			<guid>https://horizono.github.io/posts/goisfolovers/</guid>
-			<description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
-			<content type="html"><![CDATA[
-
-<p>Hugo uses the excellent <a href="https://golang.org/">Go</a> <a href="https://golang.org/pkg/html/template/">html/template</a> library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in Go templates.</p>
-
-<p>This document is a brief primer on using Go templates. The <a href="https://golang.org/pkg/html/template/">Go docs</a>
-provide more details.</p>
-
-<h2 id="introduction-to-go-templates">Introduction to Go Templates</h2>
-
-<p>Go templates provide an extremely simple template language. It adheres to the
-belief that only the most basic of logic belongs in the template or view layer.
-One consequence of this simplicity is that Go templates parse very quickly.</p>
-
-<p>A unique characteristic of Go templates is they are content aware. Variables and
-content will be sanitized depending on the context of where they are used. More
-details can be found in the <a href="https://golang.org/pkg/html/template/">Go docs</a>.</p>
-
-<h2 id="basic-syntax">Basic Syntax</h2>
-
-<p>Golang templates are HTML files with the addition of variables and
-functions.</p>
-
-<p><strong>Go variables and functions are accessible within {{ }}</strong></p>
-
-<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
-
-<pre><code>{{ foo }}
-</code></pre>
-
-<p><strong>Parameters are separated using spaces</strong></p>
-
-<p>Calling the add function with input of 1, 2:</p>
-
-<pre><code>{{ add 1 2 }}
-</code></pre>
-
-<p><strong>Methods and fields are accessed via dot notation</strong></p>
-
-<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
-
-<pre><code>{{ .Params.bar }}
-</code></pre>
-
-<p><strong>Parentheses can be used to group items together</strong></p>
-
-<pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
-</code></pre>
-
-<h2 id="variables">Variables</h2>
-
-<p>Each Go template has a struct (object) made available to it. In hugo each
-template is passed either a page or a node struct depending on which type of
-page you are rendering. More details are available on the
-<a href="/layout/variables">variables</a> page.</p>
-
-<p>A variable is accessed by referencing the variable name.</p>
-
-<pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
-</code></pre>
-
-<p>Variables can also be defined and referenced.</p>
-
-<pre><code>{{ $address := &quot;123 Main St.&quot;}}
-{{ $address }}
-</code></pre>
-
-<h2 id="functions">Functions</h2>
-
-<p>Go template ship with a few functions which provide basic functionality. The Go
-template system also provides a mechanism for applications to extend the
-available functions with their own. <a href="/layout/functions">Hugo template
-functions</a> provide some additional functionality we believe
-are useful for building websites. Functions are called by using their name
-followed by the required parameters separated by spaces. Template
-functions cannot be added without recompiling hugo.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>{{ add 1 2 }}
-</code></pre>
-
-<h2 id="includes">Includes</h2>
-
-<p>When including another template you will pass to it the data it will be
-able to access. To pass along the current context please remember to
-include a trailing dot. The templates location will always be starting at
-the /layout/ directory within Hugo.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>{{ template &quot;chrome/header.html&quot; . }}
-</code></pre>
-
-<h2 id="logic">Logic</h2>
-
-<p>Go templates provide the most basic iteration and conditional logic.</p>
-
-<h3 id="iteration">Iteration</h3>
-
-<p>Just like in Go, the Go templates make heavy use of range to iterate over
-a map, array or slice. The following are different examples of how to use
-range.</p>
-
-<p><strong>Example 1: Using Context</strong></p>
-
-<pre><code>{{ range array }}
-    {{ . }}
-{{ end }}
-</code></pre>
-
-<p><strong>Example 2: Declaring value variable name</strong></p>
-
-<pre><code>{{range $element := array}}
-    {{ $element }}
-{{ end }}
-</code></pre>
-
-<p><strong>Example 2: Declaring key and value variable name</strong></p>
-
-<pre><code>{{range $index, $element := array}}
-    {{ $index }}
-    {{ $element }}
-{{ end }}
-</code></pre>
-
-<h3 id="conditionals">Conditionals</h3>
-
-<p>If, else, with, or, &amp; and provide the framework for handling conditional
-logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
-
-<p>Go Templates treat the following values as false:</p>
-
-<ul>
-<li>false</li>
-<li>0</li>
-<li>any array, slice, map, or string of length zero</li>
-</ul>
-
-<p><strong>Example 1: If</strong></p>
-
-<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
-</code></pre>
-
-<p><strong>Example 2: If -&gt; Else</strong></p>
-
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
-{{else}}
-    {{ index .Params &quot;caption&quot; }}
-{{ end }}
-</code></pre>
-
-<p><strong>Example 3: And &amp; Or</strong></p>
-
-<pre><code>{{ if and (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
-</code></pre>
-
-<p><strong>Example 4: With</strong></p>
-
-<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent.</p>
-
-<p>The first example above could be simplified as:</p>
-
-<pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
-</code></pre>
-
-<p><strong>Example 5: If -&gt; Else If</strong></p>
-
-<pre><code>{{ if isset .Params &quot;alt&quot; }}
-    {{ index .Params &quot;alt&quot; }}
-{{ else if isset .Params &quot;caption&quot; }}
-    {{ index .Params &quot;caption&quot; }}
-{{ end }}
-</code></pre>
-
-<h2 id="pipes">Pipes</h2>
-
-<p>One of the most powerful components of Go templates is the ability to
-stack actions one after another. This is done by using pipes. Borrowed
-from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
-input of the following pipe.</p>
-
-<p>Because of the very simple syntax of Go templates, the pipe is essential
-to being able to chain together function calls. One limitation of the
-pipes is that they only can work with a single value and that value
-becomes the last parameter of the next pipeline.</p>
-
-<p>A few simple examples should help convey how to use the pipe.</p>
-
-<p><strong>Example 1 :</strong></p>
-
-<pre><code>{{ if eq 1 1 }} Same {{ end }}
-</code></pre>
-
-<p>is the same as</p>
-
-<pre><code>{{ eq 1 1 | if }} Same {{ end }}
-</code></pre>
-
-<p>It does look odd to place the if at the end, but it does provide a good
-illustration of how to use the pipes.</p>
-
-<p><strong>Example 2 :</strong></p>
-
-<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
-</code></pre>
-
-<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
-
-<p><strong>Example 3 :</strong></p>
-
-<pre><code>{{ if or (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
-Stuff Here
-{{ end }}
-</code></pre>
-
-<p>Could be rewritten as</p>
-
-<pre><code>{{  isset .Params &quot;caption&quot; | or isset .Params &quot;title&quot; | or isset .Params &quot;attr&quot; | if }}
-Stuff Here
-{{ end }}
-</code></pre>
-
-<h2 id="context-aka-the-dot">Context (aka. the dot)</h2>
-
-<p>The most easily overlooked concept to understand about Go templates is that {{ . }}
-always refers to the current context. In the top level of your template this
-will be the data set made available to it. Inside of a iteration it will have
-the value of the current item. When inside of a loop the context has changed. .
-will no longer refer to the data available to the entire page. If you need to
-access this from within the loop you will likely want to set it to a variable
-instead of depending on the context.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>  {{ $title := .Site.Title }}
-  {{ range .Params.tags }}
-    &lt;li&gt; &lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
-  {{ end }}
-</code></pre>
-
-<p>Notice how once we have entered the loop the value of {{ . }} has changed. We
-have defined a variable outside of the loop so we have access to it from within
-the loop.</p>
-
-<h1 id="hugo-parameters">Hugo Parameters</h1>
-
-<p>Hugo provides the option of passing values to the template language
-through the site configuration (for sitewide values), or through the meta
-data of each specific piece of content. You can define any values of any
-type (supported by your front matter/config format) and use them however
-you want to inside of your templates.</p>
-
-<h2 id="using-content-page-parameters">Using Content (page) Parameters</h2>
-
-<p>In each piece of content you can provide variables to be used by the
-templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
-
-<p>An example of this is used in this documentation site. Most of the pages
-benefit from having the table of contents provided. Sometimes the TOC just
-doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
-of some pages to turn off the TOC from being displayed.</p>
-
-<p>Here is the example front matter:</p>
-
-<pre><code>---
-title: &quot;Permalinks&quot;
-date: &quot;2013-11-18&quot;
-aliases:
-  - &quot;/doc/permalinks/&quot;
-groups: [&quot;extras&quot;]
-groups_weight: 30
-notoc: true
----
-</code></pre>
-
-<p>Here is the corresponding code inside of the template:</p>
-
-<pre><code>  {{ if not .Params.notoc }}
-    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
-    {{ .TableOfContents }}
-    &lt;/div&gt;
-  {{ end }}
-</code></pre>
-
-<h2 id="using-site-config-parameters">Using Site (config) Parameters</h2>
-
-<p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
-parameters, which are values which will be available to you in chrome.</p>
-
-<p>For instance, you might declare:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">params<span class="p">:</span><span class="w">
-</span><span class="w">  </span>CopyrightHTML<span class="p">:</span><span class="w"> </span><span class="s2">&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span><span class="w">
-</span><span class="w">  </span>TwitterUser<span class="p">:</span><span class="w"> </span><span class="s2">&#34;spf13&#34;</span><span class="w">
-</span><span class="w">  </span>SidebarRecentLimit<span class="p">:</span><span class="w"> </span><span class="m">5</span></code></pre></div>
-<p>Within a footer layout, you might then declare a <code>&lt;footer&gt;</code> which is only
-provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
-you would declare it to be HTML-safe, so that the HTML entity is not escaped
-again.  This would let you easily update just your top-level config file each
-January 1st, instead of hunting through your templates.</p>
-
-<pre><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
-&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
-&lt;/footer&gt;{{end}}
-</code></pre>
-
-<p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
-is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
-and skips the block if the variable is absent:</p>
-
-<pre><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
-&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
-&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
- alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
-&lt;/span&gt;{{end}}
-</code></pre>
-
-<p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
-so, such as in this example:</p>
-
-<pre><code>&lt;nav class=&quot;recent&quot;&gt;
-  &lt;h1&gt;Recent Posts&lt;/h1&gt;
-  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
-    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
-  {{end}}&lt;/ul&gt;
-&lt;/nav&gt;
-</code></pre>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Creating a New Theme</title>
-			<link>https://horizono.github.io/posts/creating-a-new-theme/</link>
-			<pubDate>Sat, 20 Jul 2019 17:07:04 +0800</pubDate>
-			
-			<guid>https://horizono.github.io/posts/creating-a-new-theme/</guid>
-			<description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-			<content type="html"><![CDATA[
-
-<h2 id="introduction">Introduction</h2>
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+
+<meta itemprop="name" content="Creating a New Theme">
+<meta itemprop="description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template.">
+
+
+<meta itemprop="datePublished" content="2019-07-20T17:07:04&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-20T17:07:04&#43;08:00" />
+<meta itemprop="wordCount" content="7233">
+
+
+
+<meta itemprop="keywords" content="untagged," />
+<meta property="og:title" content="Creating a New Theme" />
+<meta property="og:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizono.github.io/posts/creating-a-new-theme/" />
+<meta property="article:published_time" content="2019-07-20T17:07:04&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-20T17:07:04&#43;08:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating a New Theme"/>
+<meta name="twitter:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Creating a New Theme</title>
+	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://horizono.github.io/">Hugo Hermit</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://horizono.github.io/posts/">Posts</a>
+				<a href="https://horizono.github.io/about-hugo/">About</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://horizono.github.io/posts/">Posts</a></li>
+			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jul 20, 2019</span></div>
+				<h1>Creating a New Theme</h1>
+			</header>
+			<div class="content">
+				
+
+<h2 id="introduction">Introduction<a href="#introduction" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
 
@@ -399,11 +116,11 @@ bah and humbug
 $
 </code></pre>
 
-<h2 id="some-definitions">Some Definitions</h2>
+<h2 id="some-definitions">Some Definitions<a href="#some-definitions" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>There are a few concepts that you need to understand before creating a theme.</p>
 
-<h3 id="skins">Skins</h3>
+<h3 id="skins">Skins<a href="#skins" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Skins are the files responsible for the look and feel of your site. It’s the CSS that controls colors and fonts, it’s the Javascript that determines actions and reactions. It’s also the rules that Hugo uses to transform your content into the HTML that the site will serve to visitors.</p>
 
@@ -417,31 +134,31 @@ $
 
 <p>Note that you can use this tutorial to create a skin in the <code>layouts/</code> directory if you wish to. The main difference will be that you won’t need to update the site’s configuration file to use a theme.</p>
 
-<h3 id="the-home-page">The Home Page</h3>
+<h3 id="the-home-page">The Home Page<a href="#the-home-page" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>The home page, or landing page, is the first page that many visitors to a site see. It is the index.html file in the root directory of the web site. Since Hugo writes files to the public/ directory, our home page is public/index.html.</p>
 
-<h3 id="site-configuration-file">Site Configuration File</h3>
+<h3 id="site-configuration-file">Site Configuration File<a href="#site-configuration-file" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>When Hugo runs, it looks for a configuration file that contains settings that override default values for the entire site. The file can use TOML, YAML, or JSON. I prefer to use TOML for my configuration files. If you prefer to use JSON or YAML, you’ll need to translate my examples. You’ll also need to change the name of the file since Hugo uses the extension to determine how to process it.</p>
 
 <p>Hugo translates Markdown files into HTML. By default, Hugo expects to find Markdown files in your <code>content/</code> directory and template files in your <code>themes/</code> directory. It will create HTML files in your <code>public/</code> directory. You can change this by specifying alternate locations in the configuration file.</p>
 
-<h3 id="content">Content</h3>
+<h3 id="content">Content<a href="#content" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Content is stored in text files that contain two sections. The first section is the “front matter,” which is the meta-information on the content. The second section contains Markdown that will be converted to HTML.</p>
 
-<h4 id="front-matter">Front Matter</h4>
+<h4 id="front-matter">Front Matter<a href="#front-matter" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>The front matter is information about the content. Like the configuration file, it can be written in TOML, YAML, or JSON. Unlike the configuration file, Hugo doesn’t use the file’s extension to know the format. It looks for markers to signal the type. TOML is surrounded by “<code>+++</code>”, YAML by “<code>---</code>”, and JSON is enclosed in curly braces. I prefer to use TOML, so you’ll need to translate my examples if you prefer YAML or JSON.</p>
 
 <p>The information in the front matter is passed into the template before the content is rendered into HTML.</p>
 
-<h4 id="markdown">Markdown</h4>
+<h4 id="markdown">Markdown<a href="#markdown" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>Content is written in Markdown which makes it easier to create the content. Hugo runs the content through a Markdown engine to create the HTML which will be written to the output file.</p>
 
-<h3 id="template-files">Template Files</h3>
+<h3 id="template-files">Template Files<a href="#template-files" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Hugo uses template files to render content into HTML. Template files are a bridge between the content and presentation. Rules in the template define what content is published, where it&rsquo;s published to, and how it will rendered to the HTML file. The template guides the presentation by specifying the style to use.</p>
 
@@ -451,21 +168,21 @@ $
 
 <p>Please note that you can use the front matter to influence Hugo’s choice of templates.</p>
 
-<h4 id="single-template">Single Template</h4>
+<h4 id="single-template">Single Template<a href="#single-template" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>A single template is used to render a single piece of content. For example, an article or post would be a single piece of content and use a single template.</p>
 
-<h4 id="list-template">List Template</h4>
+<h4 id="list-template">List Template<a href="#list-template" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>A list template renders a group of related content. That could be a summary of recent postings or all articles in a category. List templates can contain multiple groups.</p>
 
 <p>The homepage template is a special type of list template. Hugo assumes that the home page of your site will act as the portal for the rest of the content in the site.</p>
 
-<h4 id="partial-template">Partial Template</h4>
+<h4 id="partial-template">Partial Template<a href="#partial-template" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>A partial template is a template that can be included in other templates. Partial templates must be called using the “partial” template command. They are very handy for rolling up common behavior. For example, your site may have a banner that all pages use. Instead of copying the text of the banner into every single and list template, you could create a partial with the banner in it. That way if you decide to change the banner, you only have to change the partial template.</p>
 
-<h2 id="create-a-new-site">Create a New Site</h2>
+<h2 id="create-a-new-site">Create a New Site<a href="#create-a-new-site" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>Let&rsquo;s use Hugo to create a new web site. I&rsquo;m a Mac user, so I&rsquo;ll create mine in my home directory, in the Sites folder. If you&rsquo;re using Linux, you might have to create the folder first.</p>
 
@@ -489,7 +206,7 @@ $
 
 <p>The other directories (archetypes/, layouts/, and static/) are used when customizing a theme. That&rsquo;s a topic for a different tutorial, so please ignore them for now.</p>
 
-<h3 id="generate-the-html-for-the-new-site">Generate the HTML For the New Site</h3>
+<h3 id="generate-the-html-for-the-new-site">Generate the HTML For the New Site<a href="#generate-the-html-for-the-new-site" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Running the <code>hugo</code> command with no options will read all the available content and generate the HTML files. It will also copy all static files (that&rsquo;s everything that&rsquo;s not content). Since we have an empty site, it won&rsquo;t do much, but it will do it very quickly.</p>
 
@@ -533,7 +250,7 @@ $
 
 <p>Hugo created two XML files, which is standard, but there are no HTML files.</p>
 
-<h3 id="test-the-new-site">Test the New Site</h3>
+<h3 id="test-the-new-site">Test the New Site<a href="#test-the-new-site" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Verify that you can run the built-in web server. It will dramatically shorten your development cycle if you do. Start it by running the &ldquo;server&rdquo; command. If it is successful, you will see output similar to the following:</p>
 
@@ -575,7 +292,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html]
 
 <p>At this point, you&rsquo;ve got a working installation and site that we can build upon. All that’s left is to add some content and a theme to display it.</p>
 
-<h2 id="create-a-new-theme">Create a New Theme</h2>
+<h2 id="create-a-new-theme">Create a New Theme<a href="#create-a-new-theme" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>Hugo doesn&rsquo;t ship with a default theme. There are a few available (I counted a dozen when I first installed Hugo) and Hugo comes with a command to create new themes.</p>
 
@@ -583,7 +300,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html]
 
 <p>All themes have opinions on content and layout. For example, Zafta uses &ldquo;post&rdquo; over &ldquo;blog&rdquo;. Strong opinions make for simpler templates but differing opinions make it tougher to use themes. When you build a theme, consider using the terms that other themes do.</p>
 
-<h3 id="create-a-skeleton">Create a Skeleton</h3>
+<h3 id="create-a-skeleton">Create a Skeleton<a href="#create-a-skeleton" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Use the hugo &ldquo;new&rdquo; command to create the skeleton of a theme. This creates the directory structure and places empty files for you to fill out.</p>
 
@@ -639,7 +356,7 @@ tags = [&quot;tags&quot;, &quot;categories&quot;]
 $
 </code></pre>
 
-<h3 id="update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</h3>
+<h3 id="update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme<a href="#update-the-configuration-file-to-use-the-theme" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Now that we&rsquo;ve got a theme to work with, it&rsquo;s a good idea to add the theme name to the configuration file. This is optional, because you can always add &ldquo;-t zafta&rdquo; on all your commands. I like to put it the configuration file because I like shorter command lines. If you don&rsquo;t put it in the configuration file or specify it on the command line, you won&rsquo;t use the template that you&rsquo;re expecting to.</p>
 
@@ -656,7 +373,7 @@ MetaDataFormat = &quot;toml&quot;
 $
 </code></pre>
 
-<h3 id="generate-the-site">Generate the Site</h3>
+<h3 id="generate-the-site">Generate the Site<a href="#generate-the-site" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Now that we have an empty theme, let&rsquo;s generate the site again.</p>
 
@@ -697,7 +414,7 @@ $
 <li>Hugo claimed that it created 0 pages. It created a file and copied over static files, but didn&rsquo;t create any pages. That&rsquo;s because it considers a &ldquo;page&rdquo; to be a file created directly from a content file. It doesn&rsquo;t count things like the index.html files that it creates automatically.</li>
 </ol>
 
-<h4 id="the-home-page-1">The Home Page</h4>
+<h4 id="the-home-page-1">The Home Page<a href="#the-home-page-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>Hugo supports many different types of templates. The home page is special because it gets its own type of template and its own template file. The file, layouts/index.html, is used to generate the HTML for the home page. The Hugo documentation says that this is the only required template, but that depends. Hugo&rsquo;s warning message shows that it looks for three different templates:</p>
 
@@ -714,7 +431,7 @@ $
 $ 
 </code></pre>
 
-<h4 id="the-magic-of-static">The Magic of Static</h4>
+<h4 id="the-magic-of-static">The Magic of Static<a href="#the-magic-of-static" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>Hugo does two things when generating the site. It uses templates to transform content into HTML and it copies static files into the site. Unlike content, static files are not transformed. They are copied exactly as they are.</p>
 
@@ -732,7 +449,7 @@ drwxr-xr-x  2 quoha  staff   68 Sep 29 17:31 themes/zafta/static/js
 $ 
 </code></pre>
 
-<h2 id="the-theme-development-cycle">The Theme Development Cycle</h2>
+<h2 id="the-theme-development-cycle">The Theme Development Cycle<a href="#the-theme-development-cycle" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>When you&rsquo;re working on a theme, you will make changes in the theme&rsquo;s directory, rebuild the site, and check your changes in the browser. Hugo makes this very easy:</p>
 
@@ -749,21 +466,21 @@ $
 
 <p>Check the main Hugo site for information on using Git with Hugo.</p>
 
-<h3 id="purge-the-public-directory">Purge the public/ Directory</h3>
+<h3 id="purge-the-public-directory">Purge the public/ Directory<a href="#purge-the-public-directory" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>When generating the site, Hugo will create new files and update existing ones in the <code>public/</code> directory. It will not delete files that are no longer used. For example, files that were created in the wrong directory or with the wrong title will remain. If you leave them, you might get confused by them later. I recommend cleaning out your site prior to generating it.</p>
 
 <p>Note: If you&rsquo;re building on an SSD, you should ignore this. Churning on a SSD can be costly.</p>
 
-<h3 id="hugo-s-watch-option">Hugo&rsquo;s Watch Option</h3>
+<h3 id="hugo-s-watch-option">Hugo&rsquo;s Watch Option<a href="#hugo-s-watch-option" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Hugo&rsquo;s &ldquo;<code>--watch</code>&rdquo; option will monitor the content/ and your theme directories for changes and rebuild the site automatically.</p>
 
-<h3 id="live-reload">Live Reload</h3>
+<h3 id="live-reload">Live Reload<a href="#live-reload" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Hugo&rsquo;s built in web server supports live reload. As pages are saved on the server, the browser is told to refresh the page. Usually, this happens faster than you can say, &ldquo;Wow, that&rsquo;s totally amazing.&rdquo;</p>
 
-<h3 id="development-commands">Development Commands</h3>
+<h3 id="development-commands">Development Commands<a href="#development-commands" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Use the following commands as the basis for your workflow.</p>
 
@@ -806,7 +523,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 in 1 ms
 </code></pre>
 
-<h2 id="update-the-home-page-template">Update the Home Page Template</h2>
+<h2 id="update-the-home-page-template">Update the Home Page Template<a href="#update-the-home-page-template" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>The home page is one of a few special pages that Hugo creates automatically. As mentioned earlier, it looks for one of three files in the theme&rsquo;s layout/ directory:</p>
 
@@ -818,7 +535,7 @@ in 1 ms
 
 <p>We could update one of the default templates, but a good design decision is to update the most specific template available. That&rsquo;s not a hard and fast rule (in fact, we&rsquo;ll break it a few times in this tutorial), but it is a good generalization.</p>
 
-<h3 id="make-a-static-home-page">Make a Static Home Page</h3>
+<h3 id="make-a-static-home-page">Make a Static Home Page<a href="#make-a-static-home-page" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>Right now, that page is empty because we don&rsquo;t have any content and we don&rsquo;t have any logic in the template. Let&rsquo;s change that by adding some text to the template.</p>
 
@@ -859,7 +576,7 @@ $ cat public/index.html
 &lt;/html&gt;
 </code></pre>
 
-<h4 id="live-reload-1">Live Reload</h4>
+<h4 id="live-reload-1">Live Reload<a href="#live-reload-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>Note: If you&rsquo;re running the server with the <code>--watch</code> option, you&rsquo;ll see different content in the file:</p>
 
@@ -877,11 +594,11 @@ $ cat public/index.html
 
 <p>When you use <code>--watch</code>, the Live Reload script is added by Hugo. Look for live reload in the documentation to see what it does and how to disable it.</p>
 
-<h3 id="build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</h3>
+<h3 id="build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page<a href="#build-a-dynamic-home-page" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>&ldquo;Dynamic home page?&rdquo; Hugo&rsquo;s a static web site generator, so this seems an odd thing to say. I mean let&rsquo;s have the home page automatically reflect the content in the site every time Hugo builds it. We&rsquo;ll use iteration in the template to do that.</p>
 
-<h4 id="create-new-posts">Create New Posts</h4>
+<h4 id="create-new-posts">Create New Posts<a href="#create-new-posts" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <p>Now that we have the home page generating static content, let&rsquo;s add some content to the site. We&rsquo;ll display these posts as a list on the home page and on their own page, too.</p>
 
@@ -986,7 +703,7 @@ $
 
 <p>The new files are empty because because the templates used to generate the content are empty. The homepage doesn&rsquo;t show the new content, either. We have to update the templates to add the posts.</p>
 
-<h3 id="list-and-single-templates">List and Single Templates</h3>
+<h3 id="list-and-single-templates">List and Single Templates<a href="#list-and-single-templates" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>In Hugo, we have three major kinds of templates. There&rsquo;s the home page template that we updated previously. It is used only by the home page. We also have &ldquo;single&rdquo; templates which are used to generate output for a single content file. We also have &ldquo;list&rdquo; templates that are used to group multiple pieces of content before generating output.</p>
 
@@ -994,7 +711,7 @@ $
 
 <p>There are three other types of templates: partials, content views, and terms. We will not go into much detail on these.</p>
 
-<h3 id="add-content-to-the-homepage">Add Content to the Homepage</h3>
+<h3 id="add-content-to-the-homepage">Add Content to the Homepage<a href="#add-content-to-the-homepage" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>The home page will contain a list of posts. Let&rsquo;s update its template to add the posts that we just created. The logic in the template will run every time we build the site.</p>
 
@@ -1066,7 +783,7 @@ $
 
 <p>And, if that were entirely true, this tutorial would be much shorter. There are a few things to know that will make creating a new template much easier. Don&rsquo;t worry, though, that&rsquo;s all to come.</p>
 
-<h3 id="add-content-to-the-posts">Add Content to the Posts</h3>
+<h3 id="add-content-to-the-posts">Add Content to the Posts<a href="#add-content-to-the-posts" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>We&rsquo;re working with posts, which are in the content/post/ directory. That means that their section is &ldquo;post&rdquo; (and if we don&rsquo;t do something weird, their type is also &ldquo;post&rdquo;).</p>
 
@@ -1084,7 +801,7 @@ $
 
 <p>Please see the Hugo documentation on template rendering for all the details on determining which template to use. And, as the docs mention, if you&rsquo;re building a single page application (SPA) web site, you can delete all of the other templates and work with just the default single page. That&rsquo;s a refreshing amount of joy right there.</p>
 
-<h4 id="update-the-template-file">Update the Template File</h4>
+<h4 id="update-the-template-file">Update the Template File<a href="#update-the-template-file" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
 
 <pre><code>$ vi themes/zafta/layouts/_default/single.html 
 &lt;!DOCTYPE html&gt;
@@ -1154,7 +871,7 @@ $
 
 <p>Notice that the posts now have content. You can go to localhost:1313/post/first to verify.</p>
 
-<h3 id="linking-to-content">Linking to Content</h3>
+<h3 id="linking-to-content">Linking to Content<a href="#linking-to-content" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>The posts are on the home page. Let&rsquo;s add a link from there to the post. Since this is the home page, we&rsquo;ll update its template.</p>
 
@@ -1206,7 +923,7 @@ $ cat public/index.html
 $
 </code></pre>
 
-<h3 id="create-a-post-listing">Create a Post Listing</h3>
+<h3 id="create-a-post-listing">Create a Post Listing<a href="#create-a-post-listing" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>We have the posts displaying on the home page and on their own page. We also have a file public/post/index.html that is empty. Let&rsquo;s make it show a list of all posts (not just the first ten).</p>
 
@@ -1218,7 +935,7 @@ $
 
 <p>As with the single post, we have to decide to update _default/list.html or create post/list.html. We still don&rsquo;t have multiple content types, so let&rsquo;s stay consistent and update the default list template.</p>
 
-<h2 id="creating-top-level-pages">Creating Top Level Pages</h2>
+<h2 id="creating-top-level-pages">Creating Top Level Pages<a href="#creating-top-level-pages" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>Let&rsquo;s add an &ldquo;about&rdquo; page and display it at the top level (as opposed to a sub-level like we did with posts).</p>
 
@@ -1313,13 +1030,13 @@ i'm speechless
 
 <p>Generate the web site and verify that this didn&rsquo;t work. Hugo lets &ldquo;slug&rdquo; or &ldquo;URL&rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.</p>
 
-<h2 id="sharing-templates">Sharing Templates</h2>
+<h2 id="sharing-templates">Sharing Templates<a href="#sharing-templates" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>If you&rsquo;ve been following along, you probably noticed that posts have titles in the browser and the home page doesn&rsquo;t. That&rsquo;s because we didn&rsquo;t put the title in the home page&rsquo;s template (layouts/index.html). That&rsquo;s an easy thing to do, but let&rsquo;s look at a different option.</p>
 
 <p>We can put the common bits into a shared template that&rsquo;s stored in the themes/zafta/layouts/partials/ directory.</p>
 
-<h3 id="create-the-header-and-footer-partials">Create the Header and Footer Partials</h3>
+<h3 id="create-the-header-and-footer-partials">Create the Header and Footer Partials<a href="#create-the-header-and-footer-partials" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>In Hugo, a partial is a sugar-coated template. Normally a template reference has a path specified. Partials are different. Hugo searches for them along a TODO defined search path. This makes it easier for end-users to override the theme&rsquo;s presentation.</p>
 
@@ -1338,7 +1055,7 @@ $ vi themes/zafta/layouts/partials/footer.html
 :wq
 </code></pre>
 
-<h3 id="update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</h3>
+<h3 id="update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials<a href="#update-the-home-page-template-to-use-the-partials" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>The most noticeable difference between a template call and a partials call is the lack of path:</p>
 
@@ -1377,7 +1094,7 @@ $ vi themes/zafta/layouts/partials/footer.html
 
 <p>Generate the web site and verify the results. The title on the home page is now &ldquo;your title here&rdquo;, which comes from the &ldquo;title&rdquo; variable in the config.toml file.</p>
 
-<h3 id="update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</h3>
+<h3 id="update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials<a href="#update-the-default-single-template-to-use-the-partials" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <pre><code>$ vi themes/zafta/layouts/_default/single.html
 {{ partial &quot;header.html&quot; . }}
@@ -1391,11 +1108,11 @@ $ vi themes/zafta/layouts/partials/footer.html
 
 <p>Generate the web site and verify the results. The title on the posts and the about page should both reflect the value in the markdown file.</p>
 
-<h2 id="add-date-published-to-posts">Add “Date Published” to Posts</h2>
+<h2 id="add-date-published-to-posts">Add “Date Published” to Posts<a href="#add-date-published-to-posts" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
 
 <p>It&rsquo;s common to have posts display the date that they were written or published, so let&rsquo;s add that. The front matter of our posts has a variable named &ldquo;date.&rdquo; It&rsquo;s usually the date the content was created, but let&rsquo;s pretend that&rsquo;s the value we want to display.</p>
 
-<h3 id="add-date-published-to-the-template">Add “Date Published” to the Template</h3>
+<h3 id="add-date-published-to-the-template">Add “Date Published” to the Template<a href="#add-date-published-to-the-template" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>We&rsquo;ll start by updating the template used to render the posts. The template code will look like:</p>
 
@@ -1452,244 +1169,42 @@ $ vi themes/zafta/layouts/_default/single.html
 
 <p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page doesn&rsquo;t.</p>
 
-<h3 id="don-t-repeat-yourself">Don&rsquo;t Repeat Yourself</h3>
+<h3 id="don-t-repeat-yourself">Don&rsquo;t Repeat Yourself<a href="#don-t-repeat-yourself" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
 
 <p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>二</title>
-			<link>https://horizono.github.io/posts/%E4%BA%8C/</link>
-			<pubDate>Sat, 20 Jul 2019 17:03:44 +0800</pubDate>
-			
-			<guid>https://horizono.github.io/posts/%E4%BA%8C/</guid>
-			<description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-			<content type="html"><![CDATA[
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
-appropriate version for your OS and architecture.</p>
-
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
-
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">Hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting Ctrl+C.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Blog</title>
-			<link>https://horizono.github.io/posts/blog/</link>
-			<pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
-			
-			<guid>https://horizono.github.io/posts/blog/</guid>
-			<description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
-			<content type="html"><![CDATA[<p>自个学习搭建Hugo和挂载到Github上去
-hugo new site myblog
-cd myblog/
-cd themes
-git submodule add <a href="https://github.com/UtkarshVerma/hugo-dream-plus">https://github.com/UtkarshVerma/hugo-dream-plus</a> dream-plus
-git submodule update &ndash;init &ndash;recursive
-hugo server -t dream-plus &ndash;buildDrafts
-cd myblog/
-hugo new post/blog.md
-hugo server -t dream-plus &ndash;buildDrafts
-hugo &ndash;theme=dream-plus &ndash;baseUrl=&ldquo;<a href="https://horizono.github.io/&quot;">https://horizono.github.io/&quot;</a> &ndash;buildDrafts
-cd public/
-cd myblog
-cd public/
-git init
-git add .
-git commit -m &ldquo;this is my time&rdquo;
-git remote add origin <a href="https://github.com/HorizonO/horizono.github.io.git">https://github.com/HorizonO/horizono.github.io.git</a>
-git push -u origin master</p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Typography</title>
-			<link>https://horizono.github.io/posts/typography/</link>
-			<pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
-			
-			<guid>https://horizono.github.io/posts/typography/</guid>
-			<description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-			<content type="html"><![CDATA[
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<blockquote>
-<p>An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
-</blockquote>
-
-<hr />
-
-<p>Inline styles：</p>
-
-<p><strong>strong</strong>, <em>emphasis</em>, <strong><em>strong and emphasis</em></strong>,<code>code</code>, <u>underline</u>, <del>strikethrough</del>, 😂🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, <a href="https://example.com">Link</a>, and image:</p>
-
-<p><img src="https://picsum.photos/600/400/?random" alt="img" /></p>
-
-<hr />
-
-<p>Headings:</p>
-
-<h1 id="heading-1">Heading 1</h1>
-
-<h2 id="heading-2">Heading 2</h2>
-
-<h3 id="heading-3">Heading 3</h3>
-
-<h4 id="heading-4">Heading 4</h4>
-
-<h5 id="heading-5">Heading 5</h5>
-
-<h6 id="heading-6">Heading 6</h6>
-
-<p>Table:</p>
-
-<table>
-<thead>
-<tr>
-<th align="left">Left-Aligned</th>
-<th align="center">Center Aligned</th>
-<th align="right">Right Aligned</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="left">col 3 is</td>
-<td align="center">some wordy text</td>
-<td align="right">$1600</td>
-</tr>
-
-<tr>
-<td align="left">col 2 is</td>
-<td align="center">centered</td>
-<td align="right">$12</td>
-</tr>
-
-<tr>
-<td align="left">zebra stripes</td>
-<td align="center">are neat</td>
-<td align="right">$1</td>
-</tr>
-</tbody>
-</table>
-
-<p>Lists:</p>
-
-<ul>
-<li>Unordered list item 1.</li>
-<li>Unordered list item 2.</li>
-</ul>
-
-<ol class="task-list">
-<li>ordered list item 1.</li>
-<li>ordered list item 2.
-
-<ul class="task-list">
-<li>sub-unordered list item 1.</li>
-<li>sub-unordered list item 2.
-
-<ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> something is DONE.</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> something is NOT DONE.</label></li>
-</ul></li>
-</ul></li>
-</ol>
-
-<p>Syntax Highlighting:</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">sum</span>
-<span class="nx">num1</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter first number&#34;</span><span class="p">)</span>
-<span class="nx">num2</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter second number&#34;</span><span class="p">)</span>
-<span class="nx">sum</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num2</span><span class="p">)</span> <span class="c1">// &#34;+&#34; means &#34;add&#34;
-</span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Sum = &#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">)</span>  <span class="c1">// &#34;+&#34; means combine into a string
-</span></code></pre></div><div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:1">From <a href="https://en.wikipedia.org/wiki/Apple">https://en.wikipedia.org/wiki/Apple</a>
- <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-</ol>
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://horizono.github.io/tags/untagged">untagged</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>7233 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-07-20 17:07 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="next-post" href="https://horizono.github.io/posts/goisfolovers/">
+				<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;Newer</span><br><span>Goisfolovers</span>
+			</a>
+			<a class="prev-post" href="https://horizono.github.io/posts/%E4%BA%8C/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>二</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
 </div>
-]]></content>
-		</item>
-		
-	</channel>
-</rss>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="https://horizono.github.io/">John Doe</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+
+</body>
+
+</html>

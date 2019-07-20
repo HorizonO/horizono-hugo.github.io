@@ -3,36 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/</loc>
-    <lastmod>2019-07-20T00:08:25+08:00</lastmod>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/post-title/</loc>
-    <lastmod>2019-07-20T00:08:25+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://horizono.github.io/posts/</loc>
-    <lastmod>2019-07-20T00:08:25+08:00</lastmod>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/</loc>
-    <lastmod>2019-07-20T00:08:25+08:00</lastmod>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/untagged/</loc>
-    <lastmod>2019-07-20T00:08:25+08:00</lastmod>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://horizono.github.io/posts/creating-a-new-theme/</loc>
+    <lastmod>2019-07-20T17:07:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/posts/%E4%BA%8C/</loc>
+    <lastmod>2019-07-20T17:03:44+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/post/blog/</loc>
+    <lastmod>2019-07-19T23:57:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/posts/blog/</loc>
     <lastmod>2019-07-19T23:57:58+08:00</lastmod>
   </url>
   
@@ -72,6 +87,11 @@
   
   <url>
     <loc>https://horizono.github.io/post/typography/</loc>
+    <lastmod>2018-09-29T11:36:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/posts/typography/</loc>
     <lastmod>2018-09-29T11:36:33+08:00</lastmod>
   </url>
   
