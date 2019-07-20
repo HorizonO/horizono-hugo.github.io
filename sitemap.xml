@@ -3,32 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <loc>https://horizono.github.io/about-hugo/</loc>
+    <lastmod>2019-07-20T17:45:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://horizono.github.io/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <lastmod>2019-07-20T17:45:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://horizono.github.io/posts/about-hugo/</loc>
+    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/posts/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/untagged/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
   </url>
   
   <url>
