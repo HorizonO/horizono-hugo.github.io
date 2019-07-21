@@ -3,8 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horizono.github.io/diary/19-7-21/</loc>
+    <lastmod>2019-07-21T22:43:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/diary/</loc>
+    <lastmod>2019-07-21T22:43:57+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/</loc>
-    <lastmod>2019-07-21T00:06:16+08:00</lastmod>
+    <lastmod>2019-07-21T22:43:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,25 +36,20 @@
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/about-hugo/</loc>
-    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
+    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/</loc>
-    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
+    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://horizono.github.io/tags/untagged/</loc>
-    <lastmod>2019-07-20T17:31:28+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
     <lastmod>2019-07-20T17:07:20+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -52,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/%E4%BA%8C/</loc>
+    <loc>https://horizono.github.io/posts/others/</loc>
     <lastmod>2019-07-20T17:03:44+08:00</lastmod>
   </url>
   
@@ -62,7 +68,7 @@
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/blog/</loc>
+    <loc>https://horizono.github.io/posts/blogt/</loc>
     <lastmod>2019-07-19T23:57:58+08:00</lastmod>
   </url>
   
