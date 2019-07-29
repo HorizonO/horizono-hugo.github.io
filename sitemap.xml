@@ -3,18 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horizono.github.io/</loc>
+    <lastmod>2019-07-29T15:31:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/notes/linux1.0/</loc>
+    <lastmod>2019-07-29T15:31:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/notes/</loc>
+    <lastmod>2019-07-29T15:31:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/diary/19-7-21/</loc>
     <lastmod>2019-07-21T22:43:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://horizono.github.io/diary/</loc>
-    <lastmod>2019-07-21T22:43:57+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/</loc>
     <lastmod>2019-07-21T22:43:57+08:00</lastmod>
     <priority>0</priority>
   </url>

@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 21 Jul 2019 22:43:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 15:31:52 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux-Notes1.0</title>
+      <link>https://horizono.github.io/notes/linux1.0/</link>
+      <pubDate>Mon, 29 Jul 2019 15:31:52 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/linux1.0/</guid>
+      <description>虚拟机NAT模式连接网络，选择eth0网卡，如果没有
+先右键我的电脑&amp;ndash;&amp;gt;管理&amp;ndash;&amp;gt;服务和应用程序&amp;ndash;&amp;gt;服务&amp;ndash;&amp;gt;打开VMware DHCP Service和VMware NAT Service</description>
+    </item>
     
     <item>
       <title>19-7-21</title>
@@ -137,17 +147,6 @@ Follow the following steps:
 https://gohugo.io/content-management/shortcodes/#figure
 This theme has 3 CSS classes made for figure elements:
  big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
-    </item>
-    
-    <item>
-      <title>Post With Featured Image</title>
-      <link>https://horizono.github.io/post/post-with-featured-image/</link>
-      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
-      
-      <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
-      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
-For example:
----images:-https://picsum.photos/1024/768/?random--- This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
     </item>
     
   </channel>
