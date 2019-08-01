@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 29 Jul 2019 15:31:52 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 18:38:58 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>开机，重启，用户登录注销，添加命令</title>
+      <link>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 01 Aug 2019 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</guid>
+      <description>• shutdown • shutdown -h now：立即关机 • shutdown -h 1：表示一分钟后关机 • shutdown -r now：现在重启 • halt:关机 • reboot：重启系统 • sync ：把内存数据同步到磁盘 ##用户登录和注销 • 尽量少用root登录，因为有最大权限，可以用普通用户登录，登录后用&amp;quot;su-用户名&amp;quot;切换到系统管理员身份 • logout：远程注销用户 ##用户管理 • useradd +用户名 • 指定目录创建用户 useradd -d +目录 +用户名 • passwd 添加修改密码 • cd change directory 切换目录 userdel+用户名 删除用户 保留家目录 userdel -r xm 删除用户和家目录 ##查询用户，切换用户 id 用户名 ---查询 su 用户名 ---切换 ##用户组 groupadd 新建组 groupdel 删除组 useradd -g 用户组 用户名 新建用户并将新用户指定到用户组 usermod -g 用户组 用户名 将用户修改到另一个用户组 ##用户和组的配置文件 用户配置文件（用户信息） /etc/passwd 组配置文件（组信息） /etc/group 口令配置文件（加密的密码和登录信息） /etc/shadow  </description>
+    </item>
     
     <item>
       <title>Linux-Notes1.0</title>
