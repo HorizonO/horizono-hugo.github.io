@@ -25,25 +25,25 @@
   </url>
   
   <url>
-    <loc>https://horizono.github.io/diary/19-7-21/</loc>
+    <loc>https://horizono.github.io/moment/19-7-21/</loc>
     <lastmod>2019-07-21T22:43:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://horizono.github.io/diary/</loc>
+    <loc>https://horizono.github.io/moment/</loc>
     <lastmod>2019-07-21T22:43:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/hugo&#43;github/</loc>
+    <loc>https://horizono.github.io/blog/</loc>
     <lastmod>2019-07-21T00:06:16+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/</loc>
+    <loc>https://horizono.github.io/blog/2019-07/hugo-github/</loc>
     <lastmod>2019-07-21T00:06:16+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -52,39 +52,12 @@
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/goisfolovers/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/tags/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/tags/untagged/</loc>
-    <lastmod>2019-07-20T17:07:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/posts/creating-a-new-theme/</loc>
-    <lastmod>2019-07-20T17:07:04+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/posts/others/</loc>
-    <lastmod>2019-07-20T17:03:44+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://horizono.github.io/post/blog/</loc>
     <lastmod>2019-07-19T23:57:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://horizono.github.io/posts/blogt/</loc>
+    <loc>https://horizono.github.io/blog/2019-07/blogt/</loc>
     <lastmod>2019-07-19T23:57:58+08:00</lastmod>
   </url>
   
@@ -107,6 +80,12 @@
   </url>
   
   <url>
+    <loc>https://horizono.github.io/tags/</loc>
+    <lastmod>2018-12-24T12:29:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/post/the-figure-shortcode/</loc>
     <lastmod>2018-12-24T12:29:41+08:00</lastmod>
   </url>
@@ -124,11 +103,6 @@
   
   <url>
     <loc>https://horizono.github.io/post/typography/</loc>
-    <lastmod>2018-09-29T11:36:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/posts/typography/</loc>
     <lastmod>2018-09-29T11:36:33+08:00</lastmod>
   </url>
   
@@ -164,6 +138,16 @@
   <url>
     <loc>https://horizono.github.io/post/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/series/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

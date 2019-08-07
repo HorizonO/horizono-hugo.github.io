@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typography on Horizon</title>
+    <title>Typography on Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/tags/typography/</link>
-    <description>Recent content in Typography on Horizon</description>
+    <description>Recent content in Typography on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zn-Hans</language>
     <lastBuildDate>Sat, 29 Sep 2018 11:36:33 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/tags/typography/index.xml" rel="self" type="application/rss+xml" />
@@ -18,16 +17,13 @@
       <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
       
       <guid>https://horizono.github.io/post/typography/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Typography</title>
-      <link>https://horizono.github.io/posts/typography/</link>
-      <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
-      
-      <guid>https://horizono.github.io/posts/typography/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.1
+ Inline styles：
+strong, emphasis, strong and emphasis,code, underline, strikethrough, 😂🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, Link, and image:
+Headings:
+Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Table:
+   Left-Aligned Center Aligned Right Aligned     col 3 is some wordy text $1600   col 2 is centered $12   zebra stripes are neat $1    Lists:</description>
     </item>
     
   </channel>
