@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Horizon</title>
+    <link>https://horizono.github.io/</link>
+    <description>Recent content on Horizon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 01 Aug 2019 18:38:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://horizono.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>开机，重启，用户登录注销，添加命令</title>
+      <link>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 01 Aug 2019 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</guid>
+      <description>• shutdown • shutdown -h now：立即关机 • shutdown -h 1：表示一分钟后关机 • shutdown -r now：现在重启 • halt:关机 • reboot：重启系统 • sync ：把内存数据同步到磁盘 ##用户登录和注销 • 尽量少用root登录，因为有最大权限，可以用普通用户登录，登录后用&amp;quot;su-用户名&amp;quot;切换到系统管理员身份 • logout：远程注销用户 ##用户管理 • useradd +用户名 • 指定目录创建用户 useradd -d +目录 +用户名 • passwd 添加修改密码 • cd change directory 切换目录 userdel+用户名 删除用户 保留家目录 userdel -r xm 删除用户和家目录 ##查询用户，切换用户 id 用户名 ---查询 su 用户名 ---切换 ##用户组 groupadd 新建组 groupdel 删除组 useradd -g 用户组 用户名 新建用户并将新用户指定到用户组 usermod -g 用户组 用户名 将用户修改到另一个用户组 ##用户和组的配置文件 用户配置文件（用户信息） /etc/passwd 组配置文件（组信息） /etc/group 口令配置文件（加密的密码和登录信息） /etc/shadow  </description>
+    </item>
+    
+    <item>
+      <title>Linux-Notes1.0</title>
+      <link>https://horizono.github.io/notes/linux1.0/</link>
+      <pubDate>Mon, 29 Jul 2019 15:31:52 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/linux1.0/</guid>
+      <description>虚拟机NAT模式连接网络，选择eth0网卡，如果没有
+先右键我的电脑&amp;ndash;&amp;gt;管理&amp;ndash;&amp;gt;服务和应用程序&amp;ndash;&amp;gt;服务&amp;ndash;&amp;gt;打开VMware DHCP Service和VMware NAT Service</description>
+    </item>
+    
+    <item>
+      <title>19-7-21</title>
+      <link>https://horizono.github.io/moment/19-7-21/</link>
+      <pubDate>Sun, 21 Jul 2019 22:43:57 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/moment/19-7-21/</guid>
+      <description>2019/07/21
+读一只特立独行的猪 摘抄我已经四十岁了除了这只猪，
+还没见过谁敢于如此无视对生活的设置.
+相反,
+我倒见过很多想要设置别人生活的人,
+还有对被设置的生活安之若素的人.
+因为这个缘故,
+我一直怀念这只特立独行的猪.</description>
+    </item>
+    
+    <item>
+      <title>Hugo&#43;Github</title>
+      <link>https://horizono.github.io/blog/hugo&#43;github/</link>
+      <pubDate>Sun, 21 Jul 2019 00:06:16 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/blog/hugo&#43;github/</guid>
+      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 本文章记录了我在B站上看到CodeSheep(一个大佬Up主)的视频，并按照视频的教程一步步搭建Hugo静态博客。
+一、运行环境：
+*Win10+Git
+二、Hugo是什么？
+Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。
+三、开始搭建
+Step 1：下载和安装Hugo
+①：进入Hugo的github仓库[下载]对应自己电脑的版本； ②：下载完之后，把解压包解压，里面有一个hugo.exe文件。然后在磁盘(F:)下创建Hugo文件夹，里面再创建bin文件夹和Sites文件夹。 把hugo.exe复制到bin文件夹目录下，最后把F:\Hugo\bin路径配置到系统的环境变量Path中，保存即可。
+Step 2：创建站点
+Window环境下以管理员身份运行命令提示符，切换到站点目录下(F:\Hugo\Sites) 接下来输入命令hugo new site myblog创建名为myblog的博客站点。 创建完成后会多出一个文件夹myblog，里面有很多子文件夹(content,themes等等)。
+Step 3：选择主题
+ ①：进入Hugo主题[官网]，选择自己喜欢的bolg主题风格，选好之后一般都有安装方法介绍。例如：
+根据网站给出的代码，拷贝，再把拷贝的代码git clone https://github.com/sourcethemes/academic-kickstart.git My_Website输入，这一步的前提是一定要先安装Git工具；
+②：预览 待主题安装成功后，输入hugo server -t 主题名称 --buildDrafts，按回车键，会出现如下打码：
+其中化黄线的链接就是在本机预览的链接，打开便可以看到个人博客添加主题后的样子。
+ Step 4：第一篇博客
+①：回到myblog根目录：输入命令hugo new post\myblog.md即可新建一个后缀是md的文件，用来写博客的内容。 一般用vim命令，vs code可以编辑；
+②：写好内容之后，再在本机预览一遍，输入预览命令hugo server -t 主题名称 --buildDrafts，打开链接即可预览； 预览成功后，接下来便是把整个站点推到Github仓库中。
+Step 5：新建Github仓库
+**在Github主页选择New rpository选项：
+** 这里注意Owner与Repository name尽量要保持一致，
+并在后面加上.github.io ! 完成以上步骤后按Create repository按钮即可创建一个仓库。 接下来就是把站点挂载到刚刚新建的仓库中
+Step 6：部署到Github
+①：关联你的Github：输入hugo --theme=主题名称 --baseUrl=&amp;quot;https://xxx.github.io&amp;quot;(xxx表示你的github..) --buildDrafts 按回车键后发现根目录下多出一个public的文件夹；</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://horizono.github.io/about-hugo/</link>
+      <pubDate>Sat, 20 Jul 2019 17:45:00 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/about-hugo/</guid>
+      <description>即将迈进大三,计算机专业,数据挖掘方向，正在学习Java和Python.
+趁着暑假学习并搭建了一个静态博客网站.
+本站建于2019/7/19,用于分享学习的笔记,心得等等.
+Stay hungar.Stay foolish.Life is fantasy.
+Contact * Weibo:@HorizonOriginal
+* Github:@https://github.com/HorizonO
+* QQ:766422707</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://horizono.github.io/post/blog/</link>
+      <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/blog/</guid>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>BlogT</title>
+      <link>https://horizono.github.io/blog/blogt/</link>
+      <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/blog/blogt/</guid>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>The &#34;figure&#34; Shortcode</title>
+      <link>https://horizono.github.io/post/the-figure-shortcode/</link>
+      <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/the-figure-shortcode/</guid>
+      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
+https://gohugo.io/content-management/shortcodes/#figure
+This theme has 3 CSS classes made for figure elements:
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
+    </item>
+    
+    <item>
+      <title>Post With Featured Image</title>
+      <link>https://horizono.github.io/post/post-with-featured-image/</link>
+      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
+      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
+For example:
+---images:-https://picsum.photos/1024/768/?random--- This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://horizono.github.io/post/typography/</link>
+      <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/typography/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+  </channel>
+</rss>
