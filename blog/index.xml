@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Horizon</title>
+    <title>Blogs on Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/blog/</link>
-    <description>Recent content in Blogs on Horizon</description>
+    <description>Recent content in Blogs on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zn-Hans</language>
     <lastBuildDate>Sun, 21 Jul 2019 00:06:16 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -14,42 +13,19 @@
     
     <item>
       <title>Hugo&#43;Github</title>
-      <link>https://horizono.github.io/blog/hugo&#43;github/</link>
+      <link>https://horizono.github.io/blog/2019-07/hugo-github/</link>
       <pubDate>Sun, 21 Jul 2019 00:06:16 +0800</pubDate>
       
-      <guid>https://horizono.github.io/blog/hugo&#43;github/</guid>
-      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 本文章记录了我在B站上看到CodeSheep(一个大佬Up主)的视频，并按照视频的教程一步步搭建Hugo静态博客。
-一、运行环境：
-*Win10+Git
-二、Hugo是什么？
-Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。
-三、开始搭建
-Step 1：下载和安装Hugo
-①：进入Hugo的github仓库[下载]对应自己电脑的版本； ②：下载完之后，把解压包解压，里面有一个hugo.exe文件。然后在磁盘(F:)下创建Hugo文件夹，里面再创建bin文件夹和Sites文件夹。 把hugo.exe复制到bin文件夹目录下，最后把F:\Hugo\bin路径配置到系统的环境变量Path中，保存即可。
-Step 2：创建站点
-Window环境下以管理员身份运行命令提示符，切换到站点目录下(F:\Hugo\Sites) 接下来输入命令hugo new site myblog创建名为myblog的博客站点。 创建完成后会多出一个文件夹myblog，里面有很多子文件夹(content,themes等等)。
-Step 3：选择主题
- ①：进入Hugo主题[官网]，选择自己喜欢的bolg主题风格，选好之后一般都有安装方法介绍。例如：
-根据网站给出的代码，拷贝，再把拷贝的代码git clone https://github.com/sourcethemes/academic-kickstart.git My_Website输入，这一步的前提是一定要先安装Git工具；
-②：预览 待主题安装成功后，输入hugo server -t 主题名称 --buildDrafts，按回车键，会出现如下打码：
-其中化黄线的链接就是在本机预览的链接，打开便可以看到个人博客添加主题后的样子。
- Step 4：第一篇博客
-①：回到myblog根目录：输入命令hugo new post\myblog.md即可新建一个后缀是md的文件，用来写博客的内容。 一般用vim命令，vs code可以编辑；
-②：写好内容之后，再在本机预览一遍，输入预览命令hugo server -t 主题名称 --buildDrafts，打开链接即可预览； 预览成功后，接下来便是把整个站点推到Github仓库中。
-Step 5：新建Github仓库
-**在Github主页选择New rpository选项：
-** 这里注意Owner与Repository name尽量要保持一致，
-并在后面加上.github.io ! 完成以上步骤后按Create repository按钮即可创建一个仓库。 接下来就是把站点挂载到刚刚新建的仓库中
-Step 6：部署到Github
-①：关联你的Github：输入hugo --theme=主题名称 --baseUrl=&amp;quot;https://xxx.github.io&amp;quot;(xxx表示你的github..) --buildDrafts 按回车键后发现根目录下多出一个public的文件夹；</description>
+      <guid>https://horizono.github.io/blog/2019-07/hugo-github/</guid>
+      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 本文章记录了我在B站上看到CodeSheep(一个大佬Up主)的视频，并按照视频的教程一步步搭建Hugo静态博客。 一、运行环境： *Win10+Git 二、Hugo是什么？ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。 三、开始搭</description>
     </item>
     
     <item>
       <title>BlogT</title>
-      <link>https://horizono.github.io/blog/blogt/</link>
+      <link>https://horizono.github.io/blog/2019-07/blogt/</link>
       <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
       
-      <guid>https://horizono.github.io/blog/blogt/</guid>
+      <guid>https://horizono.github.io/blog/2019-07/blogt/</guid>
       <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
     </item>
     

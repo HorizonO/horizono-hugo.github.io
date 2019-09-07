@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Moments on Horizon</title>
+    <title>Moments on Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/moment/</link>
-    <description>Recent content in Moments on Horizon</description>
+    <description>Recent content in Moments on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zn-Hans</language>
     <lastBuildDate>Sun, 21 Jul 2019 22:43:57 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/moment/index.xml" rel="self" type="application/rss+xml" />
@@ -18,14 +17,7 @@
       <pubDate>Sun, 21 Jul 2019 22:43:57 +0800</pubDate>
       
       <guid>https://horizono.github.io/moment/19-7-21/</guid>
-      <description>2019/07/21
-读一只特立独行的猪 摘抄我已经四十岁了除了这只猪，
-还没见过谁敢于如此无视对生活的设置.
-相反,
-我倒见过很多想要设置别人生活的人,
-还有对被设置的生活安之若素的人.
-因为这个缘故,
-我一直怀念这只特立独行的猪.</description>
+      <description>2019/07/21 读一只特立独行的猪 摘抄我已经四十岁了除了这只猪， 还没见过谁敢于如此无视对生活的设置. 相反, 我倒见过很多想要设置别人生活的人, 还有对被设置的生活安之若素的人. 因为这个缘故, 我一直怀念这只特立独行的猪.</description>
     </item>
     
   </channel>
