@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebLearnings on Horizon</title>
+    <link>https://horizono.github.io/weblearning/</link>
+    <description>Recent content in WebLearnings on Horizon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    
+	<atom:link href="https://horizono.github.io/weblearning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</guid>
+      <description>Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。
+我们常说的Web端就是网页端。
+网页 网页是构成网站的基本元素。网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。
+我们在浏览器上输入网址后，打开的任何一个页面，都是属于网页。
+浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。
+关于浏览器的详细介绍，可以看下一篇文章：《浏览器的介绍》
+Web标准 W3C组织 W3C：万维网联盟组织，用来制定web标准的机构（组织）。
+W3C 万维网联盟是国际最著名的标准化组织。1994年成立后，至今已发布近百项相关万维网的标准，对万维网发展做出了杰出的贡献。
+W3C 组织就类似于现实世界中的联合国。
+为什么要遵循WEB标准呢？因为很多浏览器的浏览器内核不同，导致页面解析出来的效果可能会有差异，给开发者增加无谓的工作量。因此需要指定统一的标准。
+Web 标准 Web标准：制作网页要遵循的规范。
+Web标准不是某一个标准，而是由W3C组织和其他标准化组织制定的一系列标准的集合。
+1、Web标准包括三个方面：
+ 结构标准（HTML）：用于对网页元素进行整理和分类。
+ 表现标准（CSS）：用于设置网页元素的版式、颜色、大小等外观样式。
+ 行为标准（JS）：用于定义网页的交互和行为。
+  根据上面的Web标准，可以将 Web前端分为三层，如下。
+2、Web前端分三层：
+ HTML（HyperText Markup Language）：超文本标记语言。从语义的角度描述页面的结构。相当于人的身体组织结构。 CSS（Cascading Style Sheets）：层叠样式表。从审美的角度美化页面的样式。相当于人的衣服和打扮。 JS：JavaScript。从交互的角度描述页面的行为。相当于人的动作，让人有生命力。  3、打个比方：（拿黄渤举例）
+HTML 相当于人的身体组织结构：
+CSS 相当于人的衣服和打扮：
+JS 相当于人的行为：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</guid>
+      <description>常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示：
+我们重点需要学习的是 Chrome 浏览器。
+浏览器的市场占有份额 浏览器的市场占有份额：https://tongji.baidu.com/research/site?source=index#browser
+上面这张图的统计时间是2020年2月。
+浏览器的组成 浏览器分成两部分：
+ 1、渲染引擎（即：浏览器内核）
+ 2、JS 引擎
+  1、渲染引擎（浏览器内核） 浏览器所采用的「渲染引擎」也称之为「浏览器内核」，用来解析 HTML与CSS。渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。
+渲染引擎是浏览器兼容性问题出现的根本原因。
+渲染引擎的英文叫做 Rendering Engine。通俗来说，它的作用就是：读取网页内容，计算网页的显示方式并显示在页面上。
+常见浏览器的内核如下：
+   浏览器 内核     chrome Blink   欧鹏 Blink   360安全浏览器 Blink   360极速浏览器 Blink   Safari Webkit   Firefox 火狐 Gecko   IE Trident    备注：360的浏览器，以前使用的IE浏览器的Trident内核，但是现在已经改为使用 chrome 浏览器的 Blink内核。
+另外，移动端的浏览器内核是什么？大家可以自行查阅资料。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</guid>
+      <description>编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。
+有人说 WebStorm 也不错？但真实情况是，自从VS Code 问世之后，用 WebStorm 的人越来越少了。
+PS：文件的后缀名不能决定文件格式，只能决定打开文件打开的方式。
+VS Code 的使用 详情请移步至：第一次使用VS Code时你应该知道的一切配置
+Sublime Text 的使用 详情请移步至：Sublime Text使用技巧
+HTML的概述 HTML的概念 HTML 全称为 HyperText Markup Language，译为超文本标记语言。
+HTML 不是一种编程语言，是一种描述性的标记语言。
+作用：HTML是负责描述文档语义的语言。
+概念：超文本 所谓的超文本，有两层含义：
+（1）图片、音频、视频、动画、多媒体等内容，成为超文本，因为它们超出了文本的限制。
+（2）不仅如此，它还可以从一个文件跳转到另一个文件，与世界各地主机的文件进行连接。即：超级链接文本。
+概念：标记语言 HTML 不是一种编程语言，是一种描述性的标记语言。这主要有两层含义：
+（1）标记语言是一套标记标签。比如：标签&amp;lt;a&amp;gt;表示超链接、标签&amp;lt;img&amp;gt;表示图片、标签&amp;lt;h1&amp;gt;表示一级标题等等，它们都是属于 HTML 标签。
+说的通俗一点就是：网页是由网页元素组成的，这些元素是由 HTML 标签描述出来，然后通过浏览器解析，就可以显示给用户看了。
+（2）编程语言是有编译过程的，而标记语言没有编译过程，HTML标签是直接由浏览器解析执行。
+HTML是负责描述文档语义的语言 HTML 格式的文件是一个纯本文文件（就是用txt文件改名而成），用一些标签来描述语义，这些标签在浏览器页面上是无法直观看到的，所以称之为“超文本标记语言”。
+接下来，我们需要学习 HTML 中的很多“标签对儿”，这些“标签对儿”能够给文本不同的语义。
+比如，面试的时候问你，&amp;lt;h1&amp;gt; 标签有什么作用？
+ 正确答案：给文本增加主标题的语义。 错误答案：给文字加粗、加黑、变大。  关乎“语义”的更深刻理解，等接下来我们学习了各种标签，就明白了。
+HTML的历史 其中，我们专门来对XHTML做一个介绍。
+XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本标注语言。 XHTML的主要目的是为了取代HTML，也可以理解为HTML的升级版。 HTML的标记书写很不规范，会造成其它的设备(ipad、手机、电视等)无法正常显示。 XHTML与HTML4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</guid>
+      <description>本文主要内容 排版标签：
+ &amp;lt;h1&amp;gt;
+ &amp;lt;p&amp;gt;
+ &amp;lt;hr /&amp;gt;
+ &amp;lt;br /&amp;gt;
+ &amp;lt;div&amp;gt;
+ &amp;lt;span&amp;gt;
+ &amp;lt;center&amp;gt;
+ &amp;lt;pre&amp;gt;
+  下面来详细介绍一下排版标签。
+标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。
+代码举例：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;H3：千古壹号，永不止步&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;H3：千古壹号，永不止步&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;H4：千古壹号，永不止步&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;H5：千古壹号，永不止步&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;H6：千古壹号，永不止步&amp;lt;/h6&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果演示：
+HTML 注释 HTML 注释的格式如下：
+&amp;lt;!-- 我是 html 注释 --&amp;gt; 段落标签&amp;lt;p&amp;gt; 段落，是英语“paragraph“缩写。
+作用：可以把 HTML 文档分割为若干段落。在网页中如果要把文字有条理地显示出来，离不开段落标签。就如同我们平常写文章一样，整个网页也可以分为若干个段落。
+代码举例：
+&amp;lt;p&amp;gt;This is a paragraph&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;This is another paragraph&amp;lt;/p&amp;gt; 属性：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</guid>
+      <description>本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt;
+超链接 &amp;lt;a&amp;gt;
+字体标签 特殊字符（转义字符）  &amp;amp;nbsp;：空格 （non-breaking spacing，不断打空格） &amp;amp;lt;：小于号（less than） &amp;amp;gt;：大于号（greater than） &amp;amp;amp;：符号&amp;amp; &amp;amp;quot;：双引号 &amp;amp;apos;：单引号 &amp;amp;copy;：版权© &amp;amp;trade;：商标™ &amp;amp;#32464;：文字绐。其实，#32464是汉字绐的unicode编码。  要求背诵的特殊字符有：&amp;amp;nbsp;、&amp;amp;lt;、&amp;amp;gt;、&amp;amp;copy;。
+比如说，你想把&amp;lt;p&amp;gt;作为一个文本在页面上显示，直接写&amp;lt;p&amp;gt;是肯定不行的，因为这代表的是一个段落标签，所以这里需要用到转义字符。应该这么写：
+这是一个HTML语言的&amp;amp;lt;p&amp;amp;gt;标签 正确的效果如下：
+错误的效果如下：
+其实我们只要记住前三个符号就行了，其他的在需要的时候查一下就行了。而且，EditPlus软件中是可以直接点击这些符号进行选择的：
+来一张表格，方便需要的时候查询：
+   特殊字符 描述 字符的代码      空格符 &amp;amp;nbsp;   &amp;lt; 小于号 &amp;amp;lt;   &amp;gt;  大于号 &amp;amp;gt;   &amp;amp; 和号 &amp;amp;amp;   ￥ 人民币 &amp;amp;yen;   © 版权 &amp;amp;copy;   ® 注册商标 &amp;amp;reg;   ° 摄氏度 &amp;amp;deg;   ± 正负号 &amp;amp;plusmn;   × 乘号 &amp;amp;times;   ÷ 除号 &amp;amp;divide;   ² 平方2（上标2） &amp;amp;sup2;   ³ 立方3（上标3） &amp;amp;sup3;    下划线、中划线、斜体  &amp;lt;u&amp;gt;：下划线标记</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</guid>
+      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
+如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
+&amp;lt;img src=&amp;#34;图片的URL&amp;#34; /&amp;gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
+ 不能往网页中插入的图片格式是：psd、ai等。
+  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
+img标签的src属性 这里涉及到图片的一个属性：
+ src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
+写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
+举例1：
+&amp;lt;!-- 当前目录中的图片 --&amp;gt; &amp;lt;img src=&amp;#34;2.jpg&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;.\2.jpg&amp;#34;&amp;gt; &amp;lt;!-- 上一级目录中的图片 --&amp;gt; &amp;lt;img src=&amp;#34;..\2.jpg&amp;#34;&amp;gt; 相对路径不会出现这种情况：
+aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
+举例2：
+&amp;lt;img src=&amp;#34;images/1.jpg&amp;#34;&amp;gt; 上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
+相对路径的面试题。现有如下文件层级图：
+问题：如果想在index.html中插入1.png，那么对应的img语句是？
+分析：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
+答案：
+&amp;lt;img src=&amp;#34;../../photo/1.png&amp;#34; /&amp;gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
+（1）以盘符开始的绝对路径。举例：
+&amp;lt;img src=&amp;#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&amp;#34;&amp;gt; （2）网络路径。举例：
+&amp;lt;img src=&amp;#34;http://img.smyhvae.com/20200122_200901.png&amp;#34;&amp;gt; 大家打开上面的img中的链接，可能有惊喜哦。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
+      <description>本文主要内容  列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt;  列表标签 列表标签分为三种。
+1、无序列表&amp;lt;ul&amp;gt;，无序列表中的每一项是&amp;lt;li&amp;gt; 英文单词解释如下：
+ ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;默认1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认3&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 效果：
+注意：
+ li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
+ type=&amp;quot;属性值&amp;quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&amp;lt;ul&amp;gt;标签有type属性，&amp;lt;ul&amp;gt;里面的&amp;lt;li&amp;gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
+注意：项目符号可以是图片，需要通过CSS设置&amp;lt;li&amp;gt;标记的背景图片来实现(CSS中讲)。
+当然了，列表之间是可以嵌套的。我们来举个例子。代码：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;北京市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;海淀区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;朝阳区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;东城区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;广州市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;天河区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;越秀区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 效果：
+css 属性：
+list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */ ul标签实际应用场景： 场景1、导航条：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</guid>
+      <description>本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。
+以下是正文。
+ HTML5的介绍 Web 技术发展时间线  1991 HTML
+ 1994 HTML2
+ 1996 CSS1 + JavaScript
+ 1997 HTML4
+ 1998 CSS2
+ 2000 XHTML1（严格的html）
+ 2002 Tableless Web Design（表格布局）
+ 2005 AJAX
+ 2009 HTML5
+ 2014 HTML5 Finalized
+  2002年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。
+2009年就已经推出了HTML5的草案，但直到2014年才有定稿，是因为有移动端的推动。
+H5草案的前身是叫：Web Application，最早是由WHATWG这个组织在2004年提出的。
+2007年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
+什么是 HTML5 HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。
+HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
+HTML5的广义概念：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。
+HTML5不等于 HTML next version。HTML5 包含： HTML的升级版、CSS的升级版、JavaScript API的升级版。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
+      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+index.html的代码如下：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;#34;Microsoft Yahei&amp;#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
+      <description>本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。
+举例如下：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;#34;box1&amp;#34; draggable=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果如下：
+上图中，我们给 box1 增加了draggable=&amp;quot;true&amp;quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用</description>
+    </item>
+    
+  </channel>
+</rss>

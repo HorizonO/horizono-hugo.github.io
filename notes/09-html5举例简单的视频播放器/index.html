@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+index.html的代码如下：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;!-- 引入字体图标的文件--&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;/&gt; &lt;style&gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &#34;Microsoft Yahei&#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .">
+
+
+
+<meta itemprop="wordCount" content="374">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+index.html的代码如下：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;!-- 引入字体图标的文件--&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;/&gt; &lt;style&gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &#34;Microsoft Yahei&#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizono.github.io/notes/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+index.html的代码如下：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;!-- 引入字体图标的文件--&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;/&gt; &lt;style&gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &#34;Microsoft Yahei&#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ ."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title></title>
+	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://horizono.github.io/">Horizon</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://horizono.github.io/post/">Posts</a>
+				<a href="https://horizono.github.io/about-hugo/">About</a>
+				<a href="https://horizono.github.io/blog/">Blog</a>
+				<a href="https://horizono.github.io/moment/">Moment</a>
+				<a href="https://horizono.github.io/notes/">Notes</a>
+				<a href="https://horizono.github.io/WebLearning/">WebLearning</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://horizono.github.io/post/">Posts</a></li>
+			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
+			<li><a href="https://horizono.github.io/blog/">Blog</a></li>
+			<li><a href="https://horizono.github.io/moment/">Moment</a></li>
+			<li><a href="https://horizono.github.io/notes/">Notes</a></li>
+			<li><a href="https://horizono.github.io/WebLearning/">WebLearning</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1></h1>
+		<div class="content">
+			<p>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。</p>
+
+<p>index.html的代码如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- 引入字体图标的文件--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;css/font-awesome.min.css&#34;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="o">*</span><span class="p">{</span>
+            <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c">/*多媒体标题*/</span>
+        <span class="nt">figcaption</span><span class="p">{</span>
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+            <span class="k">line-height</span><span class="p">:</span> <span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">font-family</span><span class="p">:</span> <span class="s2">&#34;Microsoft Yahei&#34;</span><span class="p">;</span>
+            <span class="k">font-size</span><span class="p">:</span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c">/* 播放器*/</span>
+        <span class="p">.</span><span class="nc">palyer</span><span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">720</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">360</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">margin</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">images/loading.gif</span><span class="p">)</span> <span class="kc">center</span> <span class="kc">no-repeat</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">background-size</span><span class="p">:</span><span class="kc">auto</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+
+        <span class="p">}</span>
+
+        <span class="p">.</span><span class="nc">palyer</span> <span class="nt">video</span><span class="p">{</span>
+            <span class="k">height</span><span class="p">:</span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+            <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+            <span class="c">/*display: none;*/</span>
+        <span class="p">}</span>
+
+        <span class="c">/* 控制条*/</span>
+
+        <span class="p">.</span><span class="nc">controls</span><span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">700</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">);</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">bottom</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c">/*开关*/</span>
+        <span class="p">.</span><span class="nc">switch</span><span class="p">{</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+            <span class="k">line-height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">color</span><span class="p">:</span><span class="kc">yellow</span><span class="p">;</span>
+
+        <span class="p">}</span>
+        <span class="c">/*进度条*/</span>
+        <span class="p">.</span><span class="nc">progress</span><span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">432</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mf">0.4</span><span class="p">);</span>
+            <span class="k">left</span><span class="p">:</span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span><span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c">/* 当前进度*/</span>
+        <span class="p">.</span><span class="nc">curr-progress</span><span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c">/* 时间模块*/</span>
+        <span class="p">.</span><span class="nc">time</span><span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">120</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+            <span class="k">line-height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">color</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span><span class="mi">510</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">font-size</span><span class="p">:</span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+
+        <span class="p">}</span>
+        <span class="c">/*全屏*/</span>
+        <span class="p">.</span><span class="nc">extend</span><span class="p">{</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+
+            <span class="k">right</span><span class="p">:</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+            <span class="k">line-height</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">color</span><span class="p">:</span><span class="kc">yellow</span><span class="p">;</span>
+        <span class="p">}</span>
+
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- 多媒体--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+        <span class="c">&lt;!--  多媒体标题--&gt;</span>
+        <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>视频案例<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;palyer&#34;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;video/fun.mp4&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+            <span class="c">&lt;!-- 控制条--&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;controls&#34;</span><span class="p">&gt;</span>
+                <span class="c">&lt;!-- 播放暂停--&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;switch  icon-play&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
+                    <span class="c">&lt;!-- 当前进度--&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;curr-progress&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="c">&lt;!-- 时间--&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;time&#34;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;curr-time&#34;</span><span class="p">&gt;</span>00:00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>/<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;total-time&#34;</span><span class="p">&gt;</span>00:00:00<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+                <span class="c">&lt;!-- 全屏--&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;extend  icon-resize-full&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c1">// 思路：
+</span><span class="c1"></span>        <span class="cm">/*
+</span><span class="cm">        * 1、点击按钮 实现播放暂停并且切换图标
+</span><span class="cm">        * 2、算出视频的总时显示出出来
+</span><span class="cm">        * 3、当视频播放的时候，进度条同步，当前时间同步
+</span><span class="cm">        * 4、点击实现全屏
+</span><span class="cm">        */</span>
+
+<span class="c1">//        获取需要的标签
+</span><span class="c1"></span>            <span class="kd">var</span>  <span class="nx">video</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;video&#39;</span><span class="p">);</span>
+<span class="c1">//          播放按钮
+</span><span class="c1"></span>            <span class="kd">var</span>  <span class="nx">playBtn</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.switch&#39;</span><span class="p">);</span>
+<span class="c1">//          当前进度条
+</span><span class="c1"></span>            <span class="kd">var</span>  <span class="nx">currProgress</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.curr-progress&#39;</span><span class="p">);</span>
+<span class="c1">//          当前时间
+</span><span class="c1"></span>            <span class="kd">var</span>  <span class="nx">currTime</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.curr-time&#39;</span><span class="p">);</span>
+<span class="c1">//          总时间
+</span><span class="c1"></span>            <span class="kd">var</span>  <span class="nx">totalTime</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.total-time&#39;</span><span class="p">);</span>
+<span class="c1">//          全屏
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">extend</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.extend&#39;</span><span class="p">);</span>
+
+            <span class="kd">var</span> <span class="nx">tTime</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">//         1、点击按钮 实现播放暂停并且切换图标
+</span><span class="c1"></span>
+           <span class="nx">playBtn</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+<span class="c1">//               如果视频播放 就暂停，如果暂停 就播放
+</span><span class="c1"></span>               <span class="k">if</span><span class="p">(</span><span class="nx">video</span><span class="p">.</span><span class="nx">paused</span><span class="p">){</span>
+<span class="c1">//                   播放
+</span><span class="c1"></span>                   <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
+                   <span class="c1">//切换图标
+</span><span class="c1"></span>                   <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;icon-play&#39;</span><span class="p">);</span>
+                   <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;icon-pause&#39;</span><span class="p">);</span>
+               <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<span class="c1">//                   暂停
+</span><span class="c1"></span>                    <span class="nx">video</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
+<span class="c1">//                   切换图标
+</span><span class="c1"></span>                   <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;icon-pause&#39;</span><span class="p">);</span>
+                   <span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;icon-play&#39;</span><span class="p">);}</span>
+           <span class="p">}</span>
+
+<span class="c1">//        2、算出视频的总时显示出出来
+</span><span class="c1">//        当时加载完成后的事件，视频能播放的时候
+</span><span class="c1"></span>        <span class="nx">video</span><span class="p">.</span><span class="nx">oncanplay</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+<span class="c1">//             获取视频总时长
+</span><span class="c1"></span>            <span class="nx">tTime</span><span class="o">=</span><span class="nx">video</span><span class="p">.</span><span class="nx">duration</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">tTime</span><span class="p">);</span>
+
+<span class="c1">//          将总秒数 转换成 时分秒的格式：00：00:00
+</span><span class="c1">//            小时
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">h</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">tTime</span><span class="o">/</span><span class="mi">3600</span><span class="p">);</span>
+<span class="c1">//            分钟
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">m</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">tTime</span><span class="o">%</span><span class="mi">3600</span><span class="o">/</span><span class="mi">60</span><span class="p">);</span>
+<span class="c1">//            秒
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">s</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">tTime</span><span class="o">%</span><span class="mi">60</span><span class="p">);</span>
+
+<span class="c1">//            console.log(h);
+</span><span class="c1">//            console.log(m);
+</span><span class="c1">//            console.log(s);
+</span><span class="c1"></span>
+<span class="c1">//            把数据格式转成 00:00：00
+</span><span class="c1"></span>            <span class="nx">h</span><span class="o">=</span><span class="nx">h</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">h</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">h</span><span class="p">;</span>
+            <span class="nx">m</span><span class="o">=</span><span class="nx">m</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">m</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">m</span><span class="p">;</span>
+            <span class="nx">s</span><span class="o">=</span><span class="nx">s</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">s</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">s</span><span class="p">;</span>
+
+
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">h</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">m</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="c1">//            显示出来
+</span><span class="c1"></span>            <span class="nx">totalTime</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">h</span><span class="o">+</span><span class="s2">&#34;:&#34;</span><span class="o">+</span><span class="nx">m</span><span class="o">+</span><span class="s2">&#34;:&#34;</span><span class="o">+</span><span class="nx">s</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="c1">//   * 3、当视频播放的时候，进度条同步，当前时间同步
+</span><span class="c1">//         当时当前时间更新的时候触发
+</span><span class="c1"></span>        <span class="nx">video</span><span class="p">.</span><span class="nx">ontimeupdate</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+<span class="c1">//            获取视频当前播放的时间
+</span><span class="c1">//           console.log(video.currentTime);
+</span><span class="c1">//            当前播放时间
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">cTime</span><span class="o">=</span><span class="nx">video</span><span class="p">.</span><span class="nx">currentTime</span><span class="p">;</span>
+<span class="c1">//           把格式转成00:00:00
+</span><span class="c1"></span>
+            <span class="kd">var</span> <span class="nx">h</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">cTime</span><span class="o">/</span><span class="mi">3600</span><span class="p">);</span>
+<span class="c1">//            分钟
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">m</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">cTime</span><span class="o">%</span><span class="mi">3600</span><span class="o">/</span><span class="mi">60</span><span class="p">);</span>
+<span class="c1">//            秒
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">s</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">cTime</span><span class="o">%</span><span class="mi">60</span><span class="p">);</span>
+
+<span class="c1">//            把数据格式转成 00:00：00
+</span><span class="c1"></span>            <span class="nx">h</span><span class="o">=</span><span class="nx">h</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">h</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">h</span><span class="p">;</span>
+            <span class="nx">m</span><span class="o">=</span><span class="nx">m</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">m</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">m</span><span class="p">;</span>
+            <span class="nx">s</span><span class="o">=</span><span class="nx">s</span><span class="o">&gt;=</span><span class="mi">10</span><span class="o">?</span><span class="nx">s</span><span class="o">:</span><span class="s2">&#34;0&#34;</span><span class="o">+</span><span class="nx">s</span><span class="p">;</span>
+
+<span class="c1">//            显示出当前时间
+</span><span class="c1"></span>            <span class="nx">currTime</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">h</span><span class="o">+</span><span class="s2">&#34;:&#34;</span><span class="o">+</span><span class="nx">m</span><span class="o">+</span><span class="s2">&#34;:&#34;</span><span class="o">+</span><span class="nx">s</span><span class="p">;</span>
+
+<span class="c1">//            改变进度条的宽度： 当前时间/总时间
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">value</span><span class="o">=</span><span class="nx">cTime</span><span class="o">/</span><span class="nx">tTime</span><span class="p">;</span>
+
+            <span class="nx">currProgress</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span><span class="o">=</span><span class="nx">value</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">;</span>
+
+        <span class="p">}</span>
+
+<span class="c1">//        全屏
+</span><span class="c1"></span>        <span class="nx">extend</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
+<span class="c1">//            全屏的h5代码
+</span><span class="c1"></span>            <span class="nx">video</span><span class="p">.</span><span class="nx">webkitRequestFullScreen</span><span class="p">();</span>
+        <span class="p">}</span>
+
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>工程文件：</p>
+
+<ul>
+<li>2018-02-23-H5多媒体播放器.rar</li>
+</ul>
+
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://horizono.github.io/">Horizon Chan</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+
+</body>
+
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&quot;true&quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&quot;true&quot; 属性的元素。
+举例如下：
+&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Title&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&gt; &lt;style&gt; .box1{ width: 200px; height: 200px; background-color: green; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;!--给 box1 增加拖拽的属性--&gt; &lt;div class=&#34;box1&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;/body&gt; &lt;/html&gt; 效果如下：
+上图中，我们给 box1 增加了draggable=&quot;true&quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用">
+
+
+
+<meta itemprop="wordCount" content="843">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&quot;true&quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&quot;true&quot; 属性的元素。
+举例如下：
+&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Title&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&gt; &lt;style&gt; .box1{ width: 200px; height: 200px; background-color: green; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;!--给 box1 增加拖拽的属性--&gt; &lt;div class=&#34;box1&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;/body&gt; &lt;/html&gt; 效果如下：
+上图中，我们给 box1 增加了draggable=&quot;true&quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&quot;true&quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&quot;true&quot; 属性的元素。
+举例如下：
+&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Title&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&gt; &lt;style&gt; .box1{ width: 200px; height: 200px; background-color: green; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;!--给 box1 增加拖拽的属性--&gt; &lt;div class=&#34;box1&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;/body&gt; &lt;/html&gt; 效果如下：
+上图中，我们给 box1 增加了draggable=&quot;true&quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title></title>
+	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://horizono.github.io/">Horizon</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://horizono.github.io/post/">Posts</a>
+				<a href="https://horizono.github.io/about-hugo/">About</a>
+				<a href="https://horizono.github.io/blog/">Blog</a>
+				<a href="https://horizono.github.io/moment/">Moment</a>
+				<a href="https://horizono.github.io/notes/">Notes</a>
+				<a href="https://horizono.github.io/WebLearning/">WebLearning</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://horizono.github.io/post/">Posts</a></li>
+			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
+			<li><a href="https://horizono.github.io/blog/">Blog</a></li>
+			<li><a href="https://horizono.github.io/moment/">Moment</a></li>
+			<li><a href="https://horizono.github.io/notes/">Notes</a></li>
+			<li><a href="https://horizono.github.io/WebLearning/">WebLearning</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1></h1>
+		<div class="content">
+			
+
+<h2 id="本文主要内容">本文主要内容<a href="#本文主要内容" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<ul>
+<li><p>拖拽</p></li>
+
+<li><p>历史</p></li>
+
+<li><p>地理位置</p></li>
+
+<li><p>全屏</p></li>
+</ul>
+
+<h2 id="拖拽">拖拽<a href="#拖拽" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p><img src="http://img.smyhvae.com/20180223_2130.gif" alt="" /></p>
+
+<p>如上图所示，我们可以拖拽博客园网站里的图片和超链接。</p>
+
+<p>在HTML5的规范中，我们可以通过为元素增加 <code>draggable=&quot;true&quot;</code> 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。</p>
+
+<h3 id="1-拖拽元素">1、拖拽元素<a href="#1-拖拽元素" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>页面中设置了 <code>draggable=&quot;true&quot;</code> 属性的元素。</p>
+
+<p>举例如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;css/font-awesome.min.css&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">.</span><span class="nc">box1</span><span class="p">{</span>
+        <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--给 box1 增加拖拽的属性--&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box1&#34;</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180223_2140.gif" alt="" /></p>
+
+<p>上图中，我们给 box1 增加了<code>draggable=&quot;true&quot;</code> 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到<strong>事件监听</strong>。</p>
+
+<p><strong>拖拽元素的事件监听</strong>：（应用于拖拽元素）</p>
+
+<ul>
+<li><p><code>ondragstart</code>当拖拽开始时调用</p></li>
+
+<li><p><code>ondragleave</code> 当<strong>鼠标离开拖拽元素时</strong>调用</p></li>
+
+<li><p><code>ondragend</code>   当拖拽结束时调用</p></li>
+
+<li><p><code>ondrag</code>      整个拖拽过程都会调用</p></li>
+</ul>
+
+<p>代码演示：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box&#34;</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">box</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.box&#39;</span><span class="p">);</span>
+
+    <span class="c1">//  绑定拖拽事件
+</span><span class="c1"></span>
+    <span class="c1">//  拖拽开始
+</span><span class="c1"></span>    <span class="nx">box</span><span class="p">.</span><span class="nx">ondragstart</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;拖拽开始.&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//  拖拽离开：鼠标拖拽时离开被拖拽的元素时触发
+</span><span class="c1"></span>    <span class="nx">box</span><span class="p">.</span><span class="nx">ondragleave</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;拖拽离开..&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//  拖拽结束
+</span><span class="c1"></span>    <span class="nx">box</span><span class="p">.</span><span class="nx">ondragend</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;拖拽结束...&#39;</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;---------------&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">box</span><span class="p">.</span><span class="nx">ondrag</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;拖拽&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180223_2201.gif" alt="" /></p>
+
+<p>打印结果：</p>
+
+<p><img src="http://img.smyhvae.com/20180223_2213.png" alt="" /></p>
+
+<h3 id="2-目标元素">2、目标元素<a href="#2-目标元素" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>比如说，你想把元素A拖拽到元素B里，那么元素B就是目标元素。</p>
+
+<p>页面中任何一个元素都可以成为目标元素。</p>
+
+<p><strong>目标元素的事件监听</strong>：（应用于目标元素）</p>
+
+<ul>
+<li><p><code>ondragenter</code> 当拖拽元素进入时调用</p></li>
+
+<li><p><code>ondragover</code>  当拖拽元素停留在目标元素上时，就会连续一直触发（不管拖拽元素此时是移动还是不动的状态）</p></li>
+
+<li><p><code>ondrop</code>      当在目标元素上松开鼠标时调用</p></li>
+
+<li><p><code>ondragleave</code> 当鼠标离开目标元素时调用</p></li>
+</ul>
+
+<p>代码演示：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">.</span><span class="nc">one</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="p">.</span><span class="nc">two</span> <span class="p">{</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span> <span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;one&#34;</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;two&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">two</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.two&#39;</span><span class="p">);</span>
+
+    <span class="c1">//目标元素的拖拽事件
+</span><span class="c1"></span>
+    <span class="c1">// 当被拖拽元素进入时触发
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondragenter</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;来了.&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 当被拖拽元素离开时触发
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondragleave</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;走了..&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 当拖拽元素在 目标元素上时，连续触发
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondragover</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//阻止拖拽事件的默认行为
+</span><span class="c1"></span>        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">//【重要】一定要加这一行代码，否则，后面的方法 ondrop() 无法触发。
+</span><span class="c1"></span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;over...&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 当在目标元素上松开鼠标是触发
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondrop</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;松开鼠标了....&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果演示：</p>
+
+<p><img src="http://img.smyhvae.com/20180223_2240.gif" alt="" /></p>
+
+<p>注意，上方代码中，我们加了<code>event.preventDefault()</code>这个方法。如果没有这个方法，后面ondrop()方法无法触发。如下图所示：</p>
+
+<p><img src="http://img.smyhvae.com/20180223_2245.gif" alt="" /></p>
+
+<p>如上图所示，连光标的形状都提示我们，无法在目标元素里继续操作了。</p>
+
+<p><strong>总结</strong>：如果想让拖拽元素在目标元素里做点事情，就必须要在 <code>ondragover()</code> 里加<code>event.preventDefault()</code>这一行代码。</p>
+
+<p><strong>案例：拖拽练习</strong></p>
+
+<p>完整版代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">.</span><span class="nc">one</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="p">.</span><span class="nc">one</span> <span class="o">&gt;</span> <span class="nt">div</span><span class="o">,</span> <span class="p">.</span><span class="nc">two</span> <span class="o">&gt;</span> <span class="nt">div</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">98</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">98</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+            <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+            <span class="k">line-height</span><span class="p">:</span> <span class="mi">98</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="p">.</span><span class="nc">two</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">top</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;one&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">draggable</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>8<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;two&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">boxs</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.one div&#39;</span><span class="p">);</span>
+    <span class="c1">//        临时的盒子 用于存放当前拖拽的元素
+</span><span class="c1"></span>
+    <span class="kd">var</span> <span class="nx">two</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.two&#39;</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="c1">//         给8个小盒子分别绑定拖拽事件
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">boxs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">boxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">ondragstart</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="c1">//                保持当前拖拽的元素
+</span><span class="c1"></span>            <span class="nx">temp</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="nx">boxs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">ondragend</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="c1">//               当拖拽结束 ，清空temp
+</span><span class="c1"></span>            <span class="nx">temp</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        目标元素的拖拽事件
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondragover</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">//            阻止拖拽的默认行为
+</span><span class="c1"></span>        <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="c1">//        当在目标元素上松开鼠标是触发
+</span><span class="c1"></span>    <span class="nx">two</span><span class="p">.</span><span class="nx">ondrop</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<span class="c1">//            将拖拽的元素追加到 two里面来
+</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">temp</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2050.gif" alt="" /></p>
+
+<h2 id="历史">历史<a href="#历史" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>界面上的所有JS操作不会被浏览器记住，就无法回到之前的状态。</p>
+
+<p>在HTML5中可以通过 <code>window.history</code> 操作访问历史状态，让一个页面可以有多个历史状态</p>
+
+<p><code>window.history</code>对象可以让我们管理历史记录，可用于单页面应用，Single Page Application，可以无刷新改变网页内容。</p>
+
+<ol>
+<li>window.history.forward(); // 前进</li>
+<li>window.history.back(); // 后退</li>
+<li>window.history.go(); // 刷新</li>
+<li>通过JS可以加入一个访问状态</li>
+<li>history.pushState; //放入历史中的状态数据, 设置title(现在浏览器不支持改变历史状态)</li>
+</ol>
+
+<h2 id="地理定位">地理定位<a href="#地理定位" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>在HTML规范中，增加了获取用户地理信息的API，这样使得我们可以基于用户位置开发互联网应用，即<strong>基于位置服务 LBS</strong> (Location Base Service)。</p>
+
+<h3 id="获取地理信息的方式">获取地理信息的方式<a href="#获取地理信息的方式" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<h4 id="1-ip地址">1、IP地址<a href="#1-ip地址" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<h4 id="2-三维坐标">2、三维坐标：<a href="#2-三维坐标" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<p>（1）<strong>GPS</strong>（Global Positioning System，全球定位系统）。</p>
+
+<p>目前世界上在用或在建的第2代全球卫星导航系统（GNSS）有：</p>
+
+<ul>
+<li><p>1.美国 Global Positioning System （全球定位系统） 简称GPS；</p></li>
+
+<li><p>2.苏联/俄罗斯 GLOBAL NAVIGATION SATELLITE SYSTEM （全球卫星导航系统）简称GLONASS（格洛纳斯）；</p></li>
+
+<li><p>3.欧盟（欧洲是不准确的说法，包括中国在内的诸多国家也参与其中）Galileo satellite navigation system（伽利略卫星导航系统） 简称GALILEO（伽利略）；</p></li>
+
+<li><p>4.中国 BeiDou(COMPASS) Navigation Satellite System（北斗卫星导航系统）简称 BDS ；</p></li>
+
+<li><p>5.日本 Quasi-Zenith Satellite System （准天顶卫星系统） 简称QZSS ；</p></li>
+
+<li><p>6.印度 India Regional Navigation Satellite System（印度区域卫星导航系统）简称IRNSS。</p></li>
+</ul>
+
+<p>以上6个系统中国都能使用。</p>
+
+<p>（2）<strong>Wi-Fi</strong>定位：仅限于室内。</p>
+
+<p>（3）<strong>手机信号</strong>定位：通过运营商的信号塔定位。</p>
+
+<h3 id="3-用户自定义数据">3、用户自定义数据：<a href="#3-用户自定义数据" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>对不同获取方式的优缺点进行了比较，浏览器会<strong>自动以最优方式</strong>去获取用户地理信息：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2110.png" alt="" /></p>
+
+<h3 id="隐私">隐私<a href="#隐私" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>HTML5 Geolocation(地理位置定位) 规范提供了一套保护用户隐私的机制。必须先得到用户明确许可，才能获取用户的位置信息。</p>
+
+<h3 id="api详解">API详解<a href="#api详解" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<ul>
+<li><p>navigator.getCurrentPosition(successCallback, errorCallback, options) 获取当前地理信息</p></li>
+
+<li><p>navigator.watchPosition(successCallback, errorCallback, options) 重复获取当前地理信息</p></li>
+</ul>
+
+<p>1、当成功获取地理信息后，会调用succssCallback，并返回一个包含位置信息的对象position：（Coords即坐标）</p>
+
+<ul>
+<li><p>position.coords.latitude纬度</p></li>
+
+<li><p>position.coords.longitude经度</p></li>
+</ul>
+
+<p>2、当获取地理信息失败后，会调用errorCallback，并返回错误信息error。</p>
+
+<p>3、可选参数 options 对象可以调整位置信息数据收集方式</p>
+
+<p>地理位置的 api 代码演示：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="cm">/*navigator 导航*/</span>
+        <span class="c1">//geolocation: 地理定位
+</span><span class="c1">//        window.navigator.geolocation
+</span><span class="c1">//        兼容处理
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">){</span>
+<span class="c1">//       如果支持，获取用户地理信息
+</span><span class="c1"></span>
+<span class="c1">//            successCallback 当获取用户位置成功的回调函数
+</span><span class="c1">//            errorCallback 当获取用户位置失败的回调函数
+</span><span class="c1"></span>
+            <span class="nx">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="nx">successCallback</span><span class="p">,</span><span class="nx">errorCallback</span><span class="p">);</span>
+
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;sorry,你的浏览器不支持地理定位&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="c1">// 获取地理位置成功的回调函数
+</span><span class="c1"></span>        <span class="kd">function</span> <span class="nx">successCallback</span><span class="p">(</span><span class="nx">position</span><span class="p">){</span>
+<span class="c1">//            获取用户当前的经纬度
+</span><span class="c1">//            coords坐标
+</span><span class="c1">//            纬度latitude
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">wd</span><span class="o">=</span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span><span class="p">;</span>
+<span class="c1">//            经度longitude
+</span><span class="c1"></span>            <span class="kd">var</span> <span class="nx">jd</span><span class="o">=</span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">;</span>
+
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;获取用户位置成功！&#34;</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">wd</span><span class="o">+</span><span class="s1">&#39;----------------&#39;</span><span class="o">+</span><span class="nx">jd</span><span class="p">);</span>
+<span class="c1">//          40.05867366972477----------------116.33668634275229
+</span><span class="c1"></span>
+<span class="c1">//            谷歌地图：40.0601398850,116.3434224706
+</span><span class="c1">//            百度地图：40.0658210000,116.3500430000
+</span><span class="c1">//            腾讯高德：40.0601486487,116.3434373643
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="c1">// 获取地理位置失败的回调函数
+</span><span class="c1"></span>        <span class="kd">function</span> <span class="nx">errorCallback</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;获取用户位置失败！&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>百度地图api举例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>普通地图<span class="err">&amp;</span>全景图<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://c.cnzz.com/core.php&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;Content-Type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=utf-8&#34;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://api.map.baidu.com/api?v=2.0&amp;ak=NsGTBiDpgGQpI7KDmYNAPGuHWGjCh1zk&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+        <span class="nt">body</span><span class="o">,</span> <span class="nt">html</span><span class="p">{</span><span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span><span class="k">font-family</span><span class="p">:</span><span class="s2">&#34;微软雅黑&#34;</span><span class="p">;}</span>
+        <span class="p">#</span><span class="nn">panorama</span> <span class="p">{</span><span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;}</span>
+
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&#34;javascript&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js&#34;</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;gb2312&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+    <span class="nx">hQGHuMEAyLn</span><span class="p">(</span><span class="s1">&#39;[id=&#34;bb9c190068b8405587e5006f905e790c&#34;]&#39;</span><span class="p">);&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;panorama&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+    <span class="c1">//全景图展示
+</span><span class="c1"></span>    <span class="c1">//  谷歌获取的经纬度      40.05867366972477----------------116.33668634275229
+</span><span class="c1"></span>
+    <span class="c1">//            谷歌地图：40.0601398850,116.3434224706
+</span><span class="c1"></span>    <span class="c1">//            百度地图：40.0658210000,116.3500430000
+</span><span class="c1"></span>    <span class="c1">//            腾讯高德：40.0601486487,116.3434373643
+</span><span class="c1">//    var jd=116.336686;
+</span><span class="c1">//    var wd=40.058673;
+</span><span class="c1"></span>
+    <span class="kd">var</span> <span class="nx">jd</span><span class="o">=</span><span class="mf">116.350043</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">wd</span><span class="o">=</span><span class="mf">40.065821</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">panorama</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BMap</span><span class="p">.</span><span class="nx">Panorama</span><span class="p">(</span><span class="s1">&#39;panorama&#39;</span><span class="p">);</span>
+    <span class="nx">panorama</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">(</span><span class="k">new</span> <span class="nx">BMap</span><span class="p">.</span><span class="nx">Point</span><span class="p">(</span><span class="nx">jd</span><span class="p">,</span> <span class="nx">wd</span><span class="p">));</span> <span class="c1">//根据经纬度坐标展示全景图
+</span><span class="c1"></span>    <span class="nx">panorama</span><span class="p">.</span><span class="nx">setPov</span><span class="p">({</span><span class="nx">heading</span><span class="o">:</span> <span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="nx">pitch</span><span class="o">:</span> <span class="mi">6</span><span class="p">});</span>
+
+    <span class="nx">panorama</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;position_changed&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span> <span class="c1">//全景图位置改变后，普通地图中心点也随之改变
+</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">panorama</span><span class="p">.</span><span class="nx">getPosition</span><span class="p">();</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="k">new</span> <span class="nx">BMap</span><span class="p">.</span><span class="nx">Point</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">lng</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">lat</span><span class="p">));</span>
+        <span class="nx">marker</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">(</span><span class="nx">pos</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="c1">//    //普通地图展示
+</span><span class="c1">//    var mapOption = {
+</span><span class="c1">//        mapType: BMAP_NORMAL_MAP,
+</span><span class="c1">//        maxZoom: 18,
+</span><span class="c1">//        drawMargin:0,
+</span><span class="c1">//        enableFulltimeSpotClick: true,
+</span><span class="c1">//        enableHighResolution:true
+</span><span class="c1">//    }
+</span><span class="c1">//    var map = new BMap.Map(&#34;normal_map&#34;, mapOption);
+</span><span class="c1">//    var testpoint = new BMap.Point(jd, wd);
+</span><span class="c1">//    map.centerAndZoom(testpoint, 18);
+</span><span class="c1">//    var marker=new BMap.Marker(testpoint);
+</span><span class="c1">//    marker.enableDragging();
+</span><span class="c1">//    map.addOverlay(marker);
+</span><span class="c1">//    marker.addEventListener(&#39;dragend&#39;,function(e){
+</span><span class="c1">//                panorama.setPosition(e.point); //拖动marker后，全景图位置也随着改变
+</span><span class="c1">//                panorama.setPov({heading: -40, pitch: 6});}
+</span><span class="c1">//    );
+</span><span class="c1"></span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="全屏">全屏<a href="#全屏" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<blockquote>
+<p>HTML5规范允许用户自定义网页上<strong>任一元素</strong>全屏显示。</p>
+</blockquote>
+
+<h3 id="开启-关闭全屏显示">开启/关闭全屏显示<a href="#开启-关闭全屏显示" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>方法如下：（注意 screen 是小写）</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">requestFullscreen</span><span class="p">()</span>   <span class="c1">//让元素开启全屏显示
+</span><span class="c1"></span>
+	<span class="nx">cancleFullscreen</span><span class="p">()</span>    <span class="c1">//让元素关闭全屏显示
+</span></code></pre></div>
+<p>为考虑兼容性问题，不同的浏览器需要<strong>在此基础之上</strong>，添加私有前缀，比如：（注意 screen 是大写）</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">webkitRequestFullScreen</span>
+	 <span class="nx">webkitCancleFullScreen</span>
+
+	<span class="nx">mozRequestFullScreen</span>
+	<span class="nx">mozCancleFullScreen</span>
+</code></pre></div>
+<h3 id="检测当前是否处于全屏状态">检测当前是否处于全屏状态<a href="#检测当前是否处于全屏状态" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>方法如下：</p>
+
+<pre><code>	document.fullScreen
+</code></pre>
+
+<p>不同浏览器需要加私有前缀，比如：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">     <span class="nb">document</span><span class="p">.</span><span class="nx">webkitIsFullScreen</span>
+
+     <span class="nb">document</span><span class="p">.</span><span class="nx">mozFullScreen</span>
+</code></pre></div>
+<h3 id="全屏的伪类">全屏的伪类<a href="#全屏的伪类" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<ul>
+<li><p>:full-screen .box {}</p></li>
+
+<li><p>:-webkit-full-screen {}</p></li>
+
+<li><p>:moz-full-screen {}</p></li>
+</ul>
+
+<p>比如说，当元素处于全屏状态时，改变它的样式。这时就可以用到伪类。</p>
+
+<h3 id="代码举例">代码举例<a href="#代码举例" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">.</span><span class="nc">box</span> <span class="p">{</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">250</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">250</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+            <span class="k">margin</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span>
+            <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c">/*全屏伪类：当元素处于全屏时，改变元素的背景色*/</span>
+        <span class="p">.</span><span class="nc">box</span><span class="p">:</span><span class="nd">-webkit-full-screen</span> <span class="p">{</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">box</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.box&#39;</span><span class="p">);</span>
+    <span class="c1">// box.requestFullscreen();   //直接这样写是没有效果的。之所以无效，应该是浏览器的机制，必须要点一下才可以实现全屏功能。
+</span><span class="c1"></span>    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.box&#39;</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 开启全屏显示的兼容写法
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">requestFullscreen</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//如果支持全屏，那就让元素全屏
+</span><span class="c1"></span>            <span class="nx">box</span><span class="p">.</span><span class="nx">requestFullscreen</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">webkitRequestFullScreen</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">box</span><span class="p">.</span><span class="nx">webkitRequestFullScreen</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">mozRequestFullScreen</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">box</span><span class="p">.</span><span class="nx">mozRequestFullScreen</span><span class="p">();</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2130.gif" alt="" /></p>
+
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://horizono.github.io/">Horizon Chan</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+
+</body>
+
+</html>
