@@ -7,18 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 09 May 2020 18:38:58 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/weblearning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
+      <title>--00介绍--</title>
+      <link>https://horizono.github.io/weblearning/%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/%E4%BB%8B%E7%BB%8D/</guid>
+      <description>​ 页面内容来自https://github.com/qianguyihao/Web，不是原创内容，放到这里只为学习回顾。</description>
+    </item>
+    
+    <item>
+      <title>01-认识Web和Web标准</title>
       <link>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</guid>
-      <description>title: &amp;ldquo;01-认识Web和Web标准&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。
+      <description>Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。
 我们常说的Web端就是网页端。
 网页 网页是构成网站的基本元素。网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。
 我们在浏览器上输入网址后，打开的任何一个页面，都是属于网页。
@@ -43,13 +52,12 @@ JS 相当于人的行为：</description>
     </item>
     
     <item>
-      <title></title>
+      <title>02-浏览器的介绍</title>
       <link>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</guid>
-      <description>title: &amp;ldquo;02-浏览器的介绍&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示：
+      <description>常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示：
 我们重点需要学习的是 Chrome 浏览器。
 浏览器的市场占有份额 浏览器的市场占有份额：https://tongji.baidu.com/research/site?source=index#browser
 上面这张图的统计时间是2020年2月。
@@ -60,17 +68,17 @@ JS 相当于人的行为：</description>
 渲染引擎是浏览器兼容性问题出现的根本原因。
 渲染引擎的英文叫做 Rendering Engine。通俗来说，它的作用就是：读取网页内容，计算网页的显示方式并显示在页面上。
 常见浏览器的内核如下：
-   浏览器 内核     chrome Blink   欧鹏 Blink   360安全浏览器 Blink   360极速浏览器 Blink   Safari Webkit   Firefox 火狐 Gecko   IE Trident    备注：360的浏览器，以前使用的IE浏览器的Trident内核，但是现在已经改为使用 chrome 浏览器的 Blink内核。</description>
+   浏览器 内核     chrome Blink   欧鹏 Blink   360安全浏览器 Blink   360极速浏览器 Blink   Safari Webkit   Firefox 火狐 Gecko   IE Trident    备注：360的浏览器，以前使用的IE浏览器的Trident内核，但是现在已经改为使用 chrome 浏览器的 Blink内核。
+另外，移动端的浏览器内核是什么？大家可以自行查阅资料。</description>
     </item>
     
     <item>
-      <title></title>
+      <title>03-初识HTML</title>
       <link>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</guid>
-      <description>title: &amp;ldquo;03-初识HTML&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。
+      <description>编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。
 有人说 WebStorm 也不错？但真实情况是，自从VS Code 问世之后，用 WebStorm 的人越来越少了。
 PS：文件的后缀名不能决定文件格式，只能决定打开文件打开的方式。
 VS Code 的使用 详情请移步至：第一次使用VS Code时你应该知道的一切配置
@@ -94,13 +102,12 @@ XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本
     </item>
     
     <item>
-      <title></title>
+      <title>04-排版标签</title>
       <link>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</guid>
-      <description>title: &amp;ldquo;04-排版标签&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-本文主要内容 排版标签：
+      <description>本文主要内容 排版标签：
  &amp;lt;h1&amp;gt;
  &amp;lt;p&amp;gt;
  &amp;lt;hr /&amp;gt;
@@ -115,17 +122,18 @@ XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;H3：千古壹号，永不止步&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;H3：千古壹号，永不止步&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;H4：千古壹号，永不止步&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;H5：千古壹号，永不止步&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;H6：千古壹号，永不止步&amp;lt;/h6&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果演示：
 HTML 注释 HTML 注释的格式如下：
 &amp;lt;!-- 我是 html 注释 --&amp;gt; 段落标签&amp;lt;p&amp;gt; 段落，是英语“paragraph“缩写。
-作用：可以把 HTML 文档分割为若干段落。在网页中如果要把文字有条理地显示出来，离不开段落标签。就如同我们平常写文章一样，整个网页也可以分为若干个段落。</description>
+作用：可以把 HTML 文档分割为若干段落。在网页中如果要把文字有条理地显示出来，离不开段落标签。就如同我们平常写文章一样，整个网页也可以分为若干个段落。
+代码举例：
+&amp;lt;p&amp;gt;This is a paragraph&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;This is another paragraph&amp;lt;/p&amp;gt; 属性：</description>
     </item>
     
     <item>
-      <title></title>
+      <title>05-字体标签和超链接</title>
       <link>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</guid>
-      <description>title: &amp;ldquo;05-字体标签和超链接&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt;
+      <description>本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt;
 超链接 &amp;lt;a&amp;gt;
 字体标签 特殊字符（转义字符）  &amp;amp;nbsp;：空格 （non-breaking spacing，不断打空格） &amp;amp;lt;：小于号（less than） &amp;amp;gt;：大于号（greater than） &amp;amp;amp;：符号&amp;amp; &amp;amp;quot;：双引号 &amp;amp;apos;：单引号 &amp;amp;copy;：版权© &amp;amp;trade;：商标™ &amp;amp;#32464;：文字绐。其实，#32464是汉字绐的unicode编码。  要求背诵的特殊字符有：&amp;amp;nbsp;、&amp;amp;lt;、&amp;amp;gt;、&amp;amp;copy;。
 比如说，你想把&amp;lt;p&amp;gt;作为一个文本在页面上显示，直接写&amp;lt;p&amp;gt;是肯定不行的，因为这代表的是一个段落标签，所以这里需要用到转义字符。应该这么写：
@@ -137,13 +145,12 @@ HTML 注释 HTML 注释的格式如下：
     </item>
     
     <item>
-      <title></title>
+      <title>06-图片标签</title>
       <link>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</guid>
-      <description>title: &amp;ldquo;06-图片标签&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
+      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
 &amp;lt;img src=&amp;#34;图片的URL&amp;#34; /&amp;gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
  不能往网页中插入的图片格式是：psd、ai等。
@@ -161,17 +168,19 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 分析：
 现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
 答案：
-&amp;lt;img src=&amp;#34;../../photo/1.png&amp;#34; /&amp;gt; 写法二：图片的绝对路径 绝对路径包括以下两种：</description>
+&amp;lt;img src=&amp;#34;../../photo/1.png&amp;#34; /&amp;gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
+（1）以盘符开始的绝对路径。举例：
+&amp;lt;img src=&amp;#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&amp;#34;&amp;gt; （2）网络路径。举例：
+&amp;lt;img src=&amp;#34;http://img.smyhvae.com/20200122_200901.png&amp;#34;&amp;gt; 大家打开上面的img中的链接，可能有惊喜哦。</description>
     </item>
     
     <item>
-      <title></title>
+      <title>07-html标签图文详解</title>
       <link>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
-      <description>title: &amp;ldquo;07-html标签图文详解&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-本文主要内容  列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt;  列表标签 列表标签分为三种。
+      <description>本文主要内容  列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt;  列表标签 列表标签分为三种。
 1、无序列表&amp;lt;ul&amp;gt;，无序列表中的每一项是&amp;lt;li&amp;gt; 英文单词解释如下：
  ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
 &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;默认1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认3&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 效果：
@@ -186,13 +195,12 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
     </item>
     
     <item>
-      <title></title>
+      <title>08-HTML5详解</title>
       <link>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</guid>
-      <description>title: &amp;ldquo;08-HTML5详解&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
- 本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。
+      <description>本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。
 以下是正文。
  HTML5的介绍 Web 技术发展时间线  1991 HTML
  1994 HTML2
@@ -210,41 +218,19 @@ H5草案的前身是叫：Web Application，最早是由WHATWG这个组织在200
 2007年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
 什么是 HTML5 HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。
 HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
-HTML5的广义概念：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。</description>
+HTML5的广义概念：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。
+HTML5不等于 HTML next version。HTML5 包含： HTML的升级版、CSS的升级版、JavaScript API的升级版。</description>
     </item>
     
     <item>
-      <title></title>
+      <title>09-简单的视频播放器</title>
       <link>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
-      <description>title: &amp;ldquo;09-简单的视频播放器&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
 index.html的代码如下：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;#34;Microsoft Yahei&amp;#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
-      <description>title: &amp;ldquo;10-HTML5详解(二)&amp;rdquo; date: 2020-05-09T18:38:58+08:00 draft: true
-本文主要内容  拖拽
- 历史
- 地理位置
- 全屏
-  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
-在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
-1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。
-举例如下：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;#34;box1&amp;#34; draggable=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果如下：
-上图中，我们给 box1 增加了draggable=&amp;quot;true&amp;quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
-拖拽元素的事件监听：（应用于拖拽元素）
- ondragstart当拖拽开始时调用
- ondragleave 当鼠标离开拖拽元素时调用</description>
     </item>
     
   </channel>

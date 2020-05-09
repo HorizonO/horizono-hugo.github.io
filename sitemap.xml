@@ -3,8 +3,79 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://horizono.github.io/weblearning/%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/11-html5%E8%AF%A6%E8%A7%A3%E4%B8%89/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/12-html%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://horizono.github.io/</loc>
-    <lastmod>2019-10-26T16:14:15+08:00</lastmod>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://horizono.github.io/weblearning/</loc>
+    <lastmod>2020-05-09T18:38:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -163,76 +234,6 @@
   <url>
     <loc>https://horizono.github.io/post/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/11-html5%E8%AF%A6%E8%A7%A3%E4%B8%89/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/12-html%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/%E4%BB%8B%E7%BB%8D/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://horizono.github.io/weblearning/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
