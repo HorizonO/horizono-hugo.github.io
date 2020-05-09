@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on Horizon</title>
+    <title>Blogs on Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/blog/</link>
-    <description>Recent content in Blogs on Horizon</description>
+    <description>Recent content in Blogs on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zn-Hans</language>
     <lastBuildDate>Sun, 22 Sep 2019 17:05:50 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -14,68 +13,525 @@
     
     <item>
       <title>MarkDown语法</title>
-      <link>https://horizono.github.io/blog/markdown%E8%AF%AD%E6%B3%95/</link>
+      <link>https://horizono.github.io/blog/2019-09/markdown%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Sun, 22 Sep 2019 17:05:50 +0800</pubDate>
       
-      <guid>https://horizono.github.io/blog/markdown%E8%AF%AD%E6%B3%95/</guid>
-      <description>** 2019-09-22 下午学习markdown语法
-6中级别的标题，对应html标签 h1 - h6 # h1
-## h2
-### h3
-#### h4
-##### h5
-###### h6
-标题形式 一级标题 === （标题的下一行，输入3个 = ，表示一级标题）
-二级标题 &amp;mdash; （标题的下一行，输入3个 - ，表示二级标题）
-强调处理（高亮） &amp;gt; 需要高亮内容
-插入链接或图片 *[注释]:[链接标题] (链接)
-![图片名称](图片地址)
-注：引用链接和应用图片的唯一区别是：引用图片前加一个感叹号
-列表 •无序列表，用 * ， + ， - ，作为列表标记，注意*/+/-后面加空格 • 有序列表，使用数字并加上 . 表示
-使用列表的注意事项： • 如果一个列表包含多个段落，为保证渲染正常， * 与段落首字母保留四个空格 • 如果在列表中加入区块引用，区域引用标记符也需要缩进4个空格
-分隔线 使用 3个*** 或 3个- 都可以
-强调 使用 * 或 _ 包裹，使用单一符号标记是斜体，使用两个符号标记是加粗 如 *斜体部分* 或 _斜体部分_ **加粗部分** 或 __加粗部分__</description>
+      <guid>https://horizono.github.io/blog/2019-09/markdown%E8%AF%AD%E6%B3%95/</guid>
+      <description>** 2019-09-22 下午学习markdown语法 6中级别的标题，对应html标签 h1 - h6 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 标题形式 一级标题 === （标题的下一行，输入3个 = ，表示一级标题） 二级标题 &amp;mdash; （标题的下一行，输入3个 - ，表示二级标题） 强调处理（高亮） &amp;gt; 需要高亮内容 插入链接或图片 *[注释]:[链接标题] (链接) ![图片名称](图片地址) 注：引用链接和应用图片的唯一区别是：引用图片前加一个感叹号 列表 •无序列表，用 * ， + ， - ，作为</description>
     </item>
     
     <item>
       <title>Hugo&#43;Github</title>
-      <link>https://horizono.github.io/blog/hugo&#43;github/</link>
+      <link>https://horizono.github.io/blog/2019-07/hugo-github/</link>
       <pubDate>Sun, 21 Jul 2019 00:06:16 +0800</pubDate>
       
-      <guid>https://horizono.github.io/blog/hugo&#43;github/</guid>
-      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 记录搭建Hugo+Github静态博客。
-一、运行环境：
-*Win10+Git
-二、Hugo是什么？
-Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。
-三、开始搭建
-Step 1：下载和安装Hugo
-①：进入Hugo的github仓库[下载]对应自己电脑的版本； ②：下载完之后，把解压包解压，里面有一个hugo.exe文件。然后在磁盘(F:)下创建Hugo文件夹，里面再创建bin文件夹和Sites文件夹。 把hugo.exe复制到bin文件夹目录下，最后把F:\Hugo\bin路径配置到系统的环境变量Path中，保存即可。
-Step 2：创建站点
-Window环境下以管理员身份运行命令提示符，切换到站点目录下(F:\Hugo\Sites) 接下来输入命令hugo new site myblog创建名为myblog的博客站点。 创建完成后会多出一个文件夹myblog，里面有很多子文件夹(content,themes等等)。
-Step 3：选择主题
- ①：进入Hugo主题[官网]，选择自己喜欢的bolg主题风格，选好之后一般都有安装方法介绍。例如：
-根据网站给出的代码，拷贝，再把拷贝的代码git clone https://github.com/sourcethemes/academic-kickstart.git My_Website输入，这一步的前提是一定要先安装Git工具；
-②：预览 待主题安装成功后，输入hugo server -t 主题名称 --buildDrafts，按回车键，会出现如下打码：
-其中化黄线的链接就是在本机预览的链接，打开便可以看到个人博客添加主题后的样子。
- Step 4：第一篇博客
-①：回到myblog根目录：输入命令hugo new post\myblog.md即可新建一个后缀是md的文件，用来写博客的内容。 一般用vim命令，vs code可以编辑；
-②：写好内容之后，再在本机预览一遍，输入预览命令hugo server -t 主题名称 --buildDrafts，打开链接即可预览； 预览成功后，接下来便是把整个站点推到Github仓库中。
-Step 5：新建Github仓库
-**在Github主页选择New rpository选项：
-** 这里注意Owner与Repository name尽量要保持一致，
-并在后面加上.github.io ! 完成以上步骤后按Create repository按钮即可创建一个仓库。 接下来就是把站点挂载到刚刚新建的仓库中
-Step 6：部署到Github
-①：关联你的Github：输入hugo --theme=主题名称 --baseUrl=&amp;quot;https://xxx.github.io&amp;quot;(xxx表示你的github..) --buildDrafts 按回车键后发现根目录下多出一个public的文件夹；</description>
+      <guid>https://horizono.github.io/blog/2019-07/hugo-github/</guid>
+      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 记录搭建Hugo+Github静态博客。 一、运行环境： *Win10+Git 二、Hugo是什么？ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。 三、开始搭建 Step 1：下载和安装Hugo ①：进入Hugo的github仓库[下载]对应自</description>
     </item>
     
     <item>
       <title>BlogT</title>
-      <link>https://horizono.github.io/blog/blogt/</link>
+      <link>https://horizono.github.io/blog/2019-07/blogt/</link>
       <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
       
-      <guid>https://horizono.github.io/blog/blogt/</guid>
+      <guid>https://horizono.github.io/blog/2019-07/blogt/</guid>
       <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。
+我们常说的Web端就是网页端。
+网页 网页是构成网站的基本元素。网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。
+我们在浏览器上输入网址后，打开的任何一个页面，都是属于网页。
+浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。
+关于浏览器的详细介绍，可以看下一篇文章：《浏览器的介绍》
+Web标准 W3C组织 W3C：万维网联盟组织，用来制定web标准的机构（组织）。
+W3C 万维网联盟是国际最著名的标准化组织。1994年成立后，至今已发布近百项相关万维网的标准，对万维网发展做出了杰出的贡献。
+W3C 组织就类似于现实世界中的联合国。
+为什么要遵循WEB标准呢？因为很多浏览器的浏览器内核不同，导致页面解析出来的效果可能会有差异，给开发者增加无谓的工作量。因此需要指定统一的标准。
+Web 标准 Web标准：制作网页要遵循的规范。
+Web标准不是某一个标准，而是由W3C组织和其他标准化组织制定的一系列标准的集合。
+1、Web标准包括三个方面：
+ 结构标准（HTML）：用于对网页元素进行整理和分类。
+ 表现标准（CSS）：用于设置网页元素的版式、颜色、大小等外观样式。
+ 行为标准（JS）：用于定义网页的交互和行为。
+  根据上面的Web标准，可以将 Web前端分为三层，如下。
+2、Web前端分三层：
+ HTML（HyperText Markup Language）：超文本标记语言。从语义的角度描述页面的结构。相当于人的身体组织结构。 CSS（Cascading Style Sheets）：层叠样式表。从审美的角度美化页面的样式。相当于人的衣服和打扮。 JS：JavaScript。从交互的角度描述页面的行为。相当于人的动作，让人有生命力。  3、打个比方：（拿黄渤举例）
+HTML 相当于人的身体组织结构：
+CSS 相当于人的衣服和打扮：
+JS 相当于人的行为：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示：
+我们重点需要学习的是 Chrome 浏览器。
+浏览器的市场占有份额 浏览器的市场占有份额：https://tongji.baidu.com/research/site?source=index#browser
+上面这张图的统计时间是2020年2月。
+浏览器的组成 浏览器分成两部分：
+ 1、渲染引擎（即：浏览器内核）
+ 2、JS 引擎
+  1、渲染引擎（浏览器内核） 浏览器所采用的「渲染引擎」也称之为「浏览器内核」，用来解析 HTML与CSS。渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。
+渲染引擎是浏览器兼容性问题出现的根本原因。
+渲染引擎的英文叫做 Rendering Engine。通俗来说，它的作用就是：读取网页内容，计算网页的显示方式并显示在页面上。
+常见浏览器的内核如下：
+   浏览器 内核     chrome Blink   欧鹏 Blink   360安全浏览器 Blink   360极速浏览器 Blink   Safari Webkit   Firefox 火狐 Gecko   IE Trident    备注：360的浏览器，以前使用的IE浏览器的Trident内核，但是现在已经改为使用 chrome 浏览器的 Blink内核。
+另外，移动端的浏览器内核是什么？大家可以自行查阅资料。
+2、JS 引擎 也称为 JS 解释器。 用来解析网页中的JavaScript代码，对其处理后再运行。
+浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎(解释器) 来执行 JS 代码 。JS 引擎执行时会逐行解释源码（转换为机器语言），然后由计算机去执行。
+浏览器本身并不会执行JS代码，而是通过内置 JavaScript 引擎(解释器) 来执行 JS 代码 。JS 引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行。所以 JavaScript 语言归为脚本语言，会逐行解释执行。
+常见浏览器的 JS 引擎如下：
+   浏览器 JS 引擎     chrome / 欧鹏 V8   Safari Nitro   Firefox 火狐 SpiderMonkey（1.0-3.0）/ TraceMonkey（3.5-3.6）/ JaegerMonkey（4.0-）   Opera Linear A（4.0-6.1）/ Linear B（7.0-9.2）/ Futhark（9.5-10.2）/ Carakan（10.5-）   IE Trident    参考链接：
+ 主流浏览器内核及JS引擎  浏览器工作原理  这一小段有些深入，小白可以暂时跳过，以后再来看。
+ 1、User Interface 用户界面，我们所看到的浏览器
+2、Browser engine 浏览器引擎，用来查询和操作渲染引擎
+3、Rendering engine 用来显示请求的内容，负责解析HTML、CSS
+4、Networking 网络，负责发送网络请求
+5、JavaScript Interpreter(解析者) JavaScript解析器，负责执行JavaScript的代码
+6、UI Backend UI后端，用来绘制类似组合框和弹出窗口
+7、Data Persistence(持久化) 数据持久化，数据存储 cookie、HTML5中的sessionStorage
+参考链接：
+ https://www.2cto.com/kf/201202/118111.html  我的公众号 想学习代码之外的技能？不妨关注我的微信公众号：千古壹号。
+扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。
+有人说 WebStorm 也不错？但真实情况是，自从VS Code 问世之后，用 WebStorm 的人越来越少了。
+PS：文件的后缀名不能决定文件格式，只能决定打开文件打开的方式。
+VS Code 的使用 详情请移步至：第一次使用VS Code时你应该知道的一切配置
+Sublime Text 的使用 详情请移步至：Sublime Text使用技巧
+HTML的概述 HTML的概念 HTML 全称为 HyperText Markup Language，译为超文本标记语言。
+HTML 不是一种编程语言，是一种描述性的标记语言。
+作用：HTML是负责描述文档语义的语言。
+概念：超文本 所谓的超文本，有两层含义：
+（1）图片、音频、视频、动画、多媒体等内容，成为超文本，因为它们超出了文本的限制。
+（2）不仅如此，它还可以从一个文件跳转到另一个文件，与世界各地主机的文件进行连接。即：超级链接文本。
+概念：标记语言 HTML 不是一种编程语言，是一种描述性的标记语言。这主要有两层含义：
+（1）标记语言是一套标记标签。比如：标签&amp;lt;a&amp;gt;表示超链接、标签&amp;lt;img&amp;gt;表示图片、标签&amp;lt;h1&amp;gt;表示一级标题等等，它们都是属于 HTML 标签。
+说的通俗一点就是：网页是由网页元素组成的，这些元素是由 HTML 标签描述出来，然后通过浏览器解析，就可以显示给用户看了。
+（2）编程语言是有编译过程的，而标记语言没有编译过程，HTML标签是直接由浏览器解析执行。
+HTML是负责描述文档语义的语言 HTML 格式的文件是一个纯本文文件（就是用txt文件改名而成），用一些标签来描述语义，这些标签在浏览器页面上是无法直观看到的，所以称之为“超文本标记语言”。
+接下来，我们需要学习 HTML 中的很多“标签对儿”，这些“标签对儿”能够给文本不同的语义。
+比如，面试的时候问你，&amp;lt;h1&amp;gt; 标签有什么作用？
+ 正确答案：给文本增加主标题的语义。 错误答案：给文字加粗、加黑、变大。  关乎“语义”的更深刻理解，等接下来我们学习了各种标签，就明白了。
+HTML的历史 其中，我们专门来对XHTML做一个介绍。
+XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本标注语言。 XHTML的主要目的是为了取代HTML，也可以理解为HTML的升级版。 HTML的标记书写很不规范，会造成其它的设备(ipad、手机、电视等)无法正常显示。 XHTML与HTML4.0的标记基本上一样。 XHTML是严格的、纯净的HTML。
+我们稍后将对XHTML的编写规范进行介绍。
+HTML的专有名词  网页 ：由各种标记组成的一个页面就叫网页。 主页(首页) : 一个网站的起始页面或者导航页面。 标记： 比如&amp;lt;p&amp;gt;称为开始标记 ，&amp;lt;/p&amp;gt;称为结束标记，也叫标签。每个标签都规定好了特殊的含义。 元素：比如&amp;lt;p&amp;gt;内容&amp;lt;/p&amp;gt;称为元素. 属性：给每一个标签所做的辅助信息。 XHTML：符合XML语法标准的HTML。 DHTML：dynamic，动态的。javascript + css + html合起来的页面就是一个 DHTML。 HTTP：超文本传输协议。用来规定客户端浏览器和服务端交互时数据的一个格式。SMTP：邮件传输协议，FTP：文件传输协议。  书写第一个 HTML 页面 我们打开 VS Code 软件，新建一个文件，名叫test.html（注意，文件名是test，后缀名是html），保存到本地。
+紧接着，在文件里，输入html:5，然后按一下键盘上的Tab键，就可以自动生成如下内容：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  上面的内容，就是 html 页面的骨架。我们在此基础之上，新增几个标签，完整代码如下：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h3&amp;gt;我是三级标题&amp;lt;/h3&amp;gt; &amp;lt;img src=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;https://www.jd.com&amp;quot;&amp;gt;我是超链接，可以点击一下&amp;lt;/a&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  标签写完之后，我们用 chrome 浏览器打开上面这个test.html文件，看看页面效果：
+到此，第一个简单的 HTML 页面就写完了。是不是很有成就感？
+HTML结构详解 HTML标签通常是成对出现的（双边标记），比如 &amp;lt;div&amp;gt; 和 &amp;lt;/div&amp;gt;；也有少部分单标签（单边标记），如：&amp;lt;br /&amp;gt;、&amp;lt;hr /&amp;gt;和&amp;lt;img src=&amp;quot;images/1.jpg&amp;quot; /&amp;gt;等。
+属性与标记之间、各属性之间需要以空格隔开。属性值以双引号括起来。
+html骨架标签分类    标签名 定义 说明     &amp;lt;html&amp;gt;&amp;lt;/html&amp;gt; HTML标签 页面中最大的标签，我们成为根标签   &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; 文档的头部 注意在head标签中我们必须要设置的标签是title   &amp;lt;titile&amp;gt;&amp;lt;/title&amp;gt; 文档的标题 让页面拥有一个属于自己的网页标题   &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt; 文档的主体 元素包含文档的所有内容，页面内容 基本都是放到body里面的    快速生成 html 的骨架 方式1：在 VS Code 中新建 html 文件，输入html:5，按 Tab键后，自动生成的代码如下：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文主要内容 排版标签：
+ &amp;lt;h1&amp;gt;
+ &amp;lt;p&amp;gt;
+ &amp;lt;hr /&amp;gt;
+ &amp;lt;br /&amp;gt;
+ &amp;lt;div&amp;gt;
+ &amp;lt;span&amp;gt;
+ &amp;lt;center&amp;gt;
+ &amp;lt;pre&amp;gt;
+  下面来详细介绍一下排版标签。
+标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。
+代码举例：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;H3：千古壹号，永不止步&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;H3：千古壹号，永不止步&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;H4：千古壹号，永不止步&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;H5：千古壹号，永不止步&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;H6：千古壹号，永不止步&amp;lt;/h6&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  效果演示：
+HTML 注释 HTML 注释的格式如下：
+&amp;lt;!-- 我是 html 注释 --&amp;gt;  段落标签&amp;lt;p&amp;gt; 段落，是英语“paragraph“缩写。
+作用：可以把 HTML 文档分割为若干段落。在网页中如果要把文字有条理地显示出来，离不开段落标签。就如同我们平常写文章一样，整个网页也可以分为若干个段落。
+代码举例：
+&amp;lt;p&amp;gt;This is a paragraph&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;This is another paragraph&amp;lt;/p&amp;gt;  属性：
+ align=&amp;quot;属性值&amp;quot;：对齐方式。属性值包括left center right。  属性举例：
+HTML标签是分等级的，HTML将所有的标签分为两种：
+ 文本级标签：p、span、a、b、i、u、em。文本级标签里只能放文字、图片、表单元素。（a标签里不能放a和input）
+ 容器级标签：div、h系列、li、dt、dd。容器级标签里可以放置任何东西。
+  从学习p的第一天开始，就要牢牢记住：p标签是一个文本级标签，p里面只能放文字、图片、表单元素。其他的一律不能放。
+错误写法：（尝试把 h 放到 p 里）
+&amp;lt;p&amp;gt; 我是一个小段落 &amp;lt;h1&amp;gt;我是一级标题&amp;lt;/h1&amp;gt; &amp;lt;/p&amp;gt;  网页效果如下：
+上图显示，浏览器不允许你这么做，我们使用Chrome的F12审查元素发现，浏览器自己把p封闭掉了，不让你去包裹h1。
+PS：Chrome浏览器是HTML5支持度最好的浏览器。提供了非常好的开发工具，非常适合我们开发人员使用。审查元素功能的快捷键是F12。
+水平线标签&amp;lt;hr /&amp;gt;  horizontal 单词的发音：[ˌhɒrɪˈzɒntl]。
+ 水平分隔线（horizontal rule）可以在视觉上将文档分隔成各个部分。在网页中常常看到一些水平线将段落与段落之间隔开，使得文档结构清晰，层次分明。
+代码举例：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;自古情深留不住&amp;lt;/p&amp;gt; &amp;lt;hr /&amp;gt; &amp;lt;p&amp;gt;总是套路得人心&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  运行效果：
+属性介绍： - align=&amp;quot;属性值&amp;quot;：设定线条置放位置。属性值可选择：left right center。 - size=&amp;quot;2&amp;quot;：设定线条粗细。以像素为单位，内定为2。 - width=&amp;quot;500&amp;quot;或width=&amp;quot;70%&amp;quot;：设定线条长度。可以是绝对值（单位是像素）或相对值。如果设置为相对值的话，内定为100%。 - color=&amp;quot;#0000FF&amp;quot;：设置线条颜色。 - noshade：不要阴影，即设定线条为平面显示。若没有这个属性则表明线条具阴影或立体。
+属性效果演示：
+换行标签&amp;lt;br /&amp;gt; 如果希望某段文本强制换行显示，就需要使用换行标签。
+This &amp;lt;br/&amp;gt; is a para&amp;lt;br/&amp;gt;graph with line breaks  效果如下：
+&amp;lt;div&amp;gt;和&amp;lt;span&amp;gt;标签 div和span是非常重要的标签，div的语义是division“分割”； span的语义就是span“范围、跨度”。想必你应该听说过“div + css”布局。
+div和span的介绍  div标签：可以把标签中的内容分割为独立的区块。必须单独占据一行。
+ span标签：和div的作用一致，但不换行。
+  代码举例：
+div标签的属性：
+ align=&amp;quot;属性值&amp;quot;：设置块儿的位置。属性值可选择：left、right、 center。  div和span的区别 &amp;lt;span&amp;gt;和&amp;lt;div&amp;gt;唯一的区别在于：&amp;lt;span&amp;gt;是不换行的，而&amp;lt;div&amp;gt;是换行的。
+如果单独在网页中插入这两个元素，不会对页面产生任何的影响。这两个元素是专门为定义CSS样式而生的。或者说，DIV+CSS来实现各种样式。
+div在浏览器中，默认是不会增加任何的效果的，但是语义变了，div中的所有元素是一个小区域。 div标签是一个容器级标签，里面什么都能放，甚至可以放div自己。
+span也是表达“小区域、小跨度”的标签，但只是一个文本级的标签。 就是说，span里面只能放置文字、图片、表单元素。 span里面不能放p、h、ul、dl、ol、div。
+span举例：
+&amp;lt;p&amp;gt; 简介简介简介简介简介简介简介简介 &amp;lt;span&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;详细信息&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;购买&amp;lt;/a&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/p&amp;gt;  div举例：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt;
+超链接 &amp;lt;a&amp;gt;
+字体标签 特殊字符（转义字符）  &amp;amp;nbsp;：空格 （non-breaking spacing，不断打空格） &amp;amp;lt;：小于号（less than） &amp;amp;gt;：大于号（greater than） &amp;amp;amp;：符号&amp;amp; &amp;amp;quot;：双引号 &amp;amp;apos;：单引号 &amp;amp;copy;：版权© &amp;amp;trade;：商标™ &amp;amp;#32464;：文字绐。其实，#32464是汉字绐的unicode编码。  要求背诵的特殊字符有：&amp;amp;nbsp;、&amp;amp;lt;、&amp;amp;gt;、&amp;amp;copy;。
+比如说，你想把&amp;lt;p&amp;gt;作为一个文本在页面上显示，直接写&amp;lt;p&amp;gt;是肯定不行的，因为这代表的是一个段落标签，所以这里需要用到转义字符。应该这么写：
+这是一个HTML语言的&amp;amp;lt;p&amp;amp;gt;标签  正确的效果如下：
+错误的效果如下：
+其实我们只要记住前三个符号就行了，其他的在需要的时候查一下就行了。而且，EditPlus软件中是可以直接点击这些符号进行选择的：
+来一张表格，方便需要的时候查询：
+   特殊字符 描述 字符的代码      空格符 &amp;amp;nbsp;   &amp;lt; 小于号 &amp;amp;lt;   &amp;gt;  大于号 &amp;amp;gt;   &amp;amp; 和号 &amp;amp;amp;   ￥ 人民币 &amp;amp;yen;   © 版权 &amp;amp;copy;   ® 注册商标 &amp;amp;reg;   ° 摄氏度 &amp;amp;deg;   ± 正负号 &amp;amp;plusmn;   × 乘号 &amp;amp;times;   ÷ 除号 &amp;amp;divide;   ² 平方2（上标2） &amp;amp;sup2;   ³ 立方3（上标3） &amp;amp;sup3;    下划线、中划线、斜体  &amp;lt;u&amp;gt;：下划线标记
+ &amp;lt;s&amp;gt;或&amp;lt;del&amp;gt;：中划线标记（删除线）
+ &amp;lt;i&amp;gt;或&amp;lt;em&amp;gt;：斜体标记
+  效果：
+上面的这几个标签，常用于做一些小装饰、小图标。比如：
+这张图中，我们通过查看京东网站的代码发现，箭头处的小图标都是用的标签&amp;lt;i&amp;gt;。
+粗体标签&amp;lt;b&amp;gt;或&amp;lt;strong&amp;gt;（已废弃） 效果：
+字体标签&amp;lt;font&amp;gt;（已废弃） 属性：
+ color=&amp;quot;红色&amp;quot;或color=&amp;quot;#ff00cc&amp;quot;或color=&amp;quot;new rgb(0,0,255)&amp;quot;：设置字体颜色。 设置方式：单词 \ #ff00cc \ rgb(0,0,255)
+ size：设置字体大小。 取值范围只能是：1至7。取值时，如果取值大于7那就按照7来算，如果取值小于1那就按照1来算。如果想要更大的字体，那就只能通过css样式来解决。
+ face=&amp;quot;微软雅黑&amp;quot;：设置字体类型。
+  举例：
+&amp;lt;font face=&amp;quot;微软雅黑&amp;quot; color=&amp;quot;#FF0000&amp;quot; size=&amp;quot;10&amp;quot;&amp;gt;vae&amp;lt;/font&amp;gt;  效果：
+上标&amp;lt;sup&amp;gt; 下标&amp;lt;sub&amp;gt; 上小标这两个标签容易混淆，怎么记呢？这样记：b的意思是bottom：底部 举例：
+O&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt; 5&amp;lt;sub&amp;gt;3&amp;lt;/sub&amp;gt;  效果：
+三、超链接 超链接有三种形式，下面分别讲讲。
+1、外部链接：链接到外部文件 举例：
+&amp;lt;a href=&amp;quot;02页面.html&amp;quot;&amp;gt;点击进入另外一个文件&amp;lt;/a&amp;gt;  a是英语anchor“锚”的意思，就好像这个页面往另一个页面扔出了一个锚。是一个文本级的标签。
+href（hypertext reference）：超文本地址。读作“喝瑞夫”，不要读作“喝夫”。
+效果：
+当然，我们也可以直接点进链接，访问一个网址。举例如下：
+	&amp;lt;a href=&amp;quot;http://www.baidu.com&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;点我点我&amp;lt;/a&amp;gt;  2、锚链接 锚链接：给超链接起一个名字，作用是在本页面或者其他页面的的不同位置进行跳转。比如说，在网页底部有一个向上箭头，点击箭头后回到顶部，这个就可以利用锚链接。
+首先我们要创建一个锚点，也就是说，使用name属性或者id属性给那个特定的位置起个名字。效果如下：
+上图中解释：
+第11行代码表示，顶部这个锚的名字叫做name1。 然后在底部设置超链接，点击时将回到顶部（此时，网页中的url的末尾也出现了#name1）。注意上图中红框部分的#号不要忘记了，表示跳到名为name1的特定位置，这是规定。如果少了#号，点击之后，就会跳到name1这个文件或者name1这个文件夹中去。
+如果我们将上图中的第28行代码写成：
+&amp;lt;a href=&amp;quot;a.html#name1&amp;quot;&amp;gt;回到顶部&amp;lt;/a&amp;gt;  那就表示，点击之后，跳转到a.html页面的name1锚点中去。
+说明：name属性是HTML4.0以前使用的，id属性是HTML4.0后才开始使用。为了向前兼容，因此，name和id这两个属性都要写上，并且值是一样的。
+3、邮件链接 代码举例：
+&amp;lt;a href=&amp;quot;mailto:xxx@163.com&amp;quot;&amp;gt;点击进入我的邮箱&amp;lt;/a&amp;gt;  效果：点击之后，会弹出outlook，作用不大。
+超链接的属性  href：目标URL title：悬停文本。 name：主要用于设置一个锚点的名称。 target：告诉浏览器用什么方式来打开目标页面。target属性有以下几个值：  _self：在同一个网页中显示（默认值） _blank：在新的窗口中打开。 _parent：在父窗口中显示 _top：在顶级窗口中显示   title属性举例：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
+如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
+&amp;lt;img src=&amp;quot;图片的URL&amp;quot; /&amp;gt;  能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
+ 不能往网页中插入的图片格式是：psd、ai等。
+  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
+img标签的src属性 这里涉及到图片的一个属性：
+ src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
+写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
+举例1：
+&amp;lt;!-- 当前目录中的图片 --&amp;gt; &amp;lt;img src=&amp;quot;2.jpg&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;.\2.jpg&amp;quot;&amp;gt; &amp;lt;!-- 上一级目录中的图片 --&amp;gt; &amp;lt;img src=&amp;quot;..\2.jpg&amp;quot;&amp;gt;  相对路径不会出现这种情况：
+aaa/../bbb/1.jpg  ../要么不写，要么就写在开头。
+举例2：
+&amp;lt;img src=&amp;quot;images/1.jpg&amp;quot;&amp;gt;  上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
+相对路径的面试题。现有如下文件层级图：
+问题：如果想在index.html中插入1.png，那么对应的img语句是？
+分析：
+现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
+答案：
+&amp;lt;img src=&amp;quot;../../photo/1.png&amp;quot; /&amp;gt;  写法二：图片的绝对路径 绝对路径包括以下两种：
+（1）以盘符开始的绝对路径。举例：
+&amp;lt;img src=&amp;quot;C:\Users\qianguyihao\Desktop\html\images\1.jpg&amp;quot;&amp;gt;  （2）网络路径。举例：
+&amp;lt;img src=&amp;quot;http://img.smyhvae.com/20200122_200901.png&amp;quot;&amp;gt;  大家打开上面的img中的链接，可能有惊喜哦。
+相对路径和绝对路径的总结 相对路径的好处：站点不管拷贝到哪里，文件和图片的相对路径关系都是不变的。相对路径使用有一个前提，就是网页文件和你的图片，必须在一个服务器上。
+问题：我的网页在C盘，图片却在D盘，能不能插入呢？
+答案： 用相对路径不能，用绝对路径也不能。
+注意：可以使用file://来插入，但是这种方法，没有任何意义！因为服务器上没有所谓c盘、d盘。
+下面的方法是行的，但是没有任何工程上的意义，这是因为服务器没有盘符，linux系统没有盘符：
+&amp;lt;img src=&amp;quot;file://C:\Users\qianguyihao\Pictures\明星\1.jpg&amp;quot; alt=&amp;quot;&amp;quot; /&amp;gt;  总结一下：
+无论是在 a 标签还是 img 标签上，如果要用路径。只有两种路径能用，就是相对路径和绝对路径：
+ 相对路径从自己出发，找到别人。
+ 绝对路径，就是http://或者https://开头的路径。
+ 绝对不允许使用file://开头的文件，这个是完全错误的！
+  img标签的其他属性 width、height 属性  width：图像的宽度。
+ height：图像的高度。
+  width和height，在 HTML5 中的单位是 CSS 像素，在 HTML 4 中既可以是像素，也可以是百分比。可以只指定 width 和 height 中的一个值，浏览器会根据原始图像进行缩放。
+重要提示：如果要想保证图片等比例缩放，请只设置width和height中其中一个。
+Alt 属性  alt：当图片不可用（无法显示）的时候，代替图片显示的内容。alt是英语 alternate “替代”的意思，代表替换资源。  Alt属性效果演示：
+如上图所示：当图片 src 不可用的时候，显示文字。这样做，至少能让用户知道，这个图片大概是什么内容。
+title 属性  title：提示性文本。鼠标悬停时出现的文本。  title 属性不该被用作一幅图片在 alt 之外的补充说明信息。如果一幅图片需要小标题，使用 figure 或 figcaption 元素。
+title 元素的值一般作为提示条(tooltip)呈现给用户，在光标于图片上停下后显示出来。尽管这确实能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，可以选择上面提供的一种方法将其内联显示，而不是使用 title。
+举例：
+&amp;lt;img src=&amp;quot;images/1.jpg&amp;quot; width=&amp;quot;300&amp;quot; height=&amp;quot;`188&amp;quot; title=&amp;quot;这是美女&amp;quot;&amp;gt;  效果：
+align 属性  图片的align属性：图片和周围文字的相对位置。属性取值可以是：bottom（默认）、center、top、left、right。  如果想实现图文混排的效果，请使用align属性，取值为left或right。
+我们来分别看一下这align属性的这几个属性值的区别。
+1、align=&amp;quot;&amp;quot;，图片和文字低端对齐。即默认情况下的显示效果：
+2、align=&amp;quot;center&amp;quot;：图片和文字水平方向上居中对齐。显示效果：
+3、align=&amp;quot;top&amp;quot;：图片与文字顶端对齐。显示效果：
+4、align=&amp;quot;left&amp;quot;：图片在文字的左边。显示效果：
+5、align=&amp;quot;right&amp;quot;：图片在文字的右边。显示效果：
+其他已废弃的属性  Align（已废弃）：指图片的水平对齐方式，属性值可以是：top、middle、bottom、left、center、right。该属性已废弃，替换为 vertical-align这个CSS属性。 border（已废弃）：给图片加边框，单位是像素，边框的颜色默认黑色。该属性已废弃，替换为 border这个CSS属性。 Hspace（已废弃）：指图片左右的边距。 Vspace（已废弃）：指图片上下的边距。  最后，送上妹子的近照一张。楼主已经仁至义尽了：http://img.smyhvae.com/2015-10-01-cnblogs_html_20150219214912_11994.jpg
+我的公众号 想学习代码之外的技能？不妨关注我的微信公众号：千古壹号（id：qianguyihao）。
+扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文主要内容  列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt;  列表标签 列表标签分为三种。
+1、无序列表&amp;lt;ul&amp;gt;，无序列表中的每一项是&amp;lt;li&amp;gt; 英文单词解释如下：
+ ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;默认1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认3&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  效果：
+注意：
+ li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
+ type=&amp;quot;属性值&amp;quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&amp;lt;ul&amp;gt;标签有type属性，&amp;lt;ul&amp;gt;里面的&amp;lt;li&amp;gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
+注意：项目符号可以是图片，需要通过CSS设置&amp;lt;li&amp;gt;标记的背景图片来实现(CSS中讲)。
+当然了，列表之间是可以嵌套的。我们来举个例子。代码：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;北京市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;海淀区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;朝阳区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;东城区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;广州市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;天河区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;越秀区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  效果：
+css 属性：
+list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */  ul标签实际应用场景： 场景1、导航条：
+场景2、li 里面放置的内容可能很多：
+声明：ul的儿子，只能是li。但是li是一个容器级标签，li里面什么都能放，甚至可以再放一个ul。
+2、有序列表&amp;lt;OL&amp;gt;，里面的每一项是&amp;lt;li&amp;gt; 英文单词：Ordered List。
+例如：
+&amp;lt;ol &amp;gt; &amp;lt;li&amp;gt;呵呵哒1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;呵呵哒2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;呵呵哒3&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;  效果：
+属性： - type=&amp;quot;属性值&amp;quot;。属性值可以是：1(阿拉伯数字，默认)、a、A、i、I。结合start属性表示从几开始。
+举例：
+&amp;lt;ol type=&amp;quot;1&amp;quot;&amp;gt; &amp;lt;li&amp;gt;呵呵&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;呵呵&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;呵呵&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;ol type=&amp;quot;a&amp;quot;&amp;gt; &amp;lt;li&amp;gt;嘿嘿&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;嘿嘿&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;呵呵&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;ol type=&amp;quot;i&amp;quot; start=&amp;quot;4&amp;quot;&amp;gt; &amp;lt;li&amp;gt;哈哈&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;哈哈&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;哈哈&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;ol type=&amp;quot;I&amp;quot; start=&amp;quot;10&amp;quot;&amp;gt; &amp;lt;li&amp;gt;么么&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;么么&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;么么&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt;  效果如下： 和无序列表一样，有序列表也是可以嵌套的哦，这里就不举类似的例子了。
+ol和ul就是语义不一样，怎么使用都是一样的。 ol里面只能有li，li必须被ol包裹。li是容器级。
+ol这个东西用的不多，如果想表达顺序，大家一般也用ul。举例如下：
+&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;1. 小苹果&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;2. 月亮之上&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;3. 最炫民族风&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt;  3、定义列表&amp;lt;dl&amp;gt;  定义列表的作用非常大。
+ &amp;lt;dl&amp;gt;英文单词：definition list，没有属性。dl的子元素只能是dt和dd。
+ &amp;lt;dt&amp;gt;：definition title 列表的标题，这个标签是必须的 &amp;lt;dd&amp;gt;：definition description 列表的列表项，如果不需要它，可以不加  备注：dt、dd只能在dl里面；dl里面只能有dt、dd。
+举例：
+&amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;第一条&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;你若是觉得你有实力和我玩，良辰不介意奉陪到底&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;我会让你明白，我从不说空话&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;我是本地的，我有一百种方式让你呆不下去；而你，无可奈何&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;第二条&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;良辰最喜欢对那些自认能力出众的人出手&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;你可以继续我行我素，不过，你的日子不会很舒心&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;你只要记住，我叫叶良辰&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;不介意陪你玩玩&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;良辰必有重谢&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt;  效果：
+上图可以看出，定义列表表达的语义是两层：
+ （1）是一个列表，列出了几个dd项目 （2）每一个词儿都有自己的描述项。  备注：dd是描述dt的。
+定义列表用法非常灵活，可以一个dt配很多dd：
+&amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;北京&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;国家首都，政治文化中心&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;污染很严重，PM2.0天天报表&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;上海&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;魔都，有外滩、东方明珠塔、黄浦江&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;广州&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;中国南大门，有珠江、小蛮腰&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt;  还可以拆开，让每一个dl里面只有一个dt和dd，这样子感觉清晰一些：
+&amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;北京&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;国家首都，政治文化中心&amp;lt;/dd&amp;gt; &amp;lt;dd&amp;gt;污染很严重，PM2.0天天报表&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;上海&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;魔都，有外滩、东方明珠塔、黄浦江&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;广州&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;中国南大门，有珠江、小蛮腰&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt;  真实案例：（京东最下方）
+上图中的结构如下：
+&amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;购物指南&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;购物流程&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;会员介绍&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;生活旅行/团购&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;常见问题&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;大家电&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;联系客服&amp;lt;/a&amp;gt; &amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt; &amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;配送方式&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;上门自提&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;211限时达&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;配送服务查询&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;配送费收取标准&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;海外配送&amp;lt;/a&amp;gt; &amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt;  京东商品分类如下：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。
+以下是正文。
+ HTML5的介绍 Web 技术发展时间线  1991 HTML
+ 1994 HTML2
+ 1996 CSS1 + JavaScript
+ 1997 HTML4
+ 1998 CSS2
+ 2000 XHTML1（严格的html）
+ 2002 Tableless Web Design（表格布局）
+ 2005 AJAX
+ 2009 HTML5
+ 2014 HTML5 Finalized
+  2002年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。
+2009年就已经推出了HTML5的草案，但直到2014年才有定稿，是因为有移动端的推动。
+H5草案的前身是叫：Web Application，最早是由WHATWG这个组织在2004年提出的。
+2007年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
+什么是 HTML5 HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。
+HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
+HTML5的广义概念：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。
+HTML5不等于 HTML next version。HTML5 包含： HTML的升级版、CSS的升级版、JavaScript API的升级版。
+总结：HTML5是新一代开发 Web 富客户端应用程序整体解决方案。包括：HTML5，CSS3，Javascript API在内的一套技术组合。
+富客户端：具有很强的交互性和体验的客户端程序。比如说，浏览博客，是比较简单的客户端；一个在线听歌的网站、即时聊天网站就是富客户端。
+PS：
+单纯地从技术的角度讲，兼容性问题只会让开发者徒增烦恼。
+如果网页端的程序能做到PC客户端的体验，就会对后者构成威胁。
+HTML5 的应用场景 列举几个HTML5 的应用场景：
+（1）极具表现力的网页：内容简约而不简单。
+（2）网页应用程序：
+ 代替PC端的软件：iCloud、百度脑图、Office 365等。
+ APP端的网页：淘宝、京东、美团等。
+ 微信端：公众号、小程序等。
+  （3）混合式本地应用。
+（4）简单的游戏。
+HTML5 新增的内容 语义化的标签 语义化的作用 语义标签对于我们并不陌生，如&amp;lt;p&amp;gt;表示一个段落、&amp;lt;ul&amp;gt;表示一个无序列表。标签语义化的作用：
+ 能够便于开发者阅读和写出更优雅的代码。
+ 同时让浏览器或是网络爬虫可以很好地解析，从而更好分析其中的内容。
+ 更好地搜索引擎优化。
+  总结：HTML的职责是描述一块内容是什么（或其意义），而不是它长什么样子；它的外观应该由CSS来决定。
+H5在语义上的改进 在此基础上，HTML5 增加了大量有意义的语义标签，更有利于搜索引擎或辅助设备理解 HTML 页面内容。HTML5会让HTML代码的内容更结构化、标签更语义化。
+我们常见的 css+div 布局是：
+在html5中，我们可以这样写：
+传统的做法中，我们通过增加类名如class=&amp;quot;header&amp;quot;、class=&amp;quot;footer&amp;quot;，使HTML页面具有语义性，但是不具有通用性。
+HTML5 则是通过新增语义标签的形式来解决这个问题，例如&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;、&amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;等，这样就可以使其具有通用性。
+传统网页布局：
+&amp;lt;!-- 头部 --&amp;gt; &amp;lt;div class=&amp;quot;header&amp;quot;&amp;gt; &amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;&amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- 主体部分 --&amp;gt; &amp;lt;div class=&amp;quot;main&amp;quot;&amp;gt; &amp;lt;!-- 文章 --&amp;gt; &amp;lt;div class=&amp;quot;article&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;!-- 侧边栏 --&amp;gt; &amp;lt;div class=&amp;quot;aside&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- 底部 --&amp;gt; &amp;lt;div class=&amp;quot;footer&amp;quot;&amp;gt; &amp;lt;/div&amp;gt;  H5 的经典网页布局：
+&amp;lt;!-- 头部 --&amp;gt; &amp;lt;header&amp;gt; &amp;lt;ul class=&amp;quot;nav&amp;quot;&amp;gt;&amp;lt;/ul&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;!-- 主体部分 --&amp;gt; &amp;lt;div class=&amp;quot;main&amp;quot;&amp;gt; &amp;lt;!-- 文章 --&amp;gt; &amp;lt;article&amp;gt;&amp;lt;/article&amp;gt; &amp;lt;!-- 侧边栏 --&amp;gt; &amp;lt;aside&amp;gt;&amp;lt;/aside&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- 底部 --&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;/footer&amp;gt;  H5中新增的语义标签  &amp;lt;section&amp;gt; 表示区块
+ &amp;lt;article&amp;gt; 表示文章。如文章、评论、帖子、博客
+ &amp;lt;header&amp;gt; 表示页眉
+ &amp;lt;footer&amp;gt; 表示页脚
+ &amp;lt;nav&amp;gt; 表示导航</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
+index.html的代码如下：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;quot;Microsoft Yahei&amp;quot;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .controls{ width: 700px; height:40px; background-color: rgba(255, 255, 0, 0.3); position: absolute; bottom:10px; left:10px; border-radius: 10px; } /*开关*/ .switch{ position: absolute; width: 20px; height: 20px; left:10px; top:10px; text-align: center; line-height: 20px; color:yellow; } /*进度条*/ .progress{ width: 432px; height: 10px; position: absolute; background-color: rgba(255,255,255,0.4); left:40px; top:15px; border-radius: 4px; overflow: hidden; } /* 当前进度*/ .curr-progress{ width: 50%; height: 10px; background-color: #fff; } /* 时间模块*/ .time{ width: 120px; height: 20px; text-align: center; line-height: 20px; color:#fff; position: absolute; left:510px; top:10px; font-size:12px; } /*全屏*/ .extend{ position: absolute; width: 20px; height: 20px; right:20px; top:10px; text-align: center; line-height: 20px; color:yellow; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- 多媒体--&amp;gt; &amp;lt;figure&amp;gt; &amp;lt;!-- 多媒体标题--&amp;gt; &amp;lt;figcaption&amp;gt;视频案例&amp;lt;/figcaption&amp;gt; &amp;lt;div class=&amp;quot;palyer&amp;quot;&amp;gt; &amp;lt;video src=&amp;quot;video/fun.mp4&amp;quot;&amp;gt;&amp;lt;/video&amp;gt; &amp;lt;!-- 控制条--&amp;gt; &amp;lt;div class=&amp;quot;controls&amp;quot;&amp;gt; &amp;lt;!-- 播放暂停--&amp;gt; &amp;lt;a href=&amp;quot;#&amp;quot; class=&amp;quot;switch icon-play&amp;quot;&amp;gt;&amp;lt;/a&amp;gt; &amp;lt;div class=&amp;quot;progress&amp;quot;&amp;gt; &amp;lt;!-- 当前进度--&amp;gt; &amp;lt;div class=&amp;quot;curr-progress&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!-- 时间--&amp;gt; &amp;lt;div class=&amp;quot;time&amp;quot;&amp;gt; &amp;lt;span class=&amp;quot;curr-time&amp;quot;&amp;gt;00:00:00&amp;lt;/span&amp;gt;/&amp;lt;span class=&amp;quot;total-time&amp;quot;&amp;gt;00:00:00&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。
+举例如下：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;quot;box1&amp;quot; draggable=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  效果如下：
+上图中，我们给 box1 增加了draggable=&amp;quot;true&amp;quot; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用
+  代码演示：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .box { width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;quot;box&amp;quot; draggable=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; var box = document.querySelector(&#39;.box&#39;); // 绑定拖拽事件 // 拖拽开始 box.ondragstart = function () { console.log(&#39;拖拽开始.&#39;); } // 拖拽离开：鼠标拖拽时离开被拖拽的元素时触发 box.ondragleave = function () { console.log(&#39;拖拽离开..&#39;); } // 拖拽结束 box.ondragend = function () { console.log(&#39;拖拽结束...&#39;); console.log(&amp;quot;---------------&amp;quot;); } box.ondrag = function () { console.log(&#39;拖拽&#39;); } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  效果如下：
+打印结果：
+2、目标元素 比如说，你想把元素A拖拽到元素B里，那么元素B就是目标元素。
+页面中任何一个元素都可以成为目标元素。
+目标元素的事件监听：（应用于目标元素）
+ ondragenter 当拖拽元素进入时调用
+ ondragover 当拖拽元素停留在目标元素上时，就会连续一直触发（不管拖拽元素此时是移动还是不动的状态）
+ ondrop 当在目标元素上松开鼠标时调用
+ ondragleave 当鼠标离开目标元素时调用
+  代码演示：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; .one { width: 100px; height: 100px; border: 1px solid #000; background-color: green; } .two { position: relative; width: 200px; height: 200px; left: 300px; top: 100px; border: 1px solid #000; background-color: red; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;quot;one&amp;quot; draggable=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;quot;two&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; var two = document.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;input type=&amp;quot;text&amp;quot;/&amp;gt; &amp;lt;button&amp;gt;sesssionStorage存储&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;sesssionStorage获取&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;sesssionStorage更新&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;sesssionStorage删除&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;sesssionStorage清除&amp;lt;/button&amp;gt; &amp;lt;script&amp;gt; //在h5中提供两种web存储方式 // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存 // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上 var txt = document.querySelector(&#39;input&#39;); var btns = document.querySelectorAll(&#39;button&#39;); // sessionStorage存储数据 btns[0].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); window.sessionStorage.setItem(&#39;pwd&#39;, &#39;123456&#39;); window.sessionStorage.setItem(&#39;age&#39;, 18); } // sessionStorage获取数据 btns[1].onclick = function () { txt.value = window.sessionStorage.getItem(&#39;userName&#39;); } // sessionStorage更新数据 btns[2].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); } // sessionStorage删除数据 btns[3].onclick = function () { window.sessionStorage.removeItem(&#39;userName&#39;); } // sessionStorage清空数据 btns[4].onclick = function () { window.sessionStorage.clear(); } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  效果如下：
+如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。
+localStorage 的 API 举例：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;input type=&amp;quot;text&amp;quot;/&amp;gt; &amp;lt;button&amp;gt;localStorage存储&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;localStorage获取&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;localStorage更新&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;localStorage删除&amp;lt;/button&amp;gt; &amp;lt;button&amp;gt;localStorage清除&amp;lt;/button&amp;gt; &amp;lt;script&amp;gt; /* * localStorage * 数据存在硬盘上 * 永久生效 * 20M * */ var txt = document.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://horizono.github.io/blog/1-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/blog/1-01/</guid>
+      <description>本文主要内容  html 的常见元素
+ html 元素的分类
+ html 元素的嵌套关系
+ html 元素的默认样式和 CSS Reset
+ html 常见面试题
+  html 的常见元素 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。
+1、head 区域的 html 元素  head 区域的 html 元素，不会在页面上留下直接的内容。
+  meta
+ title
+ style
+ link
+ script
+ base
+  base元素的介绍：
+&amp;lt;base href=&amp;quot;/&amp;quot;&amp;gt;  base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。
+2、html 元素（body 区域）  body 区域的 html 元素，会直接出现在页面上。
+  div、section、article、aside、header、footer
+ p
+ span、em、strong
+ 表格元素：table、thead、tbody、tr、td
+ 列表元素：ul、ol、dl、dt、dd
+ a
+ 表单元素：form、input、select、textarea、button
+  div 是最常见的元素，大多数场景下，都可以用div（实在不行就多包几层div）。可见，div 是比较通用的元素，这也决定了 div 的的语义并不是很明确。
+常见标签的重要属性：
+ a[href,target] img[src,alt] table td[colspan,rowspan]。设置当前单元格占据几行几列。在合并单元格时，会用到。 form[target,method,enctype] input[type,value] button[type] selection&amp;gt;option[value] label[for]  html 文档的大纲 我们平时在写论文或者其他文档的时候，一般会先列出大纲，然后再写具体的内容。
+同样，html 网页也可以看成是一种文档，也有属于它的大纲。
+一个常见的html文档，它的结构可以是：
+&amp;lt;section&amp;gt; &amp;lt;h1&amp;gt;一级标题&amp;lt;/h1&amp;gt; &amp;lt;section&amp;gt; &amp;lt;h2&amp;gt;二级标题&amp;lt;/h2&amp;gt; &amp;lt;p&amp;gt;段落内容&amp;lt;/p&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;section&amp;gt; &amp;lt;h2&amp;gt;二级标题&amp;lt;/h2&amp;gt; &amp;lt;p&amp;gt;段落内容&amp;lt;/p&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;aside&amp;gt; &amp;lt;p&amp;gt;广告内容&amp;lt;/p&amp;gt; &amp;lt;/aside&amp;gt; &amp;lt;/section&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;p&amp;gt;某某公司出品&amp;lt;/p&amp;gt; &amp;lt;/footer&amp;gt;  查看网页大纲的工具 我们可以通过 http://h5o.github.io/ 这个工具查看一个网页的大纲。
+使用方法：
+（1）将网址 http://h5o.github.io/ 保存到书签栏
+（2）去目标网页，点击书签栏的网址，即可查看该网页的大纲。
+这个工具非常好用，既可以查看网页的大纲，也可以查看 markdown 在线文档的结构。
+html 元素的分类 按照样式分类：
+ 块级元素
+ 行内元素
+ inline-block：比如form表单元素。对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。
+  按照内容分类：
+图片来源：https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content
+html 元素的嵌套关系  块级元素可以包含行内元素。
+ 块级元素不一定能包含块级元素。比如 div 中可以包含 div，但 p 标签中不能包含 div。
+ 行内元素一般不能包含块级元素。比如 span 中不能包含 div。但有个特例：在 HTML5 中， a 标签中可以包含 div。
+  注意：在 HTML5 中 a &amp;gt; div 是合法的， div &amp;gt; a &amp;gt; div是不合法的 ；但是在 html 4.0.1 中， a &amp;gt; div 仍然是不合法的。
+html 元素的默认样式和 CSS Reset 比如下拉框这种比较复杂的元素，是自带默认样式的。如果没有这个默认样式，则该元素在页面上不会有任何表现，则必然增加一些工作量。
+同时，默认样式也会带来一些问题：比如，有些默认样式我们是不需要的；有些默认样式甚至无法去掉。</description>
     </item>
     
   </channel>

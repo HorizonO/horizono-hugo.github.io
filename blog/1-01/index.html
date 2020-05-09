@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Horizon">
+  <meta name="description" content="Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&quot;en&quot;&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&quot;text&quot;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式 // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存 // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上 var txt = document.querySelector(&#39;input&#39;); var btns = document.querySelectorAll(&#39;button&#39;); // sessionStorage存储数据 btns[0].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); window.sessionStorage.setItem(&#39;pwd&#39;, &#39;123456&#39;); window.sessionStorage.setItem(&#39;age&#39;, 18); } // sessionStorage获取数据 btns[1].onclick = function () { txt.value = window.sessionStorage.getItem(&#39;userName&#39;); } // sessionStorage更新数据 btns[2].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); } // sessionStorage删除数据 btns[3].onclick = function () { window.sessionStorage.removeItem(&#39;userName&#39;); } // sessionStorage清空数据 btns[4].onclick = function () { window.sessionStorage.clear(); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  效果如下：
+如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。
+localStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&quot;en&quot;&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&quot;text&quot;/&gt; &lt;button&gt;localStorage存储&lt;/button&gt; &lt;button&gt;localStorage获取&lt;/button&gt; &lt;button&gt;localStorage更新&lt;/button&gt; &lt;button&gt;localStorage删除&lt;/button&gt; &lt;button&gt;localStorage清除&lt;/button&gt; &lt;script&gt; /* * localStorage * 数据存在硬盘上 * 永久生效 * 20M * */ var txt = document.">
+  
+  <meta property="og:title" content="" />
+<meta property="og:description" content="Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&quot;en&quot;&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&quot;text&quot;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式 // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存 // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上 var txt = document.querySelector(&#39;input&#39;); var btns = document.querySelectorAll(&#39;button&#39;); // sessionStorage存储数据 btns[0].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); window.sessionStorage.setItem(&#39;pwd&#39;, &#39;123456&#39;); window.sessionStorage.setItem(&#39;age&#39;, 18); } // sessionStorage获取数据 btns[1].onclick = function () { txt.value = window.sessionStorage.getItem(&#39;userName&#39;); } // sessionStorage更新数据 btns[2].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); } // sessionStorage删除数据 btns[3].onclick = function () { window.sessionStorage.removeItem(&#39;userName&#39;); } // sessionStorage清空数据 btns[4].onclick = function () { window.sessionStorage.clear(); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  效果如下：
+如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。
+localStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&quot;en&quot;&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&quot;text&quot;/&gt; &lt;button&gt;localStorage存储&lt;/button&gt; &lt;button&gt;localStorage获取&lt;/button&gt; &lt;button&gt;localStorage更新&lt;/button&gt; &lt;button&gt;localStorage删除&lt;/button&gt; &lt;button&gt;localStorage清除&lt;/button&gt; &lt;script&gt; /* * localStorage * 数据存在硬盘上 * 永久生效 * 20M * */ var txt = document." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizono.github.io/blog/1-01/" />
+
+
+
+  <title>
+  
+        | Horizon&#39;s  坚果壳 
+  
+  </title>
+
+  <link rel="canonical" href="https://horizono.github.io/blog/1-01/">
+
+  
+  
+
+  
+  <link href="https://horizono.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://horizono.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://horizono.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://horizono.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://horizono.github.io/img/chen.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://horizono.github.io/">
+          
+        <img class="avatar" src="https://horizono.github.io/img/chen.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> Horizon</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://horizono.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/moment/" >Moment  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/notes/" >Notes  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/about-hugo/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides/JMCY5568.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//SWGV6042.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://horizono.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://horizono.github.io/img/ki.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://horizono.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Horizon&#39;s  坚果壳</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/HorizonO" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+                <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading"></div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Jan 1, 0001</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>2 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="web-存储">Web 存储</h2>
+
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。</p>
+
+<h3 id="h5-中有两种存储的方式">H5 中有两种存储的方式</h3>
+
+<p>1、<strong><code>window.sessionStorage</code> 会话存储：</strong></p>
+
+<ul>
+<li><p>保存在内存中。</p></li>
+
+<li><p><strong>生命周期</strong>为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。</p></li>
+
+<li><p>在同一个窗口下数据可以共享。</p></li>
+</ul>
+
+<p>2、<strong><code>window.localStorage</code> 本地存储</strong>：</p>
+
+<ul>
+<li><p>有可能保存在浏览器内存里，有可能在硬盘里。</p></li>
+
+<li><p>永久生效，除非手动删除（比如清理垃圾的时候）。</p></li>
+
+<li><p>可以多窗口共享。</p></li>
+</ul>
+
+<h3 id="web-存储的特性">Web 存储的特性</h3>
+
+<p>（1）设置、读取方便。</p>
+
+<p>（2）容量较大，sessionStorage 约5M、localStorage 约20M。</p>
+
+<p>（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。</p>
+
+<h3 id="常见-api">常见 API</h3>
+
+<p>设置存储内容：</p>
+
+<pre><code class="language-javascript">	setItem(key, value);
+</code></pre>
+
+<p>PS：可以新增一个 item，也可以更新一个 item。</p>
+
+<p>读取存储内容：</p>
+
+<pre><code class="language-javascript">	getItem(key);
+</code></pre>
+
+<p>根据键，删除存储内容：</p>
+
+<pre><code class="language-javascript">	removeItem(key);
+</code></pre>
+
+<p>清空所有存储内容：</p>
+
+<pre><code class="language-javascript">	clear();
+</code></pre>
+
+<p>根据索引值来获取存储内容：</p>
+
+<pre><code class="language-javascript">	key(n);
+</code></pre>
+
+<p>sessionStorage 的 API 举例：</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang=&quot;en&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type=&quot;text&quot;/&gt;
+&lt;button&gt;sesssionStorage存储&lt;/button&gt;
+&lt;button&gt;sesssionStorage获取&lt;/button&gt;
+&lt;button&gt;sesssionStorage更新&lt;/button&gt;
+&lt;button&gt;sesssionStorage删除&lt;/button&gt;
+&lt;button&gt;sesssionStorage清除&lt;/button&gt;
+&lt;script&gt;
+
+    //在h5中提供两种web存储方式
+
+    // sessionStorage  session（会话，会议） 5M  当窗口关闭是数据销毁  内存
+    // localStorage    20M 永久生效 ，除非手动删除  清理垃圾  硬盘上
+
+    var txt = document.querySelector('input');
+
+    var btns = document.querySelectorAll('button');
+    //        sessionStorage存储数据
+    btns[0].onclick = function () {
+        window.sessionStorage.setItem('userName', txt.value);
+        window.sessionStorage.setItem('pwd', '123456');
+        window.sessionStorage.setItem('age', 18);
+    }
+
+    //        sessionStorage获取数据
+    btns[1].onclick = function () {
+        txt.value = window.sessionStorage.getItem('userName');
+    }
+
+    //        sessionStorage更新数据
+    btns[2].onclick = function () {
+        window.sessionStorage.setItem('userName', txt.value);
+    }
+
+    //        sessionStorage删除数据
+    btns[3].onclick = function () {
+        window.sessionStorage.removeItem('userName');
+    }
+
+    //        sessionStorage清空数据
+    btns[4].onclick = function () {
+        window.sessionStorage.clear();
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2200.gif" alt="" /></p>
+
+<p>如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。</p>
+
+<p><strong>localStorage 的 API 举例：</strong></p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang=&quot;en&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input type=&quot;text&quot;/&gt;
+&lt;button&gt;localStorage存储&lt;/button&gt;
+&lt;button&gt;localStorage获取&lt;/button&gt;
+&lt;button&gt;localStorage更新&lt;/button&gt;
+&lt;button&gt;localStorage删除&lt;/button&gt;
+&lt;button&gt;localStorage清除&lt;/button&gt;
+
+&lt;script&gt;
+
+    /*
+    *  localStorage
+    *  数据存在硬盘上
+    *  永久生效
+    *  20M
+    * */
+
+    var txt = document.querySelector('input');
+    var btns = document.querySelectorAll('button');
+
+    //        localStorage存储数据
+    btns[0].onclick = function () {
+        window.localStorage.setItem('userName', txt.value);
+    }
+
+    //        localStorage存储数据
+    btns[1].onclick = function () {
+        txt.value = window.localStorage.getItem('userName');
+    }
+
+    //        localStorage删除数据
+    btns[3].onclick = function () {
+        window.localStorage.removeItem('userName');
+    }
+
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="案例-记住用户名和密码">案例：记住用户名和密码</h3>
+
+<p>代码：</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang=&quot;en&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;label for=&quot;&quot;&gt;
+    用户名：&lt;input type=&quot;text&quot; class=&quot;userName&quot;/&gt;
+&lt;/label&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;label for=&quot;&quot;&gt;
+    密 码：&lt;input type=&quot;text&quot; class=&quot;pwd&quot;/&gt;
+&lt;/label&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;label for=&quot;&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;check&quot; id=&quot;&quot;/&gt;记住密码
+&lt;/label&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;button&gt;登录&lt;/button&gt;
+
+&lt;script&gt;
+    var userName = document.querySelector('.userName');
+    var pwd = document.querySelector('.pwd');
+    var chk = document.querySelector('.check');
+    var btn = document.querySelector('button');
+
+    //        当点击登录的时候 如果勾选“记住密码”，就存储密码；否则就清除密码
+    btn.onclick = function () {
+        if (chk.checked) {
+//                记住数据
+            window.localStorage.setItem('userName', userName.value);
+            window.localStorage.setItem('pwd', pwd.value);
+        } else {
+//                清除数据
+            window.localStorage.removeItem('userName');
+            window.localStorage.removeItem('pwd');
+        }
+    }
+    //        下次登录时，如果记录的有数据，就直接填充
+    window.onload = function () {
+        userName.value = window.localStorage.getItem('userName');
+        pwd.value = window.localStorage.getItem('pwd');
+
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="网络状态">网络状态</h2>
+
+<p>我们可以通过 <code>window.onLine</code> 来检测用户当前的网络状况，返回一个布尔值。另外：</p>
+
+<ul>
+<li><p>window.online：用户网络连接时被调用。</p></li>
+
+<li><p>window.offline：用户网络断开时被调用（拔掉网线或者禁用以太网）。</p></li>
+</ul>
+
+<p>网络状态监听的代码举例：</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang=&quot;en&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script&gt;
+    window.addEventListener('online', function () {
+        alert('网络连接建立！');
+    });
+
+    window.addEventListener('offline', function () {
+        alert('网络连接断开！');
+    })
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="应用缓存">应用缓存</h2>
+
+<p>HTML5中我们可以轻松的构建一个离线（无网络状态）应用，只需要创建一个 <code>cache manifest</code> 缓存清单文件。</p>
+
+<h3 id="优势">优势</h3>
+
+<p>1、可配置需要缓存的资源；</p>
+
+<p>2、网络无连接应用仍可用；</p>
+
+<p>3、本地读取缓存资源，提升访问速度，增强用户体验；</p>
+
+<p>4、减少请求，缓解服务器负担。</p>
+
+<h3 id="cache-manifest-缓存清单文件"><code>cache manifest</code> 缓存清单文件</h3>
+
+<p>缓存清单文件中列出了浏览器应缓存，以供离线访问的资源。推荐使用 <code>.appcache</code>作为后缀名，另外还要添加MIME类型。</p>
+
+<p><strong>缓存清单文件里的内容怎样写：</strong></p>
+
+<p>（1）顶行写CACHE MANIFEST。</p>
+
+<p>（2）CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等。</p>
+
+<p>（3）NETWORK: 换行 指定需要在线访问的资源，可使用通配符（也就是：不需要缓存的、必须在网络下面才能访问的资源）。</p>
+
+<p>（4）FALLBACK: 换行 当被缓存的文件找不到时的备用资源（当访问不到某个资源时，自动由另外一个资源替换）。</p>
+
+<p>格式举例1：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2240.png" alt="" /></p>
+
+<p>格式举例2：</p>
+
+<pre><code class="language-bash">CACHE MANIFEST
+
+#要缓存的文件
+CACHE:
+    images/img1.jpg
+    images/img2.jpg
+
+
+#指定必须联网才能访问的文件
+NETWORK:
+     images/img3.jpg
+     images/img4.jpg
+
+
+#当前页面无法访问是回退的页面
+FALLBACK:
+    404.html
+
+</code></pre>
+
+<p><strong>缓存清单文件怎么用：</strong></p>
+
+<p>（1）例如我们创建一个名为 <code>demo.appcache</code>的文件。例如：</p>
+
+<p>demo.appcache：</p>
+
+<pre><code class="language-bash">CACHE MANIFEST
+
+# 注释以#开头
+#下面是要缓存的文件
+CACHE:
+    http://img.smyhvae.com/2016040101.jpg
+</code></pre>
+
+<p>（2）在需要应用缓存在页面的根元素(html)里，添加属性manifest=&ldquo;demo.appcache&rdquo;。路径要保证正确。例如：</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html manifest=&quot;01.appcache&quot;&gt;
+&lt;head lang=&quot;en&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img src=&quot;http://img.smyhvae.com/2016040101.jpg&quot; alt=&quot;&quot;/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://horizono.github.io/blog/1-01/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span></span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://horizono.github.io/blog/1-01/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span></span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/HorizonO " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://horizono.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://horizono.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://horizono.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

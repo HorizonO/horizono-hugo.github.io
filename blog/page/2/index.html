@@ -340,8 +340,8 @@
         <a href="https://horizono.github.io/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
     </li>
     
-    <li class="page-item disabled">
-    <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    <li class="page-item">
+    <a href="https://horizono.github.io/blog/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
     </li>
     
     
@@ -354,7 +354,7 @@
         
     
     
-    <li class="page-item active"><a class="page-link" href="https://horizono.github.io/blog/">1</a></li>
+    <li class="page-item"><a class="page-link" href="https://horizono.github.io/blog/">1</a></li>
     
     
     
@@ -365,7 +365,7 @@
         
     
     
-    <li class="page-item"><a class="page-link" href="https://horizono.github.io/blog/page/2/">2</a></li>
+    <li class="page-item active"><a class="page-link" href="https://horizono.github.io/blog/page/2/">2</a></li>
     
     
     
@@ -402,7 +402,7 @@
     
     
     <li class="page-item">
-    <a href="https://horizono.github.io/blog/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    <a href="https://horizono.github.io/blog/page/3/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
     
     <li class="page-item">
@@ -416,12 +416,12 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://horizono.github.io/blog/2019-09/markdown%E8%AF%AD%E6%B3%95/">
+  <a href="https://horizono.github.io/blog/1-01/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">MarkDown语法</div>
+      <div class="px-4 post-heading"></div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Sep 22, 2019</li>
+          <li>Jan 1, 0001</li>
         
     
         
@@ -433,7 +433,51 @@
     
 
     
-      ** 2019-09-22 下午学习markdown语法 6中级别的标题，对应html标签 h1 - h6 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 标题形式 一级标题 === （标题的下一行，输入3个 = ，表示一级标题） 二级标题 — （标题的下一行，输入3个 - ，表示二级标题） 强调处理（高亮） &gt; 需要高亮内容 插入链接或图片 *[注释]:[链接标题] (链接) ![图片名称](图片地址) 注：引用链接和应用图片的唯一区别是：引用图片前加一个感叹号 列表 •无序列表，用 * ， &#43; ， - ，作为......
+      本文主要内容  html 的常见元素
+ html 元素的分类
+ html 元素的嵌套关系
+ html 元素的默认样式和 CSS Reset
+ html 常见面试题
+  html 的常见元素 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。
+1、head 区域的 html 元素  head 区域的 html 元素，不会在页面上留下直接的内容。
+  meta
+ title
+ style
+ link
+ script
+ base
+  base元素的介绍：
+&lt;base href=&#34;/&#34;&gt;  base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。
+2、html 元素（body 区域）  body 区域的 html 元素，会直接出现在页面上。
+  div、section、article、aside、header、footer
+ p
+ span、em、strong
+ 表格元素：table、thead、tbody、tr、td
+ 列表元素：ul、ol、dl、dt、dd
+ a
+ 表单元素：form、input、select、textarea、button
+  div 是最常见的元素，大多数场景下，都可以用div（实在不行就多包几层div）。可见，div 是比较通用的元素，这也决定了 div 的的语义并不是很明确。
+常见标签的重要属性：
+ a[href,target] img[src,alt] table td[colspan,rowspan]。设置当前单元格占据几行几列。在合并单元格时，会用到。 form[target,method,enctype] input[type,value] button[type] selection&gt;option[value] label[for]  html 文档的大纲 我们平时在写论文或者其他文档的时候，一般会先列出大纲，然后再写具体的内容。
+同样，html 网页也可以看成是一种文档，也有属于它的大纲。
+一个常见的html文档，它的结构可以是：
+&lt;section&gt; &lt;h1&gt;一级标题&lt;/h1&gt; &lt;section&gt; &lt;h2&gt;二级标题&lt;/h2&gt; &lt;p&gt;段落内容&lt;/p&gt; &lt;/section&gt; &lt;section&gt; &lt;h2&gt;二级标题&lt;/h2&gt; &lt;p&gt;段落内容&lt;/p&gt; &lt;/section&gt; &lt;aside&gt; &lt;p&gt;广告内容&lt;/p&gt; &lt;/aside&gt; &lt;/section&gt; &lt;footer&gt; &lt;p&gt;某某公司出品&lt;/p&gt; &lt;/footer&gt;  查看网页大纲的工具 我们可以通过 http://h5o.github.io/ 这个工具查看一个网页的大纲。
+使用方法：
+（1）将网址 http://h5o.github.io/ 保存到书签栏
+（2）去目标网页，点击书签栏的网址，即可查看该网页的大纲。
+这个工具非常好用，既可以查看网页的大纲，也可以查看 markdown 在线文档的结构。
+html 元素的分类 按照样式分类：
+ 块级元素
+ 行内元素
+ inline-block：比如form表单元素。对外的表现是行内元素（不会独占一行），对内的表现是块级元素（可以设置宽高）。
+  按照内容分类：
+图片来源：https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content
+html 元素的嵌套关系  块级元素可以包含行内元素。
+ 块级元素不一定能包含块级元素。比如 div 中可以包含 div，但 p 标签中不能包含 div。
+ 行内元素一般不能包含块级元素。比如 span 中不能包含 div。但有个特例：在 HTML5 中， a 标签中可以包含 div。
+  注意：在 HTML5 中 a &gt; div 是合法的， div &gt; a &gt; div是不合法的 ；但是在 html 4.0.1 中， a &gt; div 仍然是不合法的。
+html 元素的默认样式和 CSS Reset 比如下拉框这种比较复杂的元素，是自带默认样式的。如果没有这个默认样式，则该元素在页面上不会有任何表现，则必然增加一些工作量。
+同时，默认样式也会带来一些问题：比如，有些默认样式我们是不需要的；有些默认样式甚至无法去掉。......
     
   </a>
 
@@ -455,24 +499,46 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://horizono.github.io/blog/2019-07/hugo-github/">
+  <a href="https://horizono.github.io/blog/1-01/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">Hugo&#43;Github</div>
+      <div class="px-4 post-heading"></div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Jul 21, 2019</li>
+          <li>Jan 1, 0001</li>
         
     
         
           <li class="middot"></li>
-          <li>3 minutes read</li>
+          <li>2 minutes read</li>
         
       </ul>
     </div>
     
 
     
-      Hugo&#43;Github—&gt;个人博客 —- 记录搭建Hugo&#43;Github静态博客。 一、运行环境： *Win10&#43;Git 二、Hugo是什么？ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。 三、开始搭建 Step 1：下载和安装Hugo ①：进入Hugo的github仓库[下载]对应自......
+      Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&#34;text&#34;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式 // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存 // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上 var txt = document.querySelector(&#39;input&#39;); var btns = document.querySelectorAll(&#39;button&#39;); // sessionStorage存储数据 btns[0].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); window.sessionStorage.setItem(&#39;pwd&#39;, &#39;123456&#39;); window.sessionStorage.setItem(&#39;age&#39;, 18); } // sessionStorage获取数据 btns[1].onclick = function () { txt.value = window.sessionStorage.getItem(&#39;userName&#39;); } // sessionStorage更新数据 btns[2].onclick = function () { window.sessionStorage.setItem(&#39;userName&#39;, txt.value); } // sessionStorage删除数据 btns[3].onclick = function () { window.sessionStorage.removeItem(&#39;userName&#39;); } // sessionStorage清空数据 btns[4].onclick = function () { window.sessionStorage.clear(); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  效果如下：
+如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。
+localStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&#34;text&#34;/&gt; &lt;button&gt;localStorage存储&lt;/button&gt; &lt;button&gt;localStorage获取&lt;/button&gt; &lt;button&gt;localStorage更新&lt;/button&gt; &lt;button&gt;localStorage删除&lt;/button&gt; &lt;button&gt;localStorage清除&lt;/button&gt; &lt;script&gt; /* * localStorage * 数据存在硬盘上 * 永久生效 * 20M * */ var txt = document.......
     
   </a>
 
@@ -494,24 +560,50 @@
           
               <div class="post-wrapper white-bg post-card">
   
-  <a href="https://horizono.github.io/blog/2019-07/blogt/">
+  <a href="https://horizono.github.io/blog/1-01/">
     <div class="post-header text-center">
-      <div class="px-4 post-heading">BlogT</div>
+      <div class="px-4 post-heading"></div>
       <ul class="post-meta li-x mt-1">
         
-          <li>Jul 19, 2019</li>
+          <li>Jan 1, 0001</li>
         
     
         
           <li class="middot"></li>
-          <li>One minute read</li>
+          <li>4 minutes read</li>
         
       </ul>
     </div>
     
 
     
-      自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update –init –recursive hugo server -t dream-plus –buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus –buildDrafts hugo –theme=dream-plus –baseUrl=“https://horizono.github.io/&#34; –buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m “this is my time” git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master......
+      本文主要内容  拖拽
+ 历史
+ 地理位置
+ 全屏
+  拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。
+在HTML5的规范中，我们可以通过为元素增加 draggable=&#34;true&#34; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。
+1、拖拽元素 页面中设置了 draggable=&#34;true&#34; 属性的元素。
+举例如下：
+&lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Title&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;css/font-awesome.min.css&#34;&gt; &lt;style&gt; .box1{ width: 200px; height: 200px; background-color: green; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;!--给 box1 增加拖拽的属性--&gt; &lt;div class=&#34;box1&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;/body&gt; &lt;/html&gt;  效果如下：
+上图中，我们给 box1 增加了draggable=&#34;true&#34; 属性之后，发现 box1 是可以拖拽的。但是拖拽之后要做什么事情呢？这就涉及到事件监听。
+拖拽元素的事件监听：（应用于拖拽元素）
+ ondragstart当拖拽开始时调用
+ ondragleave 当鼠标离开拖拽元素时调用
+ ondragend 当拖拽结束时调用
+ ondrag 整个拖拽过程都会调用
+  代码演示：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;style&gt; .box { width: 200px; height: 200px; background-color: green; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class=&#34;box&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;script&gt; var box = document.querySelector(&#39;.box&#39;); // 绑定拖拽事件 // 拖拽开始 box.ondragstart = function () { console.log(&#39;拖拽开始.&#39;); } // 拖拽离开：鼠标拖拽时离开被拖拽的元素时触发 box.ondragleave = function () { console.log(&#39;拖拽离开..&#39;); } // 拖拽结束 box.ondragend = function () { console.log(&#39;拖拽结束...&#39;); console.log(&#34;---------------&#34;); } box.ondrag = function () { console.log(&#39;拖拽&#39;); } &lt;/script&gt; &lt;/body&gt; &lt;/html&gt;  效果如下：
+打印结果：
+2、目标元素 比如说，你想把元素A拖拽到元素B里，那么元素B就是目标元素。
+页面中任何一个元素都可以成为目标元素。
+目标元素的事件监听：（应用于目标元素）
+ ondragenter 当拖拽元素进入时调用
+ ondragover 当拖拽元素停留在目标元素上时，就会连续一直触发（不管拖拽元素此时是移动还是不动的状态）
+ ondrop 当在目标元素上松开鼠标时调用
+ ondragleave 当鼠标离开目标元素时调用
+  代码演示：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;style&gt; .one { width: 100px; height: 100px; border: 1px solid #000; background-color: green; } .two { position: relative; width: 200px; height: 200px; left: 300px; top: 100px; border: 1px solid #000; background-color: red; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div class=&#34;one&#34; draggable=&#34;true&#34;&gt;&lt;/div&gt; &lt;div class=&#34;two&#34;&gt;&lt;/div&gt; &lt;script&gt; var two = document.......
     
   </a>
 
