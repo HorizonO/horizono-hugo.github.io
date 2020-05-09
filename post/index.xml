@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Horizon&#39;s  坚果壳</title>
+    <title>Posts on Horizon</title>
     <link>https://horizono.github.io/post/</link>
-    <description>Recent content in Posts on Horizon&#39;s  坚果壳</description>
+    <description>Recent content in Posts on Horizon</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zn-Hans</language>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 19 Jul 2019 23:57:58 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -29,10 +30,7 @@
       <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
 https://gohugo.io/content-management/shortcodes/#figure
 This theme has 3 CSS classes made for figure elements:
- big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: ![]().
-Here&amp;rsquo;s some examples, please be aware that these styles only take effect when the page width is over 1300px.
-  figure-normal (without any classes)
-  Pellentesque posuere sem nec nunc varius, id hendrerit arcu consequat. Maecenas commodo, sapien ut gravida porttitor, dolor risus facilisis enim, eget pharetra nibh nisl porttitor sapien. Proin finibus elementum ligula sit amet hendrerit. Praesent et erat sodales ante accumsan pharetra non eu nulla. Sed vehicula consequat lorem, a fermentum ante faucibus quis. Aliquam erat volutpat. In vitae tincidunt dui. Proin sit amet ligula sodales, elementum tortor et, venenatis sem. Maecenas non nisl erat. Curabitur nec velit eros. Ut cursus lacus nisi, non pretium libero euismod et. Fusce luctus in nisi quis sollicitudin. Aenean nec blandit ligula.</description>
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
     </item>
     
     <item>
@@ -43,7 +41,7 @@ Here&amp;rsquo;s some examples, please be aware that these styles only take effe
       <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
       <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
 For example:
---- images: - https://picsum.photos/1024/768/?random ---  This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+---images:-https://picsum.photos/1024/768/?random--- This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
     </item>
     
     <item>
@@ -52,13 +50,7 @@ For example:
       <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
       
       <guid>https://horizono.github.io/post/typography/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
- An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.1
- Inline styles：
-strong, emphasis, strong and emphasis,code, underline, strikethrough, 😂🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, Link, and image:
-Headings:
-Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Table:
-   Left-Aligned Center Aligned Right Aligned     col 3 is some wordy text $1600   col 2 is centered $12   zebra stripes are neat $1    Lists:</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
     <item>
@@ -72,11 +64,7 @@ Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at Install Hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
- Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
-git clone https://github.com/spf13/hugo cd hugo /path/to/where/you/installed/hugo server --source=./docs &amp;gt; 29 pages created &amp;gt; 0 tags index created &amp;gt; in 27 ms &amp;gt; Web Server is available at http://localhost:1313 &amp;gt; Press ctrl+c to stop  Once you&amp;rsquo;ve gotten here, follow along the rest of this page on your local build.
-Step 3. Change the docs site Stop the Hugo process by hitting Ctrl+C.
-Now we are going to run hugo again, but this time with hugo in watch mode.
-/path/to/hugo/from/step/1/hugo server --source=./docs --watch &amp;gt; 29 pages created &amp;gt; 0 tags index created &amp;gt; in 27 ms &amp;gt; Web Server is available at http://localhost:1313 &amp;gt; Watching for changes in /Users/spf13/Code/hugo/docs/content &amp;gt; Press ctrl+c to stop  Open your favorite editor and change one of the source content pages.</description>
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
     </item>
     
     <item>
@@ -87,12 +75,7 @@ Now we are going to run hugo again, but this time with hugo in watch mode.
       <guid>https://horizono.github.io/post/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
-Create your Hugo configuration file Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the Hugo configuration documentation for details.
-Set your configuration publish folder to _site The default is for Jekyll to publish to _site and for Hugo to publish to public. If, like me, you have _site mapped to a git submodule on the gh-pages branch, you&amp;rsquo;ll want to do one of two alternatives:
- Change your submodule to point to map gh-pages to public instead of _site (recommended).
-git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public  Or, change the Hugo configuration to use _site instead of public.
-{ .. &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;, .</description>
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>

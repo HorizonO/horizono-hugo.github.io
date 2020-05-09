@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Image on Horizon&#39;s  坚果壳</title>
+    <title>Image on Horizon</title>
     <link>https://horizono.github.io/tags/image/</link>
-    <description>Recent content in Image on Horizon&#39;s  坚果壳</description>
+    <description>Recent content in Image on Horizon</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zn-Hans</language>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Mon, 24 Dec 2018 12:29:41 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
@@ -20,10 +21,7 @@
       <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
 https://gohugo.io/content-management/shortcodes/#figure
 This theme has 3 CSS classes made for figure elements:
- big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: ![]().
-Here&amp;rsquo;s some examples, please be aware that these styles only take effect when the page width is over 1300px.
-  figure-normal (without any classes)
-  Pellentesque posuere sem nec nunc varius, id hendrerit arcu consequat. Maecenas commodo, sapien ut gravida porttitor, dolor risus facilisis enim, eget pharetra nibh nisl porttitor sapien. Proin finibus elementum ligula sit amet hendrerit. Praesent et erat sodales ante accumsan pharetra non eu nulla. Sed vehicula consequat lorem, a fermentum ante faucibus quis. Aliquam erat volutpat. In vitae tincidunt dui. Proin sit amet ligula sodales, elementum tortor et, venenatis sem. Maecenas non nisl erat. Curabitur nec velit eros. Ut cursus lacus nisi, non pretium libero euismod et. Fusce luctus in nisi quis sollicitudin. Aenean nec blandit ligula.</description>
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: !</description>
     </item>
     
     <item>
@@ -34,7 +32,7 @@ Here&amp;rsquo;s some examples, please be aware that these styles only take effe
       <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
       <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
 For example:
---- images: - https://picsum.photos/1024/768/?random ---  This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+---images:-https://picsum.photos/1024/768/?random--- This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
     </item>
     
   </channel>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&#34;text&#34;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式  // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存  // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上  var txt = document.">
+
+
+
+<meta itemprop="wordCount" content="421">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&#34;text&#34;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式  // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存  // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上  var txt = document." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://horizono.github.io/blog/11-html5%E8%AF%A6%E8%A7%A3%E4%B8%89/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。
+H5 中有两种存储的方式 1、window.sessionStorage 会话存储：
+ 保存在内存中。
+ 生命周期为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。
+ 在同一个窗口下数据可以共享。
+  2、window.localStorage 本地存储：
+ 有可能保存在浏览器内存里，有可能在硬盘里。
+ 永久生效，除非手动删除（比如清理垃圾的时候）。
+ 可以多窗口共享。
+  Web 存储的特性 （1）设置、读取方便。
+（2）容量较大，sessionStorage 约5M、localStorage 约20M。
+（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。
+常见 API 设置存储内容：
+setItem(key, value);  PS：可以新增一个 item，也可以更新一个 item。
+读取存储内容：
+getItem(key);  根据键，删除存储内容：
+removeItem(key);  清空所有存储内容：
+clear();  根据索引值来获取存储内容：
+key(n);  sessionStorage 的 API 举例：
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;input type=&#34;text&#34;/&gt; &lt;button&gt;sesssionStorage存储&lt;/button&gt; &lt;button&gt;sesssionStorage获取&lt;/button&gt; &lt;button&gt;sesssionStorage更新&lt;/button&gt; &lt;button&gt;sesssionStorage删除&lt;/button&gt; &lt;button&gt;sesssionStorage清除&lt;/button&gt; &lt;script&gt; //在h5中提供两种web存储方式  // sessionStorage session（会话，会议） 5M 当窗口关闭是数据销毁 内存  // localStorage 20M 永久生效 ，除非手动删除 清理垃圾 硬盘上  var txt = document."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title></title>
+	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://horizono.github.io/">Horizon</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://horizono.github.io/post/">Posts</a>
+				<a href="https://horizono.github.io/about-hugo/">About</a>
+				<a href="https://horizono.github.io/blog/">Diary</a>
+				<a href="https://horizono.github.io/moment/">Moment</a>
+				<a href="https://horizono.github.io/notes/">Notes</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://horizono.github.io/post/">Posts</a></li>
+			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
+			<li><a href="https://horizono.github.io/blog/">Diary</a></li>
+			<li><a href="https://horizono.github.io/moment/">Moment</a></li>
+			<li><a href="https://horizono.github.io/notes/">Notes</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1></h1>
+		<div class="content">
+			
+
+<h2 id="web-存储">Web 存储<a href="#web-存储" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。</p>
+
+<h3 id="h5-中有两种存储的方式">H5 中有两种存储的方式<a href="#h5-中有两种存储的方式" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>1、<strong><code>window.sessionStorage</code> 会话存储：</strong></p>
+
+<ul>
+<li><p>保存在内存中。</p></li>
+
+<li><p><strong>生命周期</strong>为关闭浏览器窗口。也就是说，当窗口关闭时数据销毁。</p></li>
+
+<li><p>在同一个窗口下数据可以共享。</p></li>
+</ul>
+
+<p>2、<strong><code>window.localStorage</code> 本地存储</strong>：</p>
+
+<ul>
+<li><p>有可能保存在浏览器内存里，有可能在硬盘里。</p></li>
+
+<li><p>永久生效，除非手动删除（比如清理垃圾的时候）。</p></li>
+
+<li><p>可以多窗口共享。</p></li>
+</ul>
+
+<h3 id="web-存储的特性">Web 存储的特性<a href="#web-存储的特性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>（1）设置、读取方便。</p>
+
+<p>（2）容量较大，sessionStorage 约5M、localStorage 约20M。</p>
+
+<p>（3）只能存储字符串，可以将对象 JSON.stringify() 编码后存储。</p>
+
+<h3 id="常见-api">常见 API<a href="#常见-api" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>设置存储内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">setItem</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre></div>
+<p>PS：可以新增一个 item，也可以更新一个 item。</p>
+
+<p>读取存储内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">getItem</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</code></pre></div>
+<p>根据键，删除存储内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">removeItem</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>
+</code></pre></div>
+<p>清空所有存储内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">clear</span><span class="p">();</span>
+</code></pre></div>
+<p>根据索引值来获取存储内容：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">	<span class="nx">key</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+</code></pre></div>
+<p>sessionStorage 的 API 举例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>sesssionStorage存储<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>sesssionStorage获取<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>sesssionStorage更新<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>sesssionStorage删除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>sesssionStorage清除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="c1">//在h5中提供两种web存储方式
+</span><span class="c1"></span>
+    <span class="c1">// sessionStorage  session（会话，会议） 5M  当窗口关闭是数据销毁  内存
+</span><span class="c1"></span>    <span class="c1">// localStorage    20M 永久生效 ，除非手动删除  清理垃圾  硬盘上
+</span><span class="c1"></span>
+    <span class="kd">var</span> <span class="nx">txt</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">btns</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
+    <span class="c1">//        sessionStorage存储数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">,</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="s1">&#39;123456&#39;</span><span class="p">);</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        sessionStorage获取数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">txt</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        sessionStorage更新数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">,</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        sessionStorage删除数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        sessionStorage清空数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>效果如下：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2200.gif" alt="" /></p>
+
+<p>如上图所示，我们可以在 Storage 选项卡中查看 Session Storage 和Local Storage。</p>
+
+<p><strong>localStorage 的 API 举例：</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>localStorage存储<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>localStorage获取<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>localStorage更新<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>localStorage删除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>localStorage清除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="cm">/*
+</span><span class="cm">    *  localStorage
+</span><span class="cm">    *  数据存在硬盘上
+</span><span class="cm">    *  永久生效
+</span><span class="cm">    *  20M
+</span><span class="cm">    * */</span>
+
+    <span class="kd">var</span> <span class="nx">txt</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">btns</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
+
+    <span class="c1">//        localStorage存储数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">,</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        localStorage存储数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">txt</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//        localStorage删除数据
+</span><span class="c1"></span>    <span class="nx">btns</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="案例-记住用户名和密码">案例：记住用户名和密码<a href="#案例-记住用户名和密码" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+    用户名：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;userName&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+    密 码：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;pwd&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;check&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">/&gt;</span>记住密码
+<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>登录<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">var</span> <span class="nx">userName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.userName&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">pwd</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.pwd&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">chk</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.check&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
+
+    <span class="c1">//        当点击登录的时候 如果勾选“记住密码”，就存储密码；否则就清除密码
+</span><span class="c1"></span>    <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">chk</span><span class="p">.</span><span class="nx">checked</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">//                记住数据
+</span><span class="c1"></span>            <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">,</span> <span class="nx">userName</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;pwd&#39;</span><span class="p">,</span> <span class="nx">pwd</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="c1">//                清除数据
+</span><span class="c1"></span>            <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;pwd&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//        下次登录时，如果记录的有数据，就直接填充
+</span><span class="c1"></span>    <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">userName</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;userName&#39;</span><span class="p">);</span>
+        <span class="nx">pwd</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;pwd&#39;</span><span class="p">);</span>
+
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="网络状态">网络状态<a href="#网络状态" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>我们可以通过 <code>window.onLine</code> 来检测用户当前的网络状况，返回一个布尔值。另外：</p>
+
+<ul>
+<li><p>window.online：用户网络连接时被调用。</p></li>
+
+<li><p>window.offline：用户网络断开时被调用（拔掉网线或者禁用以太网）。</p></li>
+</ul>
+
+<p>网络状态监听的代码举例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络连接建立！&#39;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;offline&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;网络连接断开！&#39;</span><span class="p">);</span>
+    <span class="p">})</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="应用缓存">应用缓存<a href="#应用缓存" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>HTML5中我们可以轻松的构建一个离线（无网络状态）应用，只需要创建一个 <code>cache manifest</code> 缓存清单文件。</p>
+
+<h3 id="优势">优势<a href="#优势" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>1、可配置需要缓存的资源；</p>
+
+<p>2、网络无连接应用仍可用；</p>
+
+<p>3、本地读取缓存资源，提升访问速度，增强用户体验；</p>
+
+<p>4、减少请求，缓解服务器负担。</p>
+
+<h3 id="cache-manifest-缓存清单文件"><code>cache manifest</code> 缓存清单文件<a href="#cache-manifest-缓存清单文件" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>缓存清单文件中列出了浏览器应缓存，以供离线访问的资源。推荐使用 <code>.appcache</code>作为后缀名，另外还要添加MIME类型。</p>
+
+<p><strong>缓存清单文件里的内容怎样写：</strong></p>
+
+<p>（1）顶行写CACHE MANIFEST。</p>
+
+<p>（2）CACHE: 换行 指定我们需要缓存的静态资源，如.css、image、js等。</p>
+
+<p>（3）NETWORK: 换行 指定需要在线访问的资源，可使用通配符（也就是：不需要缓存的、必须在网络下面才能访问的资源）。</p>
+
+<p>（4）FALLBACK: 换行 当被缓存的文件找不到时的备用资源（当访问不到某个资源时，自动由另外一个资源替换）。</p>
+
+<p>格式举例1：</p>
+
+<p><img src="http://img.smyhvae.com/20180224_2240.png" alt="" /></p>
+
+<p>格式举例2：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">CACHE MANIFEST
+
+<span class="c1">#要缓存的文件</span>
+CACHE:
+    images/img1.jpg
+    images/img2.jpg
+
+
+<span class="c1">#指定必须联网才能访问的文件</span>
+NETWORK:
+     images/img3.jpg
+     images/img4.jpg
+
+
+<span class="c1">#当前页面无法访问是回退的页面</span>
+FALLBACK:
+    <span class="m">404</span>.html</code></pre></div>
+<p><strong>缓存清单文件怎么用：</strong></p>
+
+<p>（1）例如我们创建一个名为 <code>demo.appcache</code>的文件。例如：</p>
+
+<p>demo.appcache：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">CACHE MANIFEST
+
+<span class="c1"># 注释以#开头</span>
+<span class="c1">#下面是要缓存的文件</span>
+CACHE:
+    http://img.smyhvae.com/2016040101.jpg</code></pre></div>
+<p>（2）在需要应用缓存在页面的根元素(html)里，添加属性manifest=&ldquo;demo.appcache&rdquo;。路径要保证正确。例如：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">manifest</span><span class="o">=</span><span class="s">&#34;01.appcache&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://img.smyhvae.com/2016040101.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://horizono.github.io/">Horizon Chan</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+
+</body>
+
+</html>
