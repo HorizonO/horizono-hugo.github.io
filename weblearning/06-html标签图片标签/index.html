@@ -1,159 +1,365 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#494f5c">
-	<meta name="msapplication-TileColor" content="#494f5c">
-
-<meta itemprop="name" content="06-图片标签">
-<meta itemprop="description" content="img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
-如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
-&lt;img src=&#34;图片的URL&#34; /&gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
- 不能往网页中插入的图片格式是：psd、ai等。
-  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
-img标签的src属性 这里涉及到图片的一个属性：
- src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
-写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
-举例1：
-&lt;!-- 当前目录中的图片 --&gt; &lt;img src=&#34;2.jpg&#34;&gt; &lt;img src=&#34;.\2.jpg&#34;&gt; &lt;!-- 上一级目录中的图片 --&gt; &lt;img src=&#34;..\2.jpg&#34;&gt; 相对路径不会出现这种情况：
-aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
-举例2：
-&lt;img src=&#34;images/1.jpg&#34;&gt; 上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
-相对路径的面试题。现有如下文件层级图：
-问题：如果想在index.html中插入1.png，那么对应的img语句是？
-分析：
-现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
-答案：
-&lt;img src=&#34;../../photo/1.png&#34; /&gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
-（1）以盘符开始的绝对路径。举例：
-&lt;img src=&#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&#34;&gt; （2）网络路径。举例：
-&lt;img src=&#34;http://img.smyhvae.com/20200122_200901.png&#34;&gt; 大家打开上面的img中的链接，可能有惊喜哦。">
-
-
-<meta itemprop="datePublished" content="2020-05-09T18:38:58&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-09T18:38:58&#43;08:00" />
-<meta itemprop="wordCount" content="153">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="06-图片标签" />
-<meta property="og:description" content="img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
-如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
-&lt;img src=&#34;图片的URL&#34; /&gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
- 不能往网页中插入的图片格式是：psd、ai等。
-  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
-img标签的src属性 这里涉及到图片的一个属性：
- src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
-写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
-举例1：
-&lt;!-- 当前目录中的图片 --&gt; &lt;img src=&#34;2.jpg&#34;&gt; &lt;img src=&#34;.\2.jpg&#34;&gt; &lt;!-- 上一级目录中的图片 --&gt; &lt;img src=&#34;..\2.jpg&#34;&gt; 相对路径不会出现这种情况：
-aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
-举例2：
-&lt;img src=&#34;images/1.jpg&#34;&gt; 上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
-相对路径的面试题。现有如下文件层级图：
-问题：如果想在index.html中插入1.png，那么对应的img语句是？
-分析：
-现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
-答案：
-&lt;img src=&#34;../../photo/1.png&#34; /&gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
-（1）以盘符开始的绝对路径。举例：
-&lt;img src=&#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&#34;&gt; （2）网络路径。举例：
-&lt;img src=&#34;http://img.smyhvae.com/20200122_200901.png&#34;&gt; 大家打开上面的img中的链接，可能有惊喜哦。" />
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Horizon">
+  <meta name="description" content="img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下： &lt;img src=&quot;图片的URL&quot; /&gt; 能插入的图片类型 能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。 不能往网页中插入的图片格式是：psd、ai等。 HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上">
+  
+  <meta property="og:title" content="06-图片标签" />
+<meta property="og:description" content="img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下： &lt;img src=&quot;图片的URL&quot; /&gt; 能插入的图片类型 能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。 不能往网页中插入的图片格式是：psd、ai等。 HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/" />
 <meta property="article:published_time" content="2020-05-09T18:38:58&#43;08:00"/>
 <meta property="article:modified_time" content="2020-05-09T18:38:58&#43;08:00"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="06-图片标签"/>
-<meta name="twitter:description" content="img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
-如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
-&lt;img src=&#34;图片的URL&#34; /&gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
- 不能往网页中插入的图片格式是：psd、ai等。
-  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
-img标签的src属性 这里涉及到图片的一个属性：
- src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
-写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
-举例1：
-&lt;!-- 当前目录中的图片 --&gt; &lt;img src=&#34;2.jpg&#34;&gt; &lt;img src=&#34;.\2.jpg&#34;&gt; &lt;!-- 上一级目录中的图片 --&gt; &lt;img src=&#34;..\2.jpg&#34;&gt; 相对路径不会出现这种情况：
-aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
-举例2：
-&lt;img src=&#34;images/1.jpg&#34;&gt; 上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
-相对路径的面试题。现有如下文件层级图：
-问题：如果想在index.html中插入1.png，那么对应的img语句是？
-分析：
-现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
-答案：
-&lt;img src=&#34;../../photo/1.png&#34; /&gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
-（1）以盘符开始的绝对路径。举例：
-&lt;img src=&#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&#34;&gt; （2）网络路径。举例：
-&lt;img src=&#34;http://img.smyhvae.com/20200122_200901.png&#34;&gt; 大家打开上面的img中的链接，可能有惊喜哦。"/>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-	<link rel="shortcut icon" href="/favicon.ico">
 
-	<title>06-图片标签</title>
-	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
-	
+  <title>
+  
+       06-图片标签 | Horizon&#39;s  坚果壳 
+  
+  </title>
+
+  <link rel="canonical" href="https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/">
+
+  
+  
+
+  
+  <link href="https://horizono.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://horizono.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://horizono.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://horizono.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://horizono.github.io/img/chen.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/css/vendors/highlight/github-gist.css">
+  
+
 </head>
 
-<body id="page">
-	
-	<header id="site-header" class="animated slideInUp faster">
-		<div class="hdr-wrapper section-inner">
-			<div class="hdr-left">
-				<div class="site-branding">
-					<a href="https://horizono.github.io/">Horizon</a>
-				</div>
-				<nav class="site-nav hide-in-mobile">
-					
-				<a href="https://horizono.github.io/post/">Posts</a>
-				<a href="https://horizono.github.io/about-hugo/">About</a>
-				<a href="https://horizono.github.io/blog/">Blog</a>
-				<a href="https://horizono.github.io/moment/">Moment</a>
-				<a href="https://horizono.github.io/notes/">Notes</a>
-				<a href="https://horizono.github.io/weblearning/">WebLearning</a>
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
 
-				</nav>
-			</div>
-			<div class="hdr-right hdr-icons">
-				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-			</div>
-		</div>
-	</header>
-	<div id="mobile-menu" class="animated fast">
-		<ul>
-			<li><a href="https://horizono.github.io/post/">Posts</a></li>
-			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
-			<li><a href="https://horizono.github.io/blog/">Blog</a></li>
-			<li><a href="https://horizono.github.io/moment/">Moment</a></li>
-			<li><a href="https://horizono.github.io/notes/">Notes</a></li>
-			<li><a href="https://horizono.github.io/weblearning/">WebLearning</a></li>
-		</ul>
-	</div>
+    
+      
 
 
-	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>06-图片标签</h1>
-		<div class="content">
-			
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
 
-<h2 id="img标签介绍">img标签介绍<a href="#img标签介绍" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+      
+      <a class="navbar-brand" href="https://horizono.github.io/">
+          
+        <img class="avatar" src="https://horizono.github.io/img/chen.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> Horizon</strong>
+      </a>
 
-<h3 id="介绍">介绍<a href="#介绍" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://horizono.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/moment/" >Moment  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/notes/" >Notes  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/weblearning/" >webLearing  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/about-hugo/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides/JMCY5568.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//SWGV6042.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://horizono.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://horizono.github.io/img/ki.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://horizono.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Horizon&#39;s  坚果壳</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/HorizonO" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+                <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading">06-图片标签</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>May 9, 2020</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>5 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="img标签介绍">img标签介绍</h2>
+
+<h3 id="介绍">介绍</h3>
 
 <p>img: 英文全称 image（图像），代表的是一张图片。</p>
 
 <p>如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;图片的URL&#34;</span> <span class="p">/&gt;</span></code></pre></div>
-<h3 id="能插入的图片类型">能插入的图片类型<a href="#能插入的图片类型" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<pre><code class="language-html">&lt;img src=&quot;图片的URL&quot; /&gt;
+</code></pre>
+
+<h3 id="能插入的图片类型">能插入的图片类型</h3>
 
 <ul>
 <li><p>能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。</p></li>
@@ -163,7 +369,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p>HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。</p>
 
-<h2 id="img标签的-src-属性">img标签的<code>src</code>属性<a href="#img标签的-src-属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="img标签的-src-属性">img标签的<code>src</code>属性</h2>
 
 <p>这里涉及到图片的一个属性：</p>
 
@@ -173,23 +379,32 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p>在写<strong>图片的路径</strong>时，有两种写法：相对路径、绝对路径</p>
 
-<h3 id="写法一-图片的相对路径">写法一：图片的相对路径<a href="#写法一-图片的相对路径" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="写法一-图片的相对路径">写法一：图片的相对路径</h3>
 
 <p>相对当前页面所在的路径。两个标记 <code>.</code> 和 <code>..</code> 分表代表当前目录和上一层目录。</p>
 
 <p>举例1：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- 当前目录中的图片 --&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;2.jpg&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;.\2.jpg&#34;</span><span class="p">&gt;</span>
 
-<span class="c">&lt;!-- 上一级目录中的图片 --&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;..\2.jpg&#34;</span><span class="p">&gt;</span></code></pre></div>
+<pre><code class="language-html">&lt;!-- 当前目录中的图片 --&gt;
+&lt;img src=&quot;2.jpg&quot;&gt;
+&lt;img src=&quot;.\2.jpg&quot;&gt;
+
+&lt;!-- 上一级目录中的图片 --&gt;
+&lt;img src=&quot;..\2.jpg&quot;&gt;
+</code></pre>
+
 <p>相对路径不会出现这种情况：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">aaa/../bbb/1.jpg</code></pre></div>
+
+<pre><code class="language-html">aaa/../bbb/1.jpg
+</code></pre>
+
 <p><code>../</code>要么不写，要么就写在开头。</p>
 
 <p>举例2：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;images/1.jpg&#34;</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;img src=&quot;images/1.jpg&quot;&gt;
+</code></pre>
+
 <p>上方代码的意思是说，当前html页面有一个并列的文件夹<code>images</code>，在文件夹<code>images</code>中存放了一张图片<code>1.jpg</code>
 效果：</p>
 
@@ -206,18 +421,28 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 <p>现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。  所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。</p>
 
 <p>答案：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../photo/1.png&#34;</span> <span class="p">/&gt;</span></code></pre></div>
-<h3 id="写法二-图片的绝对路径">写法二：图片的绝对路径<a href="#写法二-图片的绝对路径" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<pre><code class="language-html">&lt;img src=&quot;../../photo/1.png&quot; /&gt;
+</code></pre>
+
+<h3 id="写法二-图片的绝对路径">写法二：图片的绝对路径</h3>
 
 <p>绝对路径包括以下两种：</p>
 
 <p>（1）以盘符开始的绝对路径。举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&#34;</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;img src=&quot;C:\Users\qianguyihao\Desktop\html\images\1.jpg&quot;&gt;
+</code></pre>
+
 <p>（2）网络路径。举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://img.smyhvae.com/20200122_200901.png&#34;</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;img src=&quot;http://img.smyhvae.com/20200122_200901.png&quot;&gt;
+
+</code></pre>
+
 <p>大家打开上面的img中的链接，可能有惊喜哦。</p>
 
-<h3 id="相对路径和绝对路径的总结">相对路径和绝对路径的总结<a href="#相对路径和绝对路径的总结" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="相对路径和绝对路径的总结">相对路径和绝对路径的总结</h3>
 
 <p>相对路径的好处：站点不管拷贝到哪里，文件和图片的相对路径关系都是不变的。相对路径使用有一个前提，就是网页文件和你的图片，必须在一个服务器上。</p>
 
@@ -228,7 +453,10 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 <p>注意：可以使用file://来插入，但是这种方法，没有任何意义！因为服务器上没有所谓c盘、d盘。</p>
 
 <p>下面的方法是行的，但是没有任何工程上的意义，这是因为服务器没有盘符，linux系统没有盘符：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;file://C:\Users\qianguyihao\Pictures\明星\1.jpg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="p">/&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;img src=&quot;file://C:\Users\qianguyihao\Pictures\明星\1.jpg&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
 <p><strong>总结一下</strong>：</p>
 
 <p>无论是在 a 标签还是 img 标签上，如果要用路径。只有两种路径能用，就是相对路径和绝对路径：</p>
@@ -241,9 +469,9 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 <li><p>绝对不允许使用<code>file://</code>开头的文件，这个是完全错误的！</p></li>
 </ul>
 
-<h2 id="img标签的其他属性">img标签的其他属性<a href="#img标签的其他属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="img标签的其他属性">img标签的其他属性</h2>
 
-<h3 id="width-height-属性">width、height 属性<a href="#width-height-属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="width-height-属性">width、height 属性</h3>
 
 <ul>
 <li><p><code>width</code>：图像的宽度。</p></li>
@@ -255,7 +483,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p><strong>重要提示</strong>：如果要想保证图片等比例缩放，请只设置width和height中其中一个。</p>
 
-<h3 id="alt-属性">Alt 属性<a href="#alt-属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="alt-属性">Alt 属性</h3>
 
 <ul>
 <li><code>alt</code>：当图片不可用（无法显示）的时候，代替图片显示的内容。alt是英语 alternate “替代”的意思，代表替换资源。</li>
@@ -267,7 +495,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p>如上图所示：当图片 src 不可用的时候，显示文字。这样做，至少能让用户知道，这个图片大概是什么内容。</p>
 
-<h3 id="title-属性">title 属性<a href="#title-属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="title-属性">title 属性</h3>
 
 <ul>
 <li><code>title</code>：<strong>提示性文本</strong>。鼠标悬停时出现的文本。</li>
@@ -278,12 +506,15 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 <p>title 元素的值一般作为提示条(tooltip)呈现给用户，在光标于图片上停下后显示出来。尽管这确实能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，可以选择上面提供的一种方法将其内联显示，而不是使用 title。</p>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;images/1.jpg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;`188&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;这是美女&#34;</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;img src=&quot;images/1.jpg&quot; width=&quot;300&quot; height=&quot;`188&quot; title=&quot;这是美女&quot;&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_20.png" alt="Paste_Image.png" /></p>
 
-<h3 id="align-属性">align 属性<a href="#align-属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="align-属性">align 属性</h3>
 
 <ul>
 <li>图片的<code>align</code>属性：<strong>图片和周围文字的相对位置</strong>。属性取值可以是：bottom（默认）、center、top、left、right。</li>
@@ -313,7 +544,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_24.png" alt="" /></p>
 
-<h3 id="其他已废弃的属性">其他已废弃的属性<a href="#其他已废弃的属性" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="其他已废弃的属性">其他已废弃的属性</h3>
 
 <ul>
 <li><code>Align</code>（已废弃）：指图片的水平对齐方式，属性值可以是：top、middle、bottom、left、center、right。该属性已废弃，替换为 <code>vertical-align</code>这个CSS属性。</li>
@@ -324,7 +555,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p>最后，送上妹子的近照一张。楼主已经仁至义尽了：<a href="http://img.smyhvae.com/2015-10-01-cnblogs_html_20150219214912_11994.jpg">http://img.smyhvae.com/2015-10-01-cnblogs_html_20150219214912_11994.jpg</a></p>
 
-<h2 id="我的公众号">我的公众号<a href="#我的公众号" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="我的公众号">我的公众号</h2>
 
 <p>想学习<strong>代码之外的技能</strong>？不妨关注我的微信公众号：<strong>千古壹号</strong>（id：<code>qianguyihao</code>）。</p>
 
@@ -332,19 +563,162 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
 
 <p><img src="http://img.smyhvae.com/20200101.png" alt="" /></p>
 
-		</div>
-	</main>
+          </div>
 
-	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2020 <a href="https://horizono.github.io/">Horizon Chan</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		</p>
-	</footer>
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>07-html标签图文详解</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>05-字体标签和超链接</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
 
 
-	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+  </main>
+  
 
-</body>
 
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/HorizonO " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://horizono.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://horizono.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://horizono.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
 </html>

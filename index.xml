@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Horizon</title>
+    <title>Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/</link>
-    <description>Recent content on Horizon</description>
+    <description>Recent content on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>zn-Hans</language>
     <lastBuildDate>Sat, 09 May 2020 18:38:58 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -27,28 +26,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/01-%E8%AE%A4%E8%AF%86web%E5%92%8Cweb%E6%A0%87%E5%87%86/</guid>
-      <description>Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。
-我们常说的Web端就是网页端。
-网页 网页是构成网站的基本元素。网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。
-我们在浏览器上输入网址后，打开的任何一个页面，都是属于网页。
-浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。
-关于浏览器的详细介绍，可以看下一篇文章：《浏览器的介绍》
-Web标准 W3C组织 W3C：万维网联盟组织，用来制定web标准的机构（组织）。
-W3C 万维网联盟是国际最著名的标准化组织。1994年成立后，至今已发布近百项相关万维网的标准，对万维网发展做出了杰出的贡献。
-W3C 组织就类似于现实世界中的联合国。
-为什么要遵循WEB标准呢？因为很多浏览器的浏览器内核不同，导致页面解析出来的效果可能会有差异，给开发者增加无谓的工作量。因此需要指定统一的标准。
-Web 标准 Web标准：制作网页要遵循的规范。
-Web标准不是某一个标准，而是由W3C组织和其他标准化组织制定的一系列标准的集合。
-1、Web标准包括三个方面：
- 结构标准（HTML）：用于对网页元素进行整理和分类。
- 表现标准（CSS）：用于设置网页元素的版式、颜色、大小等外观样式。
- 行为标准（JS）：用于定义网页的交互和行为。
-  根据上面的Web标准，可以将 Web前端分为三层，如下。
-2、Web前端分三层：
- HTML（HyperText Markup Language）：超文本标记语言。从语义的角度描述页面的结构。相当于人的身体组织结构。 CSS（Cascading Style Sheets）：层叠样式表。从审美的角度美化页面的样式。相当于人的衣服和打扮。 JS：JavaScript。从交互的角度描述页面的行为。相当于人的动作，让人有生命力。  3、打个比方：（拿黄渤举例）
-HTML 相当于人的身体组织结构：
-CSS 相当于人的衣服和打扮：
-JS 相当于人的行为：</description>
+      <description>Web、网页、浏览器 Web Web（World Wide Web）即全球广域网，也称为万维网。 我们常说的Web端就是网页端。 网页 网页是构成网站的基本元素。网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。 我们在浏览器上输入网址后，打开的任何一个页面，都是属于网页。 浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefo</description>
     </item>
     
     <item>
@@ -57,19 +35,7 @@ JS 相当于人的行为：</description>
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/02-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BB%8B%E7%BB%8D/</guid>
-      <description>常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示：
-我们重点需要学习的是 Chrome 浏览器。
-浏览器的市场占有份额 浏览器的市场占有份额：https://tongji.baidu.com/research/site?source=index#browser
-上面这张图的统计时间是2020年2月。
-浏览器的组成 浏览器分成两部分：
- 1、渲染引擎（即：浏览器内核）
- 2、JS 引擎
-  1、渲染引擎（浏览器内核） 浏览器所采用的「渲染引擎」也称之为「浏览器内核」，用来解析 HTML与CSS。渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。
-渲染引擎是浏览器兼容性问题出现的根本原因。
-渲染引擎的英文叫做 Rendering Engine。通俗来说，它的作用就是：读取网页内容，计算网页的显示方式并显示在页面上。
-常见浏览器的内核如下：
-   浏览器 内核     chrome Blink   欧鹏 Blink   360安全浏览器 Blink   360极速浏览器 Blink   Safari Webkit   Firefox 火狐 Gecko   IE Trident    备注：360的浏览器，以前使用的IE浏览器的Trident内核，但是现在已经改为使用 chrome 浏览器的 Blink内核。
-另外，移动端的浏览器内核是什么？大家可以自行查阅资料。</description>
+      <description>常见的浏览器 浏览器是网页运行的平台，常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。如下图所示： 我们重点需要学习的是 Chrome 浏览器。 浏览器的市场占有份额 浏览器的市场占有份额：https://tongji.baidu.com/research/site?source=index#browser 上面这张图的统计时间是2020年2月。 浏览器的组成 浏览器分</description>
     </item>
     
     <item>
@@ -78,27 +44,7 @@ JS 相当于人的行为：</description>
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/03-%E5%88%9D%E8%AF%86html/</guid>
-      <description>编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。
-有人说 WebStorm 也不错？但真实情况是，自从VS Code 问世之后，用 WebStorm 的人越来越少了。
-PS：文件的后缀名不能决定文件格式，只能决定打开文件打开的方式。
-VS Code 的使用 详情请移步至：第一次使用VS Code时你应该知道的一切配置
-Sublime Text 的使用 详情请移步至：Sublime Text使用技巧
-HTML的概述 HTML的概念 HTML 全称为 HyperText Markup Language，译为超文本标记语言。
-HTML 不是一种编程语言，是一种描述性的标记语言。
-作用：HTML是负责描述文档语义的语言。
-概念：超文本 所谓的超文本，有两层含义：
-（1）图片、音频、视频、动画、多媒体等内容，成为超文本，因为它们超出了文本的限制。
-（2）不仅如此，它还可以从一个文件跳转到另一个文件，与世界各地主机的文件进行连接。即：超级链接文本。
-概念：标记语言 HTML 不是一种编程语言，是一种描述性的标记语言。这主要有两层含义：
-（1）标记语言是一套标记标签。比如：标签&amp;lt;a&amp;gt;表示超链接、标签&amp;lt;img&amp;gt;表示图片、标签&amp;lt;h1&amp;gt;表示一级标题等等，它们都是属于 HTML 标签。
-说的通俗一点就是：网页是由网页元素组成的，这些元素是由 HTML 标签描述出来，然后通过浏览器解析，就可以显示给用户看了。
-（2）编程语言是有编译过程的，而标记语言没有编译过程，HTML标签是直接由浏览器解析执行。
-HTML是负责描述文档语义的语言 HTML 格式的文件是一个纯本文文件（就是用txt文件改名而成），用一些标签来描述语义，这些标签在浏览器页面上是无法直观看到的，所以称之为“超文本标记语言”。
-接下来，我们需要学习 HTML 中的很多“标签对儿”，这些“标签对儿”能够给文本不同的语义。
-比如，面试的时候问你，&amp;lt;h1&amp;gt; 标签有什么作用？
- 正确答案：给文本增加主标题的语义。 错误答案：给文字加粗、加黑、变大。  关乎“语义”的更深刻理解，等接下来我们学习了各种标签，就明白了。
-HTML的历史 其中，我们专门来对XHTML做一个介绍。
-XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本标注语言。 XHTML的主要目的是为了取代HTML，也可以理解为HTML的升级版。 HTML的标记书写很不规范，会造成其它的设备(ipad、手机、电视等)无法正常显示。 XHTML与HTML4.</description>
+      <description>编辑器相关 前端开发的编辑器软件，我首先推荐 VS Code，其次推荐Sublime Text。 有人说 WebStorm 也不错？但真实情况是，自从VS Code 问世之后，用 WebStorm 的人越来越少了。 PS：文件的后缀名不能决定文件格式，只能决定打开文件打开的方式。 VS Code 的使用 详情请移步至：第一次使用VS Code时你应该知道的一切配置 Sublime Text 的使用 详情请移步至：Sublime Text使用技巧 HTML的概述 HTML的概念 HTML 全称为 HyperText Markup Language，</description>
     </item>
     
     <item>
@@ -107,24 +53,7 @@ XHTML介绍： XHTML：Extensible Hypertext Markup Language，可扩展超文本
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</guid>
-      <description>本文主要内容 排版标签：
- &amp;lt;h1&amp;gt;
- &amp;lt;p&amp;gt;
- &amp;lt;hr /&amp;gt;
- &amp;lt;br /&amp;gt;
- &amp;lt;div&amp;gt;
- &amp;lt;span&amp;gt;
- &amp;lt;center&amp;gt;
- &amp;lt;pre&amp;gt;
-  下面来详细介绍一下排版标签。
-标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。
-代码举例：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2&amp;gt;H3：千古壹号，永不止步&amp;lt;/h2&amp;gt; &amp;lt;h3&amp;gt;H3：千古壹号，永不止步&amp;lt;/h3&amp;gt; &amp;lt;h4&amp;gt;H4：千古壹号，永不止步&amp;lt;/h4&amp;gt; &amp;lt;h5&amp;gt;H5：千古壹号，永不止步&amp;lt;/h5&amp;gt; &amp;lt;h6&amp;gt;H6：千古壹号，永不止步&amp;lt;/h6&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果演示：
-HTML 注释 HTML 注释的格式如下：
-&amp;lt;!-- 我是 html 注释 --&amp;gt; 段落标签&amp;lt;p&amp;gt; 段落，是英语“paragraph“缩写。
-作用：可以把 HTML 文档分割为若干段落。在网页中如果要把文字有条理地显示出来，离不开段落标签。就如同我们平常写文章一样，整个网页也可以分为若干个段落。
-代码举例：
-&amp;lt;p&amp;gt;This is a paragraph&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;This is another paragraph&amp;lt;/p&amp;gt; 属性：</description>
+      <description>本文主要内容 排版标签： &amp;lt;h1&amp;gt; &amp;lt;p&amp;gt; &amp;lt;hr /&amp;gt; &amp;lt;br /&amp;gt; &amp;lt;div&amp;gt; &amp;lt;span&amp;gt; &amp;lt;center&amp;gt; &amp;lt;pre&amp;gt; 下面来详细介绍一下排版标签。 标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。 代码举例： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2</description>
     </item>
     
     <item>
@@ -133,15 +62,7 @@ HTML 注释 HTML 注释的格式如下：
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/05-html%E6%A0%87%E7%AD%BE%E5%AD%97%E4%BD%93%E6%A0%87%E7%AD%BE%E5%92%8C%E8%B6%85%E9%93%BE%E6%8E%A5/</guid>
-      <description>本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt;
-超链接 &amp;lt;a&amp;gt;
-字体标签 特殊字符（转义字符）  &amp;amp;nbsp;：空格 （non-breaking spacing，不断打空格） &amp;amp;lt;：小于号（less than） &amp;amp;gt;：大于号（greater than） &amp;amp;amp;：符号&amp;amp; &amp;amp;quot;：双引号 &amp;amp;apos;：单引号 &amp;amp;copy;：版权© &amp;amp;trade;：商标™ &amp;amp;#32464;：文字绐。其实，#32464是汉字绐的unicode编码。  要求背诵的特殊字符有：&amp;amp;nbsp;、&amp;amp;lt;、&amp;amp;gt;、&amp;amp;copy;。
-比如说，你想把&amp;lt;p&amp;gt;作为一个文本在页面上显示，直接写&amp;lt;p&amp;gt;是肯定不行的，因为这代表的是一个段落标签，所以这里需要用到转义字符。应该这么写：
-这是一个HTML语言的&amp;amp;lt;p&amp;amp;gt;标签 正确的效果如下：
-错误的效果如下：
-其实我们只要记住前三个符号就行了，其他的在需要的时候查一下就行了。而且，EditPlus软件中是可以直接点击这些符号进行选择的：
-来一张表格，方便需要的时候查询：
-   特殊字符 描述 字符的代码      空格符 &amp;amp;nbsp;   &amp;lt; 小于号 &amp;amp;lt;   &amp;gt;  大于号 &amp;amp;gt;   &amp;amp; 和号 &amp;amp;amp;   ￥ 人民币 &amp;amp;yen;   © 版权 &amp;amp;copy;   ® 注册商标 &amp;amp;reg;   ° 摄氏度 &amp;amp;deg;   ± 正负号 &amp;amp;plusmn;   × 乘号 &amp;amp;times;   ÷ 除号 &amp;amp;divide;   ² 平方2（上标2） &amp;amp;sup2;   ³ 立方3（上标3） &amp;amp;sup3;    下划线、中划线、斜体  &amp;lt;u&amp;gt;：下划线标记</description>
+      <description>本文主要内容 字体标签： &amp;lt;font&amp;gt;、 &amp;lt;b&amp;gt;、 &amp;lt;u&amp;gt; 、&amp;lt;sup&amp;gt; 、&amp;lt;sub&amp;gt; 超链接 &amp;lt;a&amp;gt; 字体标签 特殊字符（转义字符） &amp;amp;nbsp;：空格 （non-breaking spacing，不断打空格） &amp;amp;lt;：小于号（less than） &amp;amp;gt;：大于号（greater than） &amp;amp;amp;：符号&amp;amp; &amp;amp;quot;：双引号 &amp;amp;</description>
     </item>
     
     <item>
@@ -150,28 +71,7 @@ HTML 注释 HTML 注释的格式如下：
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</guid>
-      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。
-如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下：
-&amp;lt;img src=&amp;#34;图片的URL&amp;#34; /&amp;gt; 能插入的图片类型  能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。
- 不能往网页中插入的图片格式是：psd、ai等。
-  HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。
-img标签的src属性 这里涉及到图片的一个属性：
- src属性：指图片的路径。英文名称 source。  在写图片的路径时，有两种写法：相对路径、绝对路径
-写法一：图片的相对路径 相对当前页面所在的路径。两个标记 . 和 .. 分表代表当前目录和上一层目录。
-举例1：
-&amp;lt;!-- 当前目录中的图片 --&amp;gt; &amp;lt;img src=&amp;#34;2.jpg&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;.\2.jpg&amp;#34;&amp;gt; &amp;lt;!-- 上一级目录中的图片 --&amp;gt; &amp;lt;img src=&amp;#34;..\2.jpg&amp;#34;&amp;gt; 相对路径不会出现这种情况：
-aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
-举例2：
-&amp;lt;img src=&amp;#34;images/1.jpg&amp;#34;&amp;gt; 上方代码的意思是说，当前html页面有一个并列的文件夹images，在文件夹images中存放了一张图片1.jpg 效果：
-相对路径的面试题。现有如下文件层级图：
-问题：如果想在index.html中插入1.png，那么对应的img语句是？
-分析：
-现在document是最大的文件夹，里面有两个文件夹work和photo。work中又有一个文件夹叫做myweb。myweb文件夹里面有index.html。 所以index.html在myweb文件夹里面，上一级就是work文件夹，上两级就是document文件夹。通过document文件夹当做一个中转站，进入photo文件夹，看到了1.png。
-答案：
-&amp;lt;img src=&amp;#34;../../photo/1.png&amp;#34; /&amp;gt; 写法二：图片的绝对路径 绝对路径包括以下两种：
-（1）以盘符开始的绝对路径。举例：
-&amp;lt;img src=&amp;#34;C:\Users\qianguyihao\Desktop\html\images\1.jpg&amp;#34;&amp;gt; （2）网络路径。举例：
-&amp;lt;img src=&amp;#34;http://img.smyhvae.com/20200122_200901.png&amp;#34;&amp;gt; 大家打开上面的img中的链接，可能有惊喜哦。</description>
+      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下： &amp;lt;img src=&amp;quot;图片的URL&amp;quot; /&amp;gt; 能插入的图片类型 能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。 不能往网页中插入的图片格式是：psd、ai等。 HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上</description>
     </item>
     
     <item>
@@ -180,18 +80,7 @@ aaa/../bbb/1.jpg ../要么不写，要么就写在开头。
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
-      <description>本文主要内容  列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt;  列表标签 列表标签分为三种。
-1、无序列表&amp;lt;ul&amp;gt;，无序列表中的每一项是&amp;lt;li&amp;gt; 英文单词解释如下：
- ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
-&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;默认1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;默认3&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 效果：
-注意：
- li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
- type=&amp;quot;属性值&amp;quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&amp;lt;ul&amp;gt;标签有type属性，&amp;lt;ul&amp;gt;里面的&amp;lt;li&amp;gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
-注意：项目符号可以是图片，需要通过CSS设置&amp;lt;li&amp;gt;标记的背景图片来实现(CSS中讲)。
-当然了，列表之间是可以嵌套的。我们来举个例子。代码：
-&amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;北京市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;海淀区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;朝阳区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;东城区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;b&amp;gt;广州市&amp;lt;/b&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;天河区&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;越秀区&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; 效果：
-css 属性：
-list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */ ul标签实际应用场景： 场景1、导航条：</description>
+      <description>本文主要内容 列表标签：&amp;lt;ul&amp;gt;、&amp;lt;ol&amp;gt;、&amp;lt;dl&amp;gt; 表格标签：&amp;lt;table&amp;gt; 框架标签及内嵌框架&amp;lt;iframe&amp;gt; 表单标签：&amp;lt;form&amp;gt; 多媒体标签 滚动字幕标签：&amp;lt;marquee&amp;gt; 列表标签 列表标签分为三种。 1、无序列表&amp;lt;ul&amp;gt;，无序列表中的每一项是&amp;lt;li&amp;gt; 英文单词解释如下： ul：unordered l</description>
     </item>
     
     <item>
@@ -200,26 +89,7 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/</guid>
-      <description>本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。
-以下是正文。
- HTML5的介绍 Web 技术发展时间线  1991 HTML
- 1994 HTML2
- 1996 CSS1 + JavaScript
- 1997 HTML4
- 1998 CSS2
- 2000 XHTML1（严格的html）
- 2002 Tableless Web Design（表格布局）
- 2005 AJAX
- 2009 HTML5
- 2014 HTML5 Finalized
-  2002年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。
-2009年就已经推出了HTML5的草案，但直到2014年才有定稿，是因为有移动端的推动。
-H5草案的前身是叫：Web Application，最早是由WHATWG这个组织在2004年提出的。
-2007年被 W3C 组织接纳，并在 2008-01-22 发布 HTML5 的第一个草案。
-什么是 HTML5 HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。
-HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用。我们甚至可以结合 Canvas 开发网页版游戏。
-HTML5的广义概念：HTML5代表浏览器端技术的一个发展阶段。在这个阶段，浏览器的呈现技术得到了飞跃发展和广泛支持，它包括：HTML5、CSS3、Javascript API在内的一套技术组合。
-HTML5不等于 HTML next version。HTML5 包含： HTML的升级版、CSS的升级版、JavaScript API的升级版。</description>
+      <description>本文最初发表于博客园，并在GitHub上持续更新前端的系列文章。欢迎在GitHub上关注我，一起入门和进阶前端。 以下是正文。 HTML5的介绍 Web 技术发展时间线 1991 HTML 1994 HTML2 1996 CSS1 + JavaScript 1997 HTML4 1998 CSS2 2000 XHTML1（严格的html） 2002 Tableless Web Design（表格布局） 2005 AJAX 2009 HTML5 2014 HTML5 Finalized 2002年的表格布局逐渐被淘汰，是因为：表格是用来承载数据的，并不是用来划分网页结构的。 2009年就已经推出了HTML5的草案，但直到2014年</description>
     </item>
     
     <item>
@@ -228,9 +98,217 @@ HTML5不等于 HTML next version。HTML5 包含： HTML的升级版、CSS的升�
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
-      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。
-index.html的代码如下：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;#34;Microsoft Yahei&amp;#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .</description>
+      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。 index.html的代码如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;quot;Microsoft Yahei&amp;quot;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .controls{ width: 700px; height:40px; background-color: rgba(255, 255, 0, 0.3); position: absolute; bottom:10px; left:10px; border-radius: 10px; } /*开关*/ .switch{ position: absolute; width: 20px; height: 20px; left:10px; top:10px; text-align: center; line-height: 20px; color:yellow; } /*进度条*/ .progress{ width: 432px; height: 10px; position: absolute; background-color: rgba(255,255,255,0.4); left:40px; top:15px; border-radius: 4px; overflow: hidden; } /* 当</description>
+    </item>
+    
+    <item>
+      <title>10-HTML5详解(二)</title>
+      <link>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</link>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
+      <description>本文主要内容 拖拽 历史 地理位置 全屏 拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。 在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。 1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。 举例如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;quot;box1&amp;quot; draggable=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果如下： 上图中，我们给 box1 增加了draggable=</description>
+    </item>
+    
+    <item>
+      <title>11-HTML5详解(三)</title>
+      <link>https://horizono.github.io/weblearning/11-html5%E8%AF%A6%E8%A7%A3%E4%B8%89/</link>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/11-html5%E8%AF%A6%E8%A7%A3%E4%B8%89/</guid>
+      <description>Web 存储 随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以document.cookie来进行存储的，但是由于其存储大小只有4k左右，并且解析也相当的复杂，给开发带来诸多不便，HTML5规范则提出解决方案。 H5 中有两种存储的方式 1、window.sessionStorage 会话存储： 保存在内存中。 生命周期为关闭浏览</description>
+    </item>
+    
+    <item>
+      <title>12-HTML5基础回顾</title>
+      <link>https://horizono.github.io/weblearning/12-html%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</link>
+      <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/12-html%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</guid>
+      <description>本文主要内容 html 的常见元素 html 元素的分类 html 元素的嵌套关系 html 元素的默认样式和 CSS Reset html 常见面试题 html 的常见元素 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。 1、head 区域的 html 元素 head 区域的 html 元素，不会在页面上留下直接的内容。 meta title style link script base base元素的介绍： &amp;lt;base href=&amp;quot;/&amp;quot;&amp;gt; base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。 2、html 元素（body 区域） body 区域的 html 元素</description>
+    </item>
+    
+    <item>
+      <title>Stranger CN&#43;EN</title>
+      <link>https://horizono.github.io/moment/stranger-cn&#43;en/</link>
+      <pubDate>Sat, 26 Oct 2019 16:14:15 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/moment/stranger-cn&#43;en/</guid>
+      <description>有件事我早想跟你们谈谈了 There&amp;rsquo;s something I&amp;rsquo;ve been wanting to talk to you both about. 我知道谈这个很困难，但我非常在乎你们俩 I know this is a difficult conversation,but I care about you both very much. 我也知道你们很在乎彼此 And I know that you care about each other very much. 所以我们一定要立下这些规矩，以便今后建立一个良好环境 And that&amp;rsquo;s why it&amp;rsquo;s important that we set these boundaries moving forward,so we can build an environment&amp;hellip;. 让我们都能感到自在，被信任和开放的可以分享我们的情绪。 where we all feel comfortable&amp;hellip;trusted&amp;hellip;.and open to share our feelings. 事实上，很久以来，我都忘记那是什么了。 The truth is，for so long, I&amp;rsquo;d forgotten what those even were. 我一直困在以个</description>
+    </item>
+    
+    <item>
+      <title>Stranger Things EN</title>
+      <link>https://horizono.github.io/moment/stranger-en/</link>
+      <pubDate>Sat, 26 Oct 2019 16:12:12 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/moment/stranger-en/</guid>
+      <description>There&amp;rsquo;s something I&amp;rsquo;ve been wanting to talk to you both about. I know this is a difficult conversation,but I care about you both very much. And I know that you care about each other very much. And that&amp;rsquo;s why it&amp;rsquo;s important that we set these boundaries moving forward,so we can build an environment&amp;hellip;. where we all feel comfortable&amp;hellip;trusted&amp;hellip;.and open to share our feelings. The truth is，for so long, I&amp;rsquo;d forgotten what those even were. I&amp;rsquo;ve been stuck in one place,in a cave,you might say. A deep,dark cave. And then,I left some Eggos out in the woods, and you came into my life and &amp;hellip;. for the first time in a long time, I started to feel things again. I started to feel happy. But, lately,I guess I&amp;rsquo;ve been feeling distant from you. Like you&amp;rsquo;re,you&amp;rsquo;re pulling away from me or something. I miss playing board games every night, making triple-decker Eggo extravaganzas at sunrise, watching westerns together before we doze off. But I know you&amp;rsquo;re getting older.Growing,Changing. And I guess&amp;hellip;. if I&amp;rsquo;m being really honest,that&amp;rsquo;s what scares me. I don&amp;rsquo;t want things to change. So,I think maybe that&amp;rsquo;s why I came in here, to try to maybe&amp;hellip;stop that change. To turn back the clock.</description>
+    </item>
+    
+    <item>
+      <title>Stranger Things CN</title>
+      <link>https://horizono.github.io/moment/stranger-cn/</link>
+      <pubDate>Sat, 26 Oct 2019 16:06:26 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/moment/stranger-cn/</guid>
+      <description>有件事我早想跟你们谈谈了 我知道谈这个很困难，但我非常在乎你们俩 我也知道你们很在乎彼此 所以我们一定要立下这些规矩，以便今后建立一个良好环境 让我们都能感到自在，被信任和开放的可以分享我们的情绪。 事实上，很久以来，我都忘记那是什么了。 我一直困在以个地方,可以说困在一个洞里。 深深的黑暗的洞。 然后，我在林子里留了些松饼, 你就走进了我的生活，很久以来，头一次 我开始有感觉了 我开始感觉快乐了， 但近来，我想我觉得与</description>
+    </item>
+    
+    <item>
+      <title>MarkDown语法</title>
+      <link>https://horizono.github.io/notes/markdown%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sun, 22 Sep 2019 17:06:21 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/markdown%E8%AF%AD%E6%B3%95/</guid>
+      <description>** 2019-09-22 下午学习markdown语法 6中级别的标题，对应html标签 h1 - h6 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 标题形式 一级标题 === （标题的下一行，输入3个 = ，表示一级标题） 二级标题 &amp;mdash; （标题的下一行，输入3个 - ，表示二级标题） 强调处理（高亮） &amp;gt; 需要高亮内容 插入链接或图片 *[注释]:[链接标题] (链接) ![图片名称](图片地址) 注：引用链接和应用图片的唯一区别是：引用图片前加一个感叹号 列表 •无序列表，用 * ， + ， - ，作为</description>
+    </item>
+    
+    <item>
+      <title>MarkDown语法</title>
+      <link>https://horizono.github.io/blog/2019-09/markdown%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sun, 22 Sep 2019 17:05:50 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/blog/2019-09/markdown%E8%AF%AD%E6%B3%95/</guid>
+      <description>** 2019-09-22 下午学习markdown语法 6中级别的标题，对应html标签 h1 - h6 # h1 ## h2 ### h3 #### h4 ##### h5 ###### h6 标题形式 一级标题 === （标题的下一行，输入3个 = ，表示一级标题） 二级标题 &amp;mdash; （标题的下一行，输入3个 - ，表示二级标题） 强调处理（高亮） &amp;gt; 需要高亮内容 插入链接或图片 *[注释]:[链接标题] (链接) ![图片名称](图片地址) 注：引用链接和应用图片的唯一区别是：引用图片前加一个感叹号 列表 •无序列表，用 * ， + ， - ，作为</description>
+    </item>
+    
+    <item>
+      <title>开机，重启，用户登录注销，添加命令</title>
+      <link>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 01 Aug 2019 18:38:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/%E5%BC%80%E6%9C%BA%E9%87%8D%E5%90%AF%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80%E6%B7%BB%E5%8A%A0%E5%91%BD%E4%BB%A4/</guid>
+      <description>• shutdown • shutdown -h now：立即关机 • shutdown -h 1：表示一分钟后关机 • shutdown -r now：现在重启 • halt:关机 • reboot：重启系统 • sync ：把内存数据同步到磁盘 ##用户登录和注销 • 尽量少用root登录，因为有最大权限，可以用普通用户登录，登录后用&amp;quot;su-用户名&amp;quot;切换到系统管理员身份 • logout：远程注销用户 ##用户管理 • useradd +用户名 • 指定目录创建用户 useradd -d +目录 +用户名 • passwd 添加修改密码 • cd change directory 切换目</description>
+    </item>
+    
+    <item>
+      <title>Linux-Notes1.0</title>
+      <link>https://horizono.github.io/notes/linux1.0/</link>
+      <pubDate>Mon, 29 Jul 2019 15:31:52 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/notes/linux1.0/</guid>
+      <description>虚拟机NAT模式连接网络，选择eth0网卡，如果没有 先右键我的电脑&amp;ndash;&amp;gt;管理&amp;ndash;&amp;gt;服务和应用程序&amp;ndash;&amp;gt;服务&amp;ndash;&amp;gt;打开VMware DHCP Service和VMware NAT Service</description>
+    </item>
+    
+    <item>
+      <title>19-7-21</title>
+      <link>https://horizono.github.io/moment/19-7-21/</link>
+      <pubDate>Sun, 21 Jul 2019 22:43:57 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/moment/19-7-21/</guid>
+      <description>2019/07/21 读一只特立独行的猪 摘抄我已经四十岁了除了这只猪， 还没见过谁敢于如此无视对生活的设置. 相反, 我倒见过很多想要设置别人生活的人, 还有对被设置的生活安之若素的人. 因为这个缘故, 我一直怀念这只特立独行的猪.</description>
+    </item>
+    
+    <item>
+      <title>Hugo&#43;Github</title>
+      <link>https://horizono.github.io/blog/2019-07/hugo-github/</link>
+      <pubDate>Sun, 21 Jul 2019 00:06:16 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/blog/2019-07/hugo-github/</guid>
+      <description>Hugo+Github&amp;mdash;&amp;gt;个人博客 &amp;mdash;- 记录搭建Hugo+Github静态博客。 一、运行环境： *Win10+Git 二、Hugo是什么？ Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。 Hugo还提供有[Hugo中文文档]，文档里面也有介绍如何安装Hugo到将个人站点部署到Github仓库上。 三、开始搭建 Step 1：下载和安装Hugo ①：进入Hugo的github仓库[下载]对应自</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://horizono.github.io/about-hugo/</link>
+      <pubDate>Sat, 20 Jul 2019 17:45:00 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/about-hugo/</guid>
+      <description>即将迈进大三,计算机专业,数据挖掘方向，正在学习Java和Python. 趁着暑假学习并搭建了一个静态博客网站. 本站建于2019/7/19,用于分享学习的笔记,心得等等. Stay hungar.Stay foolish.Life is fantasy. Contact * Weibo:@HorizonOriginal * Github:@https://github.com/HorizonO * QQ:766422707</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://horizono.github.io/post/blog/</link>
+      <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/blog/</guid>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>BlogT</title>
+      <link>https://horizono.github.io/blog/2019-07/blogt/</link>
+      <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/blog/2019-07/blogt/</guid>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+    </item>
+    
+    <item>
+      <title>The &#34;figure&#34; Shortcode</title>
+      <link>https://horizono.github.io/post/the-figure-shortcode/</link>
+      <pubDate>Mon, 24 Dec 2018 12:29:41 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/the-figure-shortcode/</guid>
+      <description>Hugo has figure shortcode built in, so you can easily add figcaptions or hyperlink rel attributes to images. Documentations can be found here:
+https://gohugo.io/content-management/shortcodes/#figure
+This theme has 3 CSS classes made for figure elements:
+ big: images will break the width limit of main content area. left: images will float to the left. right: images will float to the right.  If a figure has no class set, the image will behave just like a normal markdown image: ![]().
+Here&amp;rsquo;s some examples, please be aware that these styles only take effect when the page width is over 1300px.
+  figure-normal (without any classes)
+  Pellentesque posuere sem nec nunc varius, id hendrerit arcu consequat. Maecenas commodo, sapien ut gravida porttitor, dolor risus facilisis enim, eget pharetra nibh nisl porttitor sapien. Proin finibus elementum ligula sit amet hendrerit. Praesent et erat sodales ante accumsan pharetra non eu nulla. Sed vehicula consequat lorem, a fermentum ante faucibus quis. Aliquam erat volutpat. In vitae tincidunt dui. Proin sit amet ligula sodales, elementum tortor et, venenatis sem. Maecenas non nisl erat. Curabitur nec velit eros. Ut cursus lacus nisi, non pretium libero euismod et. Fusce luctus in nisi quis sollicitudin. Aenean nec blandit ligula.</description>
+    </item>
+    
+    <item>
+      <title>Post With Featured Image</title>
+      <link>https://horizono.github.io/post/post-with-featured-image/</link>
+      <pubDate>Mon, 01 Oct 2018 16:15:09 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
+      <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
+For example:
+--- images: - https://picsum.photos/1024/768/?random ---  This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://horizono.github.io/post/typography/</link>
+      <pubDate>Sat, 29 Sep 2018 11:36:33 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/post/typography/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.1
+ Inline styles：
+strong, emphasis, strong and emphasis,code, underline, strikethrough, 😂🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, Link, and image:
+Headings:
+Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Table:
+   Left-Aligned Center Aligned Right Aligned     col 3 is some wordy text $1600   col 2 is centered $12   zebra stripes are neat $1    Lists:</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://horizono.github.io/post/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/post/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
+git clone https://github.com/spf13/hugo cd hugo /path/to/where/you/installed/hugo server --source=./docs &amp;gt; 29 pages created &amp;gt; 0 tags index created &amp;gt; in 27 ms &amp;gt; Web Server is available at http://localhost:1313 &amp;gt; Press ctrl+c to stop  Once you&amp;rsquo;ve gotten here, follow along the rest of this page on your local build.
+Step 3. Change the docs site Stop the Hugo process by hitting Ctrl+C.
+Now we are going to run hugo again, but this time with hugo in watch mode.
+/path/to/hugo/from/step/1/hugo server --source=./docs --watch &amp;gt; 29 pages created &amp;gt; 0 tags index created &amp;gt; in 27 ms &amp;gt; Web Server is available at http://localhost:1313 &amp;gt; Watching for changes in /Users/spf13/Code/hugo/docs/content &amp;gt; Press ctrl+c to stop  Open your favorite editor and change one of the source content pages.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://horizono.github.io/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://horizono.github.io/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
+Create your Hugo configuration file Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the Hugo configuration documentation for details.
+Set your configuration publish folder to _site The default is for Jekyll to publish to _site and for Hugo to publish to public. If, like me, you have _site mapped to a git submodule on the gh-pages branch, you&amp;rsquo;ll want to do one of two alternatives:
+ Change your submodule to point to map gh-pages to public instead of _site (recommended).
+git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public  Or, change the Hugo configuration to use _site instead of public.
+{ .. &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;, .</description>
     </item>
     
   </channel>

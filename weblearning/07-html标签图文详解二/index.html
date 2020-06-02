@@ -1,121 +1,354 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="theme-color" content="#494f5c">
-	<meta name="msapplication-TileColor" content="#494f5c">
-
-<meta itemprop="name" content="07-html标签图文详解">
-<meta itemprop="description" content="本文主要内容  列表标签：&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt; 表格标签：&lt;table&gt; 框架标签及内嵌框架&lt;iframe&gt; 表单标签：&lt;form&gt; 多媒体标签 滚动字幕标签：&lt;marquee&gt;  列表标签 列表标签分为三种。
-1、无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt; 英文单词解释如下：
- ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
-&lt;ul&gt; &lt;li&gt;默认1&lt;/li&gt; &lt;li&gt;默认2&lt;/li&gt; &lt;li&gt;默认3&lt;/li&gt; &lt;/ul&gt; 效果：
-注意：
- li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
- type=&quot;属性值&quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&lt;ul&gt;标签有type属性，&lt;ul&gt;里面的&lt;li&gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
-注意：项目符号可以是图片，需要通过CSS设置&lt;li&gt;标记的背景图片来实现(CSS中讲)。
-当然了，列表之间是可以嵌套的。我们来举个例子。代码：
-&lt;ul&gt; &lt;li&gt;&lt;b&gt;北京市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;海淀区&lt;/li&gt; &lt;li&gt;朝阳区&lt;/li&gt; &lt;li&gt;东城区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;b&gt;广州市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;天河区&lt;/li&gt; &lt;li&gt;越秀区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; 效果：
-css 属性：
-list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */ ul标签实际应用场景： 场景1、导航条：">
-
-
-<meta itemprop="datePublished" content="2020-05-09T18:38:58&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-09T18:38:58&#43;08:00" />
-<meta itemprop="wordCount" content="858">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta property="og:title" content="07-html标签图文详解" />
-<meta property="og:description" content="本文主要内容  列表标签：&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt; 表格标签：&lt;table&gt; 框架标签及内嵌框架&lt;iframe&gt; 表单标签：&lt;form&gt; 多媒体标签 滚动字幕标签：&lt;marquee&gt;  列表标签 列表标签分为三种。
-1、无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt; 英文单词解释如下：
- ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
-&lt;ul&gt; &lt;li&gt;默认1&lt;/li&gt; &lt;li&gt;默认2&lt;/li&gt; &lt;li&gt;默认3&lt;/li&gt; &lt;/ul&gt; 效果：
-注意：
- li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
- type=&quot;属性值&quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&lt;ul&gt;标签有type属性，&lt;ul&gt;里面的&lt;li&gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
-注意：项目符号可以是图片，需要通过CSS设置&lt;li&gt;标记的背景图片来实现(CSS中讲)。
-当然了，列表之间是可以嵌套的。我们来举个例子。代码：
-&lt;ul&gt; &lt;li&gt;&lt;b&gt;北京市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;海淀区&lt;/li&gt; &lt;li&gt;朝阳区&lt;/li&gt; &lt;li&gt;东城区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;b&gt;广州市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;天河区&lt;/li&gt; &lt;li&gt;越秀区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; 效果：
-css 属性：
-list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */ ul标签实际应用场景： 场景1、导航条：" />
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="Horizon">
+  <meta name="description" content="本文主要内容 列表标签：&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt; 表格标签：&lt;table&gt; 框架标签及内嵌框架&lt;iframe&gt; 表单标签：&lt;form&gt; 多媒体标签 滚动字幕标签：&lt;marquee&gt; 列表标签 列表标签分为三种。 1、无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt; 英文单词解释如下： ul：unordered l">
+  
+  <meta property="og:title" content="07-html标签图文详解" />
+<meta property="og:description" content="本文主要内容 列表标签：&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt; 表格标签：&lt;table&gt; 框架标签及内嵌框架&lt;iframe&gt; 表单标签：&lt;form&gt; 多媒体标签 滚动字幕标签：&lt;marquee&gt; 列表标签 列表标签分为三种。 1、无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt; 英文单词解释如下： ul：unordered l" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/" />
 <meta property="article:published_time" content="2020-05-09T18:38:58&#43;08:00"/>
 <meta property="article:modified_time" content="2020-05-09T18:38:58&#43;08:00"/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="07-html标签图文详解"/>
-<meta name="twitter:description" content="本文主要内容  列表标签：&lt;ul&gt;、&lt;ol&gt;、&lt;dl&gt; 表格标签：&lt;table&gt; 框架标签及内嵌框架&lt;iframe&gt; 表单标签：&lt;form&gt; 多媒体标签 滚动字幕标签：&lt;marquee&gt;  列表标签 列表标签分为三种。
-1、无序列表&lt;ul&gt;，无序列表中的每一项是&lt;li&gt; 英文单词解释如下：
- ul：unordered list，“无序列表”的意思。 li：list item，“列表项”的意思。  例如：
-&lt;ul&gt; &lt;li&gt;默认1&lt;/li&gt; &lt;li&gt;默认2&lt;/li&gt; &lt;li&gt;默认3&lt;/li&gt; &lt;/ul&gt; 效果：
-注意：
- li不能单独存在，必须包裹在ul里面；反过来说，ul的“儿子”不能是别的东西，只能有li。 我们这里再次强调，ul的作用，并不是给文字增加小圆点的，而是增加无序列表的“语义”的。  属性：
- type=&quot;属性值&quot;。属性值可以选： disc(实心原点，默认)，square(实心方点)，circle(空心圆)。 效果如下：  不光是&lt;ul&gt;标签有type属性，&lt;ul&gt;里面的&lt;li&gt;标签也有type属性（虽然说这种写法很少见）。效果如下：
-注意：项目符号可以是图片，需要通过CSS设置&lt;li&gt;标记的背景图片来实现(CSS中讲)。
-当然了，列表之间是可以嵌套的。我们来举个例子。代码：
-&lt;ul&gt; &lt;li&gt;&lt;b&gt;北京市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;海淀区&lt;/li&gt; &lt;li&gt;朝阳区&lt;/li&gt; &lt;li&gt;东城区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;b&gt;广州市&lt;/b&gt; &lt;ul&gt; &lt;li&gt;天河区&lt;/li&gt; &lt;li&gt;越秀区&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt; 效果：
-css 属性：
-list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */ ul标签实际应用场景： 场景1、导航条："/>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-	<link rel="shortcut icon" href="/favicon.ico">
 
-	<title>07-html标签图文详解</title>
-	<link rel="stylesheet" href="https://horizono.github.io/css/style.min.568c54a56780af2a70c45272522247710b69dbfc080b315211fb98381e3796f8.css" integrity="sha256-VoxUpWeArypwxFJyUiJHcQtp2/wICzFSEfuYOB43lvg=">
-	
+  <title>
+  
+       07-html标签图文详解 | Horizon&#39;s  坚果壳 
+  
+  </title>
+
+  <link rel="canonical" href="https://horizono.github.io/weblearning/07-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E4%BA%8C/">
+
+  
+  
+
+  
+  <link href="https://horizono.github.io/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://horizono.github.io/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://horizono.github.io/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://horizono.github.io/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://horizono.github.io/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://horizono.github.io/img/chen.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://horizono.github.io/css/vendors/highlight/github-gist.css">
+  
+
 </head>
 
-<body id="page">
-	
-	<header id="site-header" class="animated slideInUp faster">
-		<div class="hdr-wrapper section-inner">
-			<div class="hdr-left">
-				<div class="site-branding">
-					<a href="https://horizono.github.io/">Horizon</a>
-				</div>
-				<nav class="site-nav hide-in-mobile">
-					
-				<a href="https://horizono.github.io/post/">Posts</a>
-				<a href="https://horizono.github.io/about-hugo/">About</a>
-				<a href="https://horizono.github.io/blog/">Blog</a>
-				<a href="https://horizono.github.io/moment/">Moment</a>
-				<a href="https://horizono.github.io/notes/">Notes</a>
-				<a href="https://horizono.github.io/weblearning/">WebLearning</a>
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
 
-				</nav>
-			</div>
-			<div class="hdr-right hdr-icons">
-				<span class="hdr-social hide-in-mobile"><a href="https://twitter.com/" target="_blank" rel="noopener me" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a><a href="https://instagram.com/" target="_blank" rel="noopener me" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg></a><a href="https://github.com/" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
-			</div>
-		</div>
-	</header>
-	<div id="mobile-menu" class="animated fast">
-		<ul>
-			<li><a href="https://horizono.github.io/post/">Posts</a></li>
-			<li><a href="https://horizono.github.io/about-hugo/">About</a></li>
-			<li><a href="https://horizono.github.io/blog/">Blog</a></li>
-			<li><a href="https://horizono.github.io/moment/">Moment</a></li>
-			<li><a href="https://horizono.github.io/notes/">Notes</a></li>
-			<li><a href="https://horizono.github.io/weblearning/">WebLearning</a></li>
-		</ul>
-	</div>
+    
+      
 
 
-	<main class="site-main section-inner thin animated fadeIn faster">
-		<h1>07-html标签图文详解</h1>
-		<div class="content">
-			
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
 
-<h2 id="本文主要内容">本文主要内容<a href="#本文主要内容" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+      
+      <a class="navbar-brand" href="https://horizono.github.io/">
+          
+        <img class="avatar" src="https://horizono.github.io/img/chen.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> Horizon</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://horizono.github.io/">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/moment/" >Moment  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/notes/" >Notes  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/weblearning/" >webLearing  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://horizono.github.io/about-hugo/" >About  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides/JMCY5568.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//SWGV6042.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://horizono.github.io/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://horizono.github.io/">
+          
+            <img class="pull-right avatar avatar-md" src="https://horizono.github.io/img/ki.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://horizono.github.io/">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>Horizon&#39;s  坚果壳</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="https://github.com/HorizonO" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+
+            
+
+            
+
+            
+
+            
+                <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="container pr-5">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+    
+  </ul>
+
+  <div class="px-4 post-heading">07-html标签图文详解</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>May 9, 2020</li>
+    
+
+    
+      <li class="middot"></li>
+      <li>29 minutes read</li>
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h2 id="本文主要内容">本文主要内容</h2>
 
 <ul>
 <li>列表标签：<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;dl&gt;</code></li>
@@ -126,11 +359,11 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
 <li>滚动字幕标签：<code>&lt;marquee&gt;</code></li>
 </ul>
 
-<h2 id="列表标签">列表标签<a href="#列表标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="列表标签">列表标签</h2>
 
 <p>列表标签分为三种。</p>
 
-<h3 id="1-无序列表-ul-无序列表中的每一项是-li">1、无序列表<code>&lt;ul&gt;</code>，无序列表中的每一项是<code>&lt;li&gt;</code><a href="#1-无序列表-ul-无序列表中的每一项是-li" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="1-无序列表-ul-无序列表中的每一项是-li">1、无序列表<code>&lt;ul&gt;</code>，无序列表中的每一项是<code>&lt;li&gt;</code></h3>
 
 <p>英文单词解释如下：</p>
 
@@ -140,11 +373,14 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
 </ul>
 
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>默认1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>默认2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>默认3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;默认1&lt;/li&gt;
+	&lt;li&gt;默认2&lt;/li&gt;
+	&lt;li&gt;默认3&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_01.png" alt="" /></p>
@@ -172,30 +408,36 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
 <p>注意：项目符号可以是图片，需要通过CSS设置<code>&lt;li&gt;</code>标记的背景图片来实现(CSS中讲)。</p>
 
 <p>当然了，列表之间是可以<strong>嵌套</strong>的。我们来举个例子。代码：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>北京市<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>海淀区<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>朝阳区<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>东城区<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 
-		<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<pre><code class="language-html">  &lt;ul&gt;
+	&lt;li&gt;&lt;b&gt;北京市&lt;/b&gt;
+		&lt;ul&gt;
+			&lt;li&gt;海淀区&lt;/li&gt;
+			&lt;li&gt;朝阳区&lt;/li&gt;
+			&lt;li&gt;东城区&lt;/li&gt;
 
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>广州市<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>天河区<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>越秀区<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+		&lt;/ul&gt;
+	&lt;/li&gt;
+
+	&lt;li&gt;&lt;b&gt;广州市&lt;/b&gt;
+		&lt;ul&gt;
+			&lt;li&gt;天河区&lt;/li&gt;
+			&lt;li&gt;越秀区&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-01-cnblogs_html_40.png" alt="" /></p>
 
 <p><strong>css 属性</strong>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">list-style-position</span><span class="o">:</span> <span class="nt">inside</span>   <span class="c">/* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */</span></code></pre></div>
-<h4 id="ul标签实际应用场景">ul标签实际应用场景：<a href="#ul标签实际应用场景" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<pre><code class="language-css">list-style-position: inside   /* 给 ul 设置这个属性后，将小圆点包含在 li 元素的内部 */
+</code></pre>
+
+<h4 id="ul标签实际应用场景">ul标签实际应用场景：</h4>
 
 <p>场景1、导航条：</p>
 
@@ -207,16 +449,19 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
 
 <p>声明：ul的儿子，只能是li。但是li是一个容器级标签，<strong>li里面什么都能放，甚至可以再放一个ul</strong>。</p>
 
-<h3 id="2-有序列表-ol-里面的每一项是-li">2、有序列表<code>&lt;OL&gt;</code>，里面的每一项是<code>&lt;li&gt;</code><a href="#2-有序列表-ol-里面的每一项是-li" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="2-有序列表-ol-里面的每一项是-li">2、有序列表<code>&lt;OL&gt;</code>，里面的每一项是<code>&lt;li&gt;</code></h3>
 
 <p>英文单词：Ordered List。</p>
 
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ol</span> <span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵哒1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵哒2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵哒3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;ol &gt;
+	&lt;li&gt;呵呵哒1&lt;/li&gt;
+	&lt;li&gt;呵呵哒2&lt;/li&gt;
+	&lt;li&gt;呵呵哒3&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_04.png" alt="" /></p>
@@ -225,29 +470,32 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
  - <code>type=&quot;属性值&quot;</code>。属性值可以是：1(阿拉伯数字，默认)、a、A、i、I。结合<code>start</code>属性表示<code>从几开始</code>。</p>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 
-<span class="p">&lt;</span><span class="nt">ol</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;a&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>嘿嘿<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>嘿嘿<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>呵呵<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;ol type=&quot;1&quot;&gt;
+	&lt;li&gt;呵呵&lt;/li&gt;
+	&lt;li&gt;呵呵&lt;/li&gt;
+	&lt;li&gt;呵呵&lt;/li&gt;
+&lt;/ol&gt;
 
-<span class="p">&lt;</span><span class="nt">ol</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;i&#34;</span> <span class="na">start</span><span class="o">=</span><span class="s">&#34;4&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>哈哈<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>哈哈<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>哈哈<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+&lt;ol type=&quot;a&quot;&gt;
+	&lt;li&gt;嘿嘿&lt;/li&gt;
+	&lt;li&gt;嘿嘿&lt;/li&gt;
+	&lt;li&gt;呵呵&lt;/li&gt;
+&lt;/ol&gt;
 
-<span class="p">&lt;</span><span class="nt">ol</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;I&#34;</span> <span class="na">start</span><span class="o">=</span><span class="s">&#34;10&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>么么<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>么么<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>么么<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span></code></pre></div>
+&lt;ol type=&quot;i&quot; start=&quot;4&quot;&gt;
+	&lt;li&gt;哈哈&lt;/li&gt;
+	&lt;li&gt;哈哈&lt;/li&gt;
+	&lt;li&gt;哈哈&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type=&quot;I&quot; start=&quot;10&quot;&gt;
+	&lt;li&gt;么么&lt;/li&gt;
+	&lt;li&gt;么么&lt;/li&gt;
+	&lt;li&gt;么么&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
 <p>效果如下：
 <img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_07.png" alt="" /></p>
 
@@ -257,12 +505,15 @@ list-style-position: inside /* 给 ul 设置这个属性后，将小圆点包含
 ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p>ol这个东西用的不多，如果想表达顺序，大家一般也用ul。举例如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>1. 小苹果<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>2. 月亮之上<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>3. 最炫民族风<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="3-定义列表-dl">3、定义列表<code>&lt;dl&gt;</code><a href="#3-定义列表-dl" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;1. 小苹果&lt;/li&gt;
+	&lt;li&gt;2. 月亮之上&lt;/li&gt;
+	&lt;li&gt;3. 最炫民族风&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<h3 id="3-定义列表-dl">3、定义列表<code>&lt;dl&gt;</code></h3>
 
 <blockquote>
 <p>定义列表的作用非常大。</p>
@@ -278,20 +529,23 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <p>备注：dt、dd只能在dl里面；dl里面只能有dt、dd。</p>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>第一条<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>你若是觉得你有实力和我玩，良辰不介意奉陪到底<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>我会让你明白，我从不说空话<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>我是本地的，我有一百种方式让你呆不下去；而你，无可奈何<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
 
-	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>第二条<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>良辰最喜欢对那些自认能力出众的人出手<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>你可以继续我行我素，不过，你的日子不会很舒心<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>你只要记住，我叫叶良辰<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>不介意陪你玩玩<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>良辰必有重谢<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;dl&gt;
+	&lt;dt&gt;第一条&lt;/dt&gt;
+	&lt;dd&gt;你若是觉得你有实力和我玩，良辰不介意奉陪到底&lt;/dd&gt;
+	&lt;dd&gt;我会让你明白，我从不说空话&lt;/dd&gt;
+	&lt;dd&gt;我是本地的，我有一百种方式让你呆不下去；而你，无可奈何&lt;/dd&gt;
 
-<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
+	&lt;dt&gt;第二条&lt;/dt&gt;
+	&lt;dd&gt;良辰最喜欢对那些自认能力出众的人出手&lt;/dd&gt;
+	&lt;dd&gt;你可以继续我行我素，不过，你的日子不会很舒心&lt;/dd&gt;
+	&lt;dd&gt;你只要记住，我叫叶良辰&lt;/dd&gt;
+	&lt;dd&gt;不介意陪你玩玩&lt;/dd&gt;
+	&lt;dd&gt;良辰必有重谢&lt;/dd&gt;
+
+&lt;/dl&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_09.png" alt="" /></p>
@@ -306,64 +560,74 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <p>备注：dd是描述dt的。</p>
 
 <p>定义列表用法非常灵活，可以一个dt配很多dd：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>北京<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>国家首都，政治文化中心<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>污染很严重，PM2.0天天报表<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>上海<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>魔都，有外滩、东方明珠塔、黄浦江<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>广州<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>中国南大门，有珠江、小蛮腰<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;dl&gt;
+		&lt;dt&gt;北京&lt;/dt&gt;
+		&lt;dd&gt;国家首都，政治文化中心&lt;/dd&gt;
+		&lt;dd&gt;污染很严重，PM2.0天天报表&lt;/dd&gt;
+		&lt;dt&gt;上海&lt;/dt&gt;
+		&lt;dd&gt;魔都，有外滩、东方明珠塔、黄浦江&lt;/dd&gt;
+		&lt;dt&gt;广州&lt;/dt&gt;
+		&lt;dd&gt;中国南大门，有珠江、小蛮腰&lt;/dd&gt;
+	&lt;/dl&gt;
+</code></pre>
+
 <p>还可以拆开，让每一个dl里面只有一个dt和dd，这样子感觉清晰一些：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>北京<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>国家首都，政治文化中心<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>污染很严重，PM2.0天天报表<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
 
-	<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>上海<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>魔都，有外滩、东方明珠塔、黄浦江<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+<pre><code class="language-html">	&lt;dl&gt;
+		&lt;dt&gt;北京&lt;/dt&gt;
+		&lt;dd&gt;国家首都，政治文化中心&lt;/dd&gt;
+		&lt;dd&gt;污染很严重，PM2.0天天报表&lt;/dd&gt;
+	&lt;/dl&gt;
 
-	<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>广州<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>中国南大门，有珠江、小蛮腰<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
+	&lt;dl&gt;
+		&lt;dt&gt;上海&lt;/dt&gt;
+		&lt;dd&gt;魔都，有外滩、东方明珠塔、黄浦江&lt;/dd&gt;
+	&lt;/dl&gt;
+
+	&lt;dl&gt;
+		&lt;dt&gt;广州&lt;/dt&gt;
+		&lt;dd&gt;中国南大门，有珠江、小蛮腰&lt;/dd&gt;
+	&lt;/dl&gt;
+</code></pre>
+
 <p>真实案例：（京东最下方）</p>
 
 <p><img src="http://img.smyhvae.com/20170704_1727.png" alt="" /></p>
 
 <p>上图中的结构如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>购物指南<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>购物流程<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>会员介绍<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>生活旅行/团购<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>常见问题<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>大家电<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>联系客服<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>配送方式<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>上门自提<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>211限时达<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>配送服务查询<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>配送费收取标准<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>海外配送<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;dl&gt;
+	&lt;dt&gt;购物指南&lt;/dt&gt;
+	&lt;dd&gt;
+		&lt;a href=&quot;#&quot;&gt;购物流程&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;会员介绍&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;生活旅行/团购&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;常见问题&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;大家电&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;联系客服&lt;/a&gt;
+	&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl&gt;
+	&lt;dt&gt;配送方式&lt;/dt&gt;
+	&lt;dd&gt;
+		&lt;a href=&quot;#&quot;&gt;上门自提&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;211限时达&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;配送服务查询&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;配送费收取标准&lt;/a&gt;
+		&lt;a href=&quot;#&quot;&gt;海外配送&lt;/a&gt;
+	&lt;/dd&gt;
+&lt;/dl&gt;
+
+</code></pre>
+
 <p>京东商品分类如下：</p>
 
 <p><img src="http://img.smyhvae.com/20170704_1729.png" alt="" /></p>
 
 <p>dt、dd都是容器级标签，想放什么都可以。所以，现在就应该更加清晰的知道：用什么标签，不是根据样子来决定，而是语义（语义本质上是结构）。</p>
 
-<h2 id="表格标签">表格标签<a href="#表格标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="表格标签">表格标签</h2>
 
 <p>表格标签用<code>&lt;table&gt;</code>表示。
 一个表格<code>&lt;table&gt;</code>是由每行<code>&lt;tr&gt;</code>组成的，每行是由每个单元格<code>&lt;td&gt;</code>组成的。
@@ -371,39 +635,45 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 在以前，要想固定标签的位置，唯一的方法就是表格。现在可以通过CSS定位的功能来实现。但是现在在做页面的时候，表格作用还是有一些的。</p>
 
 <p>例如，一行的单元格：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
 <p>上面的表格中没有加文字，所以在生成的网页中什么都看不到。
 例如，3行4列的单元格：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>生命壹号<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>黄冈<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 
-	<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>许嵩<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>29<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>安徽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<pre><code class="language-html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;生命壹号&lt;/td&gt;
+		&lt;td&gt;23&lt;/td&gt;
+		&lt;td&gt;男&lt;/td&gt;
+		&lt;td&gt;黄冈&lt;/td&gt;
+	&lt;/tr&gt;
 
-	<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>邓紫棋<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>女<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>香港<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+	&lt;tr&gt;
+		&lt;td&gt;许嵩&lt;/td&gt;
+		&lt;td&gt;29&lt;/td&gt;
+		&lt;td&gt;男&lt;/td&gt;
+		&lt;td&gt;安徽&lt;/td&gt;
+	&lt;/tr&gt;
 
-<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></code></pre></div>
+	&lt;tr&gt;
+		&lt;td&gt;邓紫棋&lt;/td&gt;
+		&lt;td&gt;23&lt;/td&gt;
+		&lt;td&gt;女&lt;/td&gt;
+		&lt;td&gt;香港&lt;/td&gt;
+	&lt;/tr&gt;
+
+&lt;/table&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_10.png" alt="" /></p>
@@ -435,8 +705,11 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_11.png" alt="" /></p>
 
 <p>备注：表格中很细表格边线的制作，CSS的写法：</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">style</span><span class="o">=</span><span class="s2">&#34;border-collapse:collapse;&#34;</span></code></pre></div>
-<h3 id="tr-行"><code>&lt;tr&gt;</code>：行<a href="#tr-行" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<pre><code class="language-css">style=&quot;border-collapse:collapse;&quot;
+</code></pre>
+
+<h3 id="tr-行"><code>&lt;tr&gt;</code>：行</h3>
 
 <p>一个表格就是一行一行组成的。</p>
 
@@ -456,7 +729,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <li><code>valign=&quot;center&quot;</code>：一行的内容垂直居中，取值：top、middle、bottom</li>
 </ul>
 
-<h3 id="td-单元格"><code>&lt;td&gt;</code>：单元格<a href="#td-单元格" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="td-单元格"><code>&lt;td&gt;</code>：单元格</h3>
 
 <p><strong>属性：</strong></p>
 
@@ -469,7 +742,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <li><code>background</code>：设置这个单元格的背景图片。</li>
 </ul>
 
-<h3 id="单元格的合并">单元格的合并<a href="#单元格的合并" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="单元格的合并">单元格的合并</h3>
 
 <p>单元格的属性：</p>
 
@@ -486,7 +759,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_15.png" alt="" /></p>
 
-<h3 id="th-加粗的单元格-相当于-td-b"><code>&lt;th&gt;</code>：加粗的单元格。相当于<code>&lt;td&gt;</code> + <code>&lt;b&gt;</code><a href="#th-加粗的单元格-相当于-td-b" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="th-加粗的单元格-相当于-td-b"><code>&lt;th&gt;</code>：加粗的单元格。相当于<code>&lt;td&gt;</code> + <code>&lt;b&gt;</code></h3>
 
 <ul>
 <li>属性同<code>&lt;td&gt;</code>标签。</li>
@@ -494,7 +767,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><br></p>
 
-<h3 id="caption-表格的标题-使用时和-tr-标签并列"><code>&lt;caption&gt;</code>：表格的标题。使用时和<code>tr</code>标签并列<a href="#caption-表格的标题-使用时和-tr-标签并列" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="caption-表格的标题-使用时和-tr-标签并列"><code>&lt;caption&gt;</code>：表格的标题。使用时和<code>tr</code>标签并列</h3>
 
 <ul>
 <li>属性：<code>align</code>，表示标题相对于表格的位置。属性取值可以是：left、center、right、top、bottom
@@ -503,7 +776,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_16.png" alt="" /></p>
 
-<h3 id="表格的-thead-标签-tbody-标签-tfoot-标签">表格的<code>&lt;thead&gt;</code>标签、<code>&lt;tbody&gt;</code>标签、<code>&lt;tfoot&gt;</code>标签<a href="#表格的-thead-标签-tbody-标签-tfoot-标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="表格的-thead-标签-tbody-标签-tfoot-标签">表格的<code>&lt;thead&gt;</code>标签、<code>&lt;tbody&gt;</code>标签、<code>&lt;tfoot&gt;</code>标签</h3>
 
 <p>这三个标签有与没有的区别：</p>
 
@@ -513,45 +786,48 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 </ul>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 
-	<span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>
+<pre><code class="language-html"> &lt;body&gt;
 
-		<span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>生命壹号<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>黄冈<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+	&lt;table border=&quot;1&quot;&gt;
 
-		<span class="p">&lt;</span><span class="nt">tfoot</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>许嵩<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>29<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>安徽<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">tfoot</span><span class="p">&gt;</span>
+		&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;生命壹号&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;男&lt;/td&gt;
+			&lt;td&gt;黄冈&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/tbody&gt;
 
-		<span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>邓紫棋<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>23<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>女<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>香港<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+		&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;许嵩&lt;/td&gt;
+			&lt;td&gt;29&lt;/td&gt;
+			&lt;td&gt;男&lt;/td&gt;
+			&lt;td&gt;安徽&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/tfoot&gt;
 
-	<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+		&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;td&gt;邓紫棋&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;女&lt;/td&gt;
+			&lt;td&gt;香港&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;/thead&gt;
 
- <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></code></pre></div>
+	&lt;/table&gt;
+
+ &lt;/body&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_17.png" alt="" /></p>
 
-<h2 id="框架标签">框架标签<a href="#框架标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="框架标签">框架标签</h2>
 
 <p>如果我们希望在一个网页中显示多个页面，那框架标签就派上用场了。
 &gt; - 注意，框架标签不能放在<code>&lt;body&gt;</code>标签里面，因为<code>&lt;body&gt;</code>标签代表的只是一个页面，而框架标签代表的是多个页面。于是：<code>&lt;frameset&gt;</code>和<code>&lt;body&gt;</code>只能二选一。
@@ -559,7 +835,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><strong>补充</strong>：<code>frameset</code>和<code>frame</code>已经从 Web标准中删除，建议使用 iframe 代替。</p>
 
-<h3 id="frameset-框架的集合"><code>&lt;frameset&gt;</code>：框架的集合<a href="#frameset-框架的集合" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="frameset-框架的集合"><code>&lt;frameset&gt;</code>：框架的集合</h3>
 
 <p>一个框架的集合可以包含多个框架或框架的集合。<strong>属性：</strong></p>
 
@@ -591,7 +867,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_27.png" alt="" /></p>
 
-<h3 id="frame-框架"><code>&lt;frame&gt;</code>：框架<a href="#frame-框架" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="frame-框架"><code>&lt;frame&gt;</code>：框架</h3>
 
 <p>一个框架显示一个页面。</p>
 
@@ -603,7 +879,10 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 </ul>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">frame</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;top.html&#34;</span> <span class="na">noresize</span><span class="p">&gt;&lt;/</span><span class="nt">frame</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;frame src=&quot;top.html&quot; noresize&gt;&lt;/frame&gt;
+</code></pre>
+
 <ul>
 <li><p><code>bordercolor=&quot;#00FF00&quot;</code>：给框架的边框定义颜色。这个属性在框架集合<code>&lt;frameset&gt;</code>中同样适用。
 颜色这个属性在IE浏览器中生效，但是在google浏览器中无效，不知道为啥。</p></li>
@@ -623,7 +902,7 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_gif3.gif" alt="" /></p>
 
-<h2 id="内嵌框架">内嵌框架<a href="#内嵌框架" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="内嵌框架">内嵌框架</h2>
 
 <p>内嵌框架用<code>&lt;iframe&gt;</code>表示。<code>&lt;iframe&gt;</code>是<code>&lt;body&gt;</code>的子标记。</p>
 
@@ -644,21 +923,25 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_29.png" alt="" /></p>
 
 <p>内嵌框架举例：（在内嵌页面中切换显示不同的压面）</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 
- 	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;文字页面.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;myframe&#34;</span><span class="p">&gt;</span>默认显示文字页面<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
- 	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;图片页面.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;myframe&#34;</span><span class="p">&gt;</span>点击进入图片页面<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
- 	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;表格页面.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;myframe&#34;</span><span class="p">&gt;</span>点击进入表格页面<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<pre><code class="language-html"> &lt;body&gt;
 
- 	<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;文字页面.html&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;400&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;400&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;myframe&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
- 	<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+ 	&lt;a href=&quot;文字页面.html&quot; target=&quot;myframe&quot;&gt;默认显示文字页面&lt;/a&gt;&lt;br&gt;
+ 	&lt;a href=&quot;图片页面.html&quot; target=&quot;myframe&quot;&gt;点击进入图片页面&lt;/a&gt;&lt;br&gt;
+ 	&lt;a href=&quot;表格页面.html&quot; target=&quot;myframe&quot;&gt;点击进入表格页面&lt;/a&gt;&lt;br&gt;
+
+ 	&lt;iframe src=&quot;文字页面.html&quot; width=&quot;400&quot; height=&quot;400&quot; name=&quot;myframe&quot;&gt;&lt;/iframe&gt;
+ 	&lt;br&gt;
  	嘿嘿
 
- <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></code></pre></div>
+ &lt;/body&gt;
+
+</code></pre>
+
 <p>效果演示：
 <img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_GIF.gif" alt="" /></p>
 
-<h2 id="表单标签">表单标签<a href="#表单标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="表单标签">表单标签</h2>
 
 <p>表单标签用<code>&lt;form&gt;</code>表示，用于与服务器的交互。表单就是收集用户信息的，就是让用户填写的、选择的。</p>
 
@@ -690,10 +973,13 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <li>Multipart/form-data：<strong>上传附件时，必须使用这种编码方式</strong>。</li>
 </ul>
 
-<h3 id="input-输入标签-文本框"><code>&lt;input&gt;</code>：输入标签（文本框）<a href="#input-输入标签-文本框" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="input-输入标签-文本框"><code>&lt;input&gt;</code>：输入标签（文本框）</h3>
 
 <p>用于接收用户输入。</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="p">/&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;input type=&quot;text&quot; /&gt;
+</code></pre>
+
 <p><strong>属性：</strong></p>
 
 <ul>
@@ -732,17 +1018,20 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 </blockquote>
 
 <p><strong>举例</strong>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-		姓名：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;呵呵&#34;</span> <span class="p">&gt;</span>逗比<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		昵称：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;哈哈&#34;</span> <span class="na">readonly</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		名字：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;name&#34;</span> <span class="na">disabled</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		密码：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;pwd&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;50&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		性别：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;gender&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;radio1&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;male&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>男
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;gender&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;radio2&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;female&#34;</span> <span class="p">&gt;</span>女<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		爱好：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;eat&#34;</span><span class="p">&gt;</span>吃饭
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;sleep&#34;</span><span class="p">&gt;</span>睡觉
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;bat&#34;</span><span class="p">&gt;</span>打豆豆
-	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;form&gt;
+		姓名：&lt;input value=&quot;呵呵&quot; &gt;逗比&lt;br&gt;
+		昵称：&lt;input value=&quot;哈哈&quot; readonly=&quot;&quot;&gt;&lt;br&gt;
+		名字：&lt;input type=&quot;text&quot; value=&quot;name&quot; disabled=&quot;&quot;&gt;&lt;br&gt;
+		密码：&lt;input type=&quot;password&quot; value=&quot;pwd&quot; size=&quot;50&quot;&gt;&lt;br&gt;
+		性别：&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;radio1&quot; value=&quot;male&quot; checked=&quot;&quot;&gt;男
+			  &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;radio2&quot; value=&quot;female&quot; &gt;女&lt;br&gt;
+		爱好：&lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;eat&quot;&gt;吃饭
+			  &lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;sleep&quot;&gt;睡觉
+			  &lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;bat&quot;&gt;打豆豆
+	&lt;/form&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_33.png" alt="" /></p>
@@ -750,21 +1039,24 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 <p>注意，多个个单选框的input标签中，name 的属性值可以相同，但是 <strong>id 的属性值必须是唯一的</strong>。我们知道，html的标签中，id的属性值是唯一的。</p>
 
 <p><strong>四种按钮的举例</strong>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;普通按钮&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span>  <span class="na">value</span><span class="o">=</span><span class="s">&#34;提交按钮&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;reset&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;重置按钮&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;image&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;图片按钮1&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;image&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;1.jpg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;800&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;图片按钮2&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;文件选择框&#34;</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;form&gt;
+		&lt;input type=&quot;button&quot; value=&quot;普通按钮&quot;&gt;&lt;br&gt;
+		&lt;input type=&quot;submit&quot;  value=&quot;提交按钮&quot;&gt;&lt;br&gt;
+		&lt;input type=&quot;reset&quot; value=&quot;重置按钮&quot;&gt;&lt;br&gt;
+		&lt;input type=&quot;image&quot; value=&quot;图片按钮1&quot;&gt;&lt;br&gt;
+		&lt;input type=&quot;image&quot; src=&quot;1.jpg&quot; width=&quot;800&quot; value=&quot;图片按钮2&quot;&gt;&lt;br&gt;
+		&lt;input type=&quot;file&quot; value=&quot;文件选择框&quot;&gt;
+	&lt;/form&gt;
+</code></pre>
+
 <p><strong>前端开发工程师，重点关心页面的美、样式、板式、交互。至于数据的提供和比较重的业务逻辑，都是后台工程师做的事情。</strong></p>
 
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_35.png" alt="" /></p>
 
-<h3 id="select-下拉列表标签"><code>&lt;select&gt;</code>：下拉列表标签<a href="#select-下拉列表标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="select-下拉列表标签"><code>&lt;select&gt;</code>：下拉列表标签</h3>
 
 <p><code>&lt;select&gt;</code>标签里面的每一项用<code>&lt;option&gt;</code>表示。select就是“选择”，option“选项”。</p>
 
@@ -784,40 +1076,43 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 </ul>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">select</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>小学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>初中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>高中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>大学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>研究生<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
 
-		<span class="p">&lt;</span><span class="nt">select</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>小学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>初中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>高中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>大学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>研究生<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<pre><code class="language-html">	&lt;form&gt;
+		&lt;select&gt;
+			&lt;option&gt;小学&lt;/option&gt;
+			&lt;option&gt;初中&lt;/option&gt;
+			&lt;option&gt;高中&lt;/option&gt;
+			&lt;option&gt;大学&lt;/option&gt;
+			&lt;option selected=&quot;&quot;&gt;研究生&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-		<span class="p">&lt;</span><span class="nt">select</span> <span class="na">multiple</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>小学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>初中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>高中<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span> <span class="na">selected</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>大学<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-			<span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>研究生<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+		&lt;select size=&quot;3&quot;&gt;
+			&lt;option&gt;小学&lt;/option&gt;
+			&lt;option&gt;初中&lt;/option&gt;
+			&lt;option&gt;高中&lt;/option&gt;
+			&lt;option&gt;大学&lt;/option&gt;
+			&lt;option&gt;研究生&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+		&lt;select multiple=&quot;&quot;&gt;
+			&lt;option&gt;小学&lt;/option&gt;
+			&lt;option&gt;初中&lt;/option&gt;
+			&lt;option selected=&quot;&quot;&gt;高中&lt;/option&gt;
+			&lt;option selected=&quot;&quot;&gt;大学&lt;/option&gt;
+			&lt;option&gt;研究生&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+	&lt;/form&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_32.png" alt="" /></p>
 
-<h3 id="textarea-标签-多行文本输入框"><code>&lt;textarea&gt;</code>标签：多行文本输入框<a href="#textarea-标签-多行文本输入框" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="textarea-标签-多行文本输入框"><code>&lt;textarea&gt;</code>标签：多行文本输入框</h3>
 
 <p>text 就是“文本”，area 就是“区域”。</p>
 
@@ -830,59 +1125,75 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 </ul>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;txtInfo&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;4&#34;</span> <span class="na">cols</span><span class="o">=</span><span class="s">&#34;20&#34;</span><span class="p">&gt;</span>1、不爱摄影不懂设计的程序猿不是一个好的产品经理。<span class="p">&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;form&gt;
+		&lt;textarea name=&quot;txtInfo&quot; rows=&quot;4&quot; cols=&quot;20&quot;&gt;1、不爱摄影不懂设计的程序猿不是一个好的产品经理。&lt;/textarea&gt;
+	&lt;/form&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_34.png" alt="" /></p>
 
 <p>上图的红框部分表示，我在文本区域进行了换行，所以显示的效果也出现了空白。</p>
 
-<h3 id="表单的语义化">表单的语义化<a href="#表单的语义化" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="表单的语义化">表单的语义化</h3>
 
 <p>比如，我们在注册一个网站的信息的时候，有一部分是必填信息，有一部分是选填信息，这个时候可以利用表单的语义化。
 举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
 
-		<span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>账号信息<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
-		姓名：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;呵呵&#34;</span> <span class="p">&gt;</span>逗比<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		密码：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;pwd&#34;</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;50&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+<pre><code class="language-html">	&lt;form&gt;
 
-		<span class="p">&lt;</span><span class="nt">fieldset</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">legend</span><span class="p">&gt;</span>其他信息<span class="p">&lt;/</span><span class="nt">legend</span><span class="p">&gt;</span>
-		性别：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;gender&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;male&#34;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>男
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;gender&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;female&#34;</span> <span class="p">&gt;</span>女<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-		爱好：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;eat&#34;</span><span class="p">&gt;</span>吃饭
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;sleep&#34;</span><span class="p">&gt;</span>睡觉
-			  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;love&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;bat&#34;</span><span class="p">&gt;</span>打豆豆
-		<span class="p">&lt;/</span><span class="nt">fieldset</span><span class="p">&gt;</span>
+		&lt;fieldset&gt;
+		&lt;legend&gt;账号信息&lt;/legend&gt;
+		姓名：&lt;input value=&quot;呵呵&quot; &gt;逗比&lt;br&gt;
+		密码：&lt;input type=&quot;password&quot; value=&quot;pwd&quot; size=&quot;50&quot;&gt;&lt;br&gt;
+		&lt;/fieldset&gt;
 
-	<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+		&lt;fieldset&gt;
+		&lt;legend&gt;其他信息&lt;/legend&gt;
+		性别：&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot; checked=&quot;&quot;&gt;男
+			  &lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot; &gt;女&lt;br&gt;
+		爱好：&lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;eat&quot;&gt;吃饭
+			  &lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;sleep&quot;&gt;睡觉
+			  &lt;input type=&quot;checkbox&quot; name=&quot;love&quot; value=&quot;bat&quot;&gt;打豆豆
+		&lt;/fieldset&gt;
+
+	&lt;/form&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/20151002_36.png" alt="" /></p>
 
-<h3 id="label-标签"><code>&lt;label&gt;</code>标签<a href="#label-标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="label-标签"><code>&lt;label&gt;</code>标签</h3>
 
 <p>我们先来看下面一段代码：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="p">/&gt;</span> 男
-<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="p">/&gt;</span> 女</code></pre></div>
+
+<pre><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; /&gt; 男
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; /&gt; 女
+
+</code></pre>
+
 <p>对于上面这样的单选框，我们只有点击那个单选框（小圆圈）才可以选中，点击“男”、“女”这两个文字时是无法选中的；于是，label标签派上了用场。</p>
 
 <p>本质上来讲，“男”、“女”这两个文字和input标签时没有关系的，而label就是解决这个问题的。我们可以通过label把input和汉字包裹起来作为整体。</p>
 
 <p>解决方法如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nan&#34;</span> <span class="p">/&gt;</span> <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;nan&#34;</span><span class="p">&gt;</span>男<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;sex&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nv&#34;</span>  <span class="p">/&gt;</span> <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;nv&#34;</span><span class="p">&gt;</span>女<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;nan&quot; /&gt; &lt;label for=&quot;nan&quot;&gt;男&lt;/label&gt;
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;nv&quot;  /&gt; &lt;label for=&quot;nv&quot;&gt;女&lt;/label&gt;
+</code></pre>
+
 <p>上方代码中，让label标签的<strong>for 属性值</strong>，和 input 标签的 <strong>id 属性值相同</strong>，那么这个label和input就有绑定关系了。</p>
 
 <p>当然了，复选框也有label：（任何表单元素都有label）</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;kk&#34;</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;kk&#34;</span><span class="p">&gt;</span>10天内免登陆<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="多媒体标签">多媒体标签<a href="#多媒体标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; id=&quot;kk&quot; /&gt;
+&lt;label for=&quot;kk&quot;&gt;10天内免登陆&lt;/label&gt;
+</code></pre>
+
+<h2 id="多媒体标签">多媒体标签</h2>
 
 <p><strong>声明：</strong>
 多媒体包含：音频、视频、Flash。网页上的多媒体基本都是Flash格式的。
@@ -891,21 +1202,25 @@ ol里面只能有li，li必须被ol包裹。li是容器级。</p>
 一般情况下，是将其它的视频格式，转成Flash来在网页上播放。转换软件：格式工厂等。
 Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 
-<h3 id="bgsound-标签-播放背景音乐"><code>&lt;bgsound&gt;</code>标签：播放背景音乐<a href="#bgsound-标签-播放背景音乐" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="bgsound-标签-播放背景音乐"><code>&lt;bgsound&gt;</code>标签：播放背景音乐</h3>
 
 <p><strong>属性：</strong>
  - <code>src=&quot;音乐文件的路径&quot;</code>
  - <code>loop=&quot;-1&quot;</code>：属性值代表播放次数，-1代表循环播放。</p>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">bgsound</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;王菲 - 清风徐来.mp3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">bgsound</span><span class="p">&gt;</span>
- <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html"> &lt;body&gt;
+	&lt;bgsound src=&quot;王菲 - 清风徐来.mp3&quot;&gt;&lt;/bgsound&gt;
+ &lt;/body&gt;
+
+</code></pre>
+
 <p>运行效果：
 打开网页后，在IE 8中播放正常，播放时网页上显示一片空白。在google浏览器中无法播放。
 <br></p>
 
-<h3 id="embed-标签-播放多媒体文件-音频-视频等"><code>&lt;embed&gt;</code>标签：播放多媒体文件（音频、视频等）<a href="#embed-标签-播放多媒体文件-音频-视频等" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="embed-标签-播放多媒体文件-音频-视频等"><code>&lt;embed&gt;</code>标签：播放多媒体文件（音频、视频等）</h3>
 
 <p>主要应用Netscape浏览器，它不是W3C规范。</p>
 
@@ -926,9 +1241,13 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
  - wmode：指Flash的背景是否可以透明，取值：transparent是透明的</p>
 
 <p><code>&lt;embed&gt;</code>标签播放音频举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">embed</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;王菲 - 清风徐来.mp3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">embed</span><span class="p">&gt;</span>
- <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html"> &lt;body&gt;
+	&lt;embed src=&quot;王菲 - 清风徐来.mp3&quot;&gt;&lt;/embed&gt;
+ &lt;/body&gt;
+
+</code></pre>
+
 <p>IE 8中的运行效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_37.png" alt="" /></p>
@@ -940,7 +1259,7 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 <p>注：在HTML5中新增了<code>&lt;video&gt;</code>标签播放视频。
 <br></p>
 
-<h3 id="object-标签-播放多媒体文件-音频-视频等"><code>&lt;object&gt;</code>标签：播放多媒体文件（音频、视频等）<a href="#object-标签-播放多媒体文件-音频-视频等" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<h3 id="object-标签-播放多媒体文件-音频-视频等"><code>&lt;object&gt;</code>标签：播放多媒体文件（音频、视频等）</h3>
 
 <p>主要应用IE浏览器，它是W3C规范。</p>
 
@@ -951,13 +1270,16 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 
 <p><strong>总结：在网页中插入Flash时，为了同时兼容多种浏览器，需要将<code>&lt;object&gt;</code>标签和<code>&lt;embed&gt;</code>标签标记一起使用，但使用的顺序是：<code>&lt;object&gt;</code>中嵌套<code>&lt;embed&gt;</code>标记。</strong>
 举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">object</span> <span class="na">classid</span><span class="o">=</span><span class="s">&#34;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&#34;</span> <span class="na">codebase</span><span class="o">=</span><span class="s">&#34;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;778&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;202&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">param</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;movie&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;images/banner.swf&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">param</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;quality&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;high&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">param</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;wmode&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;transparent&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">embed</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;images/banner.swf&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;778&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;202&#34;</span> <span class="na">quality</span><span class="o">=</span><span class="s">&#34;high&#34;</span> <span class="na">pluginspage</span><span class="o">=</span><span class="s">&#34;http://www.macromedia.com/go/getflashplayer&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/x-shockwave-flash&#34;</span> <span class="na">wmode</span><span class="o">=</span><span class="s">&#34;transparent&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">embed</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">object</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="marquee-滚动字幕标签"><code>&lt;marquee&gt;</code>：滚动字幕标签<a href="#marquee-滚动字幕标签" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<pre><code class="language-html">&lt;object classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; codebase=&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0&quot; width=&quot;778&quot; height=&quot;202&quot;&gt;
+  &lt;param name=&quot;movie&quot; value=&quot;images/banner.swf&quot;&gt;
+  &lt;param name=&quot;quality&quot; value=&quot;high&quot;&gt;
+  &lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;&gt;
+  &lt;embed src=&quot;images/banner.swf&quot; width=&quot;778&quot; height=&quot;202&quot; quality=&quot;high&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; type=&quot;application/x-shockwave-flash&quot; wmode=&quot;transparent&quot;&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</code></pre>
+
+<h2 id="marquee-滚动字幕标签"><code>&lt;marquee&gt;</code>：滚动字幕标签</h2>
 
 <p>如果在这个标签里设置了内容，那么，打开网页时，内容会像弹幕一样自动移动。
 <strong>属性：</strong>
@@ -975,28 +1297,41 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 </ul>
 
 <p>举例：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">marquee</span> <span class="na">behavior</span><span class="o">=</span><span class="s">&#34;alternate&#34;</span> <span class="na">direction</span><span class="o">=</span><span class="s">&#34;down&#34;</span>  <span class="na">width</span><span class="o">=</span><span class="s">&#34;300&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;200&#34;</span> <span class="na">bgcolor</span><span class="o">=</span><span class="s">&#34;#8c5dc1&#34;</span><span class="p">&gt;</span>我来了<span class="p">&lt;/</span><span class="nt">marquee</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;marquee behavior=&quot;alternate&quot; direction=&quot;down&quot;  width=&quot;300&quot; height=&quot;200&quot; bgcolor=&quot;#8c5dc1&quot;&gt;我来了&lt;/marquee&gt;
+</code></pre>
+
 <p>效果：</p>
 
 <p><img src="http://img.smyhvae.com/2015-10-02-cnblogs_html_04.gif" alt="" /></p>
 
-<h2 id="html废弃标签介绍">html废弃标签介绍<a href="#html废弃标签介绍" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="html废弃标签介绍">html废弃标签介绍</h2>
 
 <p>HTML现在只负责语义，而不负责样式。但是HTML一开始，连样式也包办了。这些样式的标签，都已经被废弃。</p>
 
 <p>2004年之前的东西：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">font</span> <span class="na">size</span><span class="o">=</span><span class="s">&#34;9&#34;</span> <span class="na">color</span><span class="o">=</span><span class="s">&#34;red&#34;</span><span class="p">&gt;</span>哈哈<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;font size=&quot;9&quot; color=&quot;red&quot;&gt;哈哈&lt;/font&gt;
+</code></pre>
+
 <p>下面这些标签都是css钩子，而不是原意：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">	<span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>加粗<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;</span>下划线<span class="p">&lt;/</span><span class="nt">u</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>倾斜<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>删除线<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>强调<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
-	<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>强调<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span></code></pre></div>
+
+<pre><code class="language-html">	&lt;b&gt;加粗&lt;/b&gt;
+	&lt;u&gt;下划线&lt;/u&gt;
+	&lt;i&gt;倾斜&lt;/i&gt;
+    &lt;del&gt;删除线&lt;/del&gt;
+	&lt;em&gt;强调&lt;/em&gt;
+	&lt;strong&gt;强调&lt;/strong&gt;
+
+</code></pre>
+
 <p>这些标签，是有着浓厚的样式的作用，干涉了css的作用，所以HTML抛弃了他们。</p>
 
 <p>类似的还有水平线标签：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span></code></pre></div>
+
+<pre><code class="language-html">&lt;hr /&gt;
+</code></pre>
+
 <p>换行标签：</p>
 
 <pre><code>&lt;br /&gt;
@@ -1011,7 +1346,7 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 
 <p>知道每个标签的特殊用法、属性。比如a标签，img的属性。</p>
 
-<h2 id="我的公众号">我的公众号<a href="#我的公众号" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<h2 id="我的公众号">我的公众号</h2>
 
 <p>想学习<font color=#0000ff><strong>代码之外的技能</strong></font>？不妨关注我的微信公众号（千古壹号id：<code>qianguyihao</code>）。</p>
 
@@ -1019,19 +1354,162 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。</p>
 
 <p><img src="http://img.smyhvae.com/cnblogs/%E7%94%9F%E5%91%BD%E5%9B%A2%E9%98%9F%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt="" /></p>
 
-		</div>
-	</main>
+          </div>
 
-	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
-		<p>&copy; 2020 <a href="https://horizono.github.io/">Horizon Chan</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
-		<p>
-			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://horizono.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
-		</p>
-	</footer>
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=https://horizono.github.io/weblearning/08-html5%E8%AF%A6%E8%A7%A3/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>08-HTML5详解</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>06-图片标签</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+
+    </div>
+    
 
 
-	<script src="https://horizono.github.io/js/main.min.35ccbf1cdceb91e4c64c06b5d009d6e2977fafe56beda7762febd4e67528d2ac.js" integrity="sha256-Ncy/HNzrkeTGTAa10AnW4pd/r+Vr7ad2L+vU5nUo0qw="></script>
+  </main>
+  
 
-</body>
 
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="https://github.com/HorizonO " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <a href="//instagram.com/whoyoull" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:1530719891@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2020 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://horizono.github.io/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://horizono.github.io/js/main.js"></script>
+
+
+
+  
+  <script src="https://horizono.github.io/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://horizono.github.io/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://horizono.github.io/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
 </html>
