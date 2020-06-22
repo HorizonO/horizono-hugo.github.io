@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on Horizon&#39;s  坚果壳</title>
@@ -35,7 +35,7 @@
       <pubDate>Mon, 29 Jul 2019 15:31:52 +0800</pubDate>
       
       <guid>https://horizono.github.io/notes/linux1.0/</guid>
-      <description>虚拟机NAT模式连接网络，选择eth0网卡，如果没有 先右键我的电脑&amp;ndash;&amp;gt;管理&amp;ndash;&amp;gt;服务和应用程序&amp;ndash;&amp;gt;服务&amp;ndash;&amp;gt;打开VMware DHCP Service和VMware NAT Service</description>
+      <description>虚拟机NAT模式连接网络，选择eth0网卡，如果没有先右键我的电脑&amp;ndash;&amp;gt;管理&amp;ndash;&amp;gt;服务和应用程序&amp;ndash;&amp;gt;服务&amp;ndash;&amp;gt;打开VMware DHCP Service和VMware NAT Service</description>
     </item>
     
   </channel>

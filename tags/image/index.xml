@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>image on Horizon&#39;s  坚果壳</title>
+    <title>Image on Horizon&#39;s  坚果壳</title>
     <link>https://horizono.github.io/tags/image/</link>
-    <description>Recent content in image on Horizon&#39;s  坚果壳</description>
+    <description>Recent content in Image on Horizon&#39;s  坚果壳</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
     <lastBuildDate>Mon, 24 Dec 2018 12:29:41 +0800</lastBuildDate>
@@ -34,7 +34,7 @@ Here&amp;rsquo;s some examples, please be aware that these styles only take effe
       <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
       <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
 For example:
---- images: - https://picsum.photos/1024/768/?random ---  This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+---images:- https://picsum.photos/1024/768/?random---This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
     </item>
     
   </channel>

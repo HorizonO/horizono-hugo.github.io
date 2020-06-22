@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About-mes on Horizon&#39;s  坚果壳</title>
+    <link>https://horizono.github.io/about-me/</link>
+    <description>Recent content in About-mes on Horizon&#39;s  坚果壳</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Mon, 22 Jun 2020 22:52:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://horizono.github.io/about-me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About-2020</title>
+      <link>https://horizono.github.io/about-me/2020/</link>
+      <pubDate>Mon, 22 Jun 2020 22:52:47 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/about-me/2020/</guid>
+      <description>即将大四,计算机专业,正在学习大前端。 继续记录~~ Stay hungar.Stay foolish.Life is fantasy. Contact Weibo: @HorizonOriginal Github: @https://github.com/HorizonO QQ: 766422707</description>
+    </item>
+    
+    <item>
+      <title>About-2019</title>
+      <link>https://horizono.github.io/about-me/2019/</link>
+      <pubDate>Sat, 20 Jul 2019 17:45:00 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/about-me/2019/</guid>
+      <description>即将迈进大三,计算机专业,正在学习大前端.趁着暑假学习并搭建了一个静态博客网站. 本站建于2019/7/19,用于分享学习的笔记,心得等等. Stay hungar.Stay foolish.Life is fantasy. Contact Weibo: @HorizonOriginal Github: @https://github.com/HorizonO QQ: 766422707</description>
+    </item>
+    
+  </channel>
+</rss>

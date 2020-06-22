@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Horizon&#39;s  坚果壳</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 19 Jul 2019 23:57:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/post/blog/</guid>
-      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;ldquo;https://horizono.github.io/&amp;quot; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
+      <description>自个学习搭建Hugo和挂载到Github上去 hugo new site myblog cd myblog/ cd themes git submodule add https://github.com/UtkarshVerma/hugo-dream-plus dream-plus git submodule update &amp;ndash;init &amp;ndash;recursive hugo server -t dream-plus &amp;ndash;buildDrafts cd myblog/ hugo new post/blog.md hugo server -t dream-plus &amp;ndash;buildDrafts hugo &amp;ndash;theme=dream-plus &amp;ndash;baseUrl=&amp;quot;https://horizono.github.io/&amp;rdquo; &amp;ndash;buildDrafts cd public/ cd myblog cd public/ git init git add . git commit -m &amp;ldquo;this is my time&amp;rdquo; git remote add origin https://github.com/HorizonO/horizono.github.io.git git push -u origin master</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ Here&amp;rsquo;s some examples, please be aware that these styles only take effe
       <guid>https://horizono.github.io/post/post-with-featured-image/</guid>
       <description>Just define the image URL in the content’s front matter, the featured image will be displayed as the background.
 For example:
---- images: - https://picsum.photos/1024/768/?random ---  This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
+---images:- https://picsum.photos/1024/768/?random---This is an array, you can set multiple urls, only the first url will be used. These images is also used in Twitter Cards and the Open Graph metadata.</description>
     </item>
     
     <item>
@@ -54,9 +54,9 @@ For example:
       <guid>https://horizono.github.io/post/typography/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
  An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.1
- Inline styles：
+  Inline styles：
 strong, emphasis, strong and emphasis,code, underline, strikethrough, 😂🤣, $\LaTeX$, X^2^, H~2~O, ==highlight==, Link, and image:
-Headings:
+ Headings:
 Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Table:
    Left-Aligned Center Aligned Right Aligned     col 3 is some wordy text $1600   col 2 is centered $12   zebra stripes are neat $1    Lists:</description>
     </item>
@@ -90,9 +90,9 @@ Now we are going to run hugo again, but this time with hugo in watch mode.
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
 Create your Hugo configuration file Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the Hugo configuration documentation for details.
 Set your configuration publish folder to _site The default is for Jekyll to publish to _site and for Hugo to publish to public. If, like me, you have _site mapped to a git submodule on the gh-pages branch, you&amp;rsquo;ll want to do one of two alternatives:
- Change your submodule to point to map gh-pages to public instead of _site (recommended).
-git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public  Or, change the Hugo configuration to use _site instead of public.
-{ .. &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;, .</description>
+  Change your submodule to point to map gh-pages to public instead of _site (recommended).
+ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public    Or, change the Hugo configuration to use _site instead of public.
+ { .</description>
     </item>
     
   </channel>

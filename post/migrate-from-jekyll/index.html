@@ -12,9 +12,9 @@
 ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
 Create your Hugo configuration file Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the Hugo configuration documentation for details.
 Set your configuration publish folder to _site The default is for Jekyll to publish to _site and for Hugo to publish to public. If, like me, you have _site mapped to a git submodule on the gh-pages branch, you&rsquo;ll want to do one of two alternatives:
- Change your submodule to point to map gh-pages to public instead of _site (recommended).
-git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public  Or, change the Hugo configuration to use _site instead of public.
-{ .. &quot;publishdir&quot;: &quot;_site&quot;, .">
+  Change your submodule to point to map gh-pages to public instead of _site (recommended).
+ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public    Or, change the Hugo configuration to use _site instead of public.
+ { .">
   
   <meta property="og:title" content="Migrate to Hugo from Jekyll" />
 <meta property="og:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
@@ -22,13 +22,13 @@ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github
 ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
 Create your Hugo configuration file Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the Hugo configuration documentation for details.
 Set your configuration publish folder to _site The default is for Jekyll to publish to _site and for Hugo to publish to public. If, like me, you have _site mapped to a git submodule on the gh-pages branch, you&rsquo;ll want to do one of two alternatives:
- Change your submodule to point to map gh-pages to public instead of _site (recommended).
-git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public  Or, change the Hugo configuration to use _site instead of public.
-{ .. &quot;publishdir&quot;: &quot;_site&quot;, ." />
+  Change your submodule to point to map gh-pages to public instead of _site (recommended).
+ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github.com:your-username/your-repo.git public    Or, change the Hugo configuration to use _site instead of public.
+ { ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://horizono.github.io/post/migrate-from-jekyll/" />
-<meta property="article:published_time" content="2014-03-10T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-03-10T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2014-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-03-10T00:00:00+00:00" />
 
 
   <title>
@@ -145,7 +145,7 @@ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github
           
              
             <li class="nav-item ">
-              <a class="nav-link" href="https://horizono.github.io/about-hugo/" >About  </a>
+              <a class="nav-link" href="https://horizono.github.io/about-me/" >AboutMe  </a>
             </li>
           
           
@@ -360,70 +360,50 @@ git submodule deinit _site git rm _site git submodule add -b gh-pages git@github
 
 
           <div class="post-content markdown">
-            
-
-<h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
-
+            <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
 <p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
 With Jekyll, something that looked like</p>
-
 <pre><code>▾ &lt;root&gt;/
     ▾ images/
         logo.png
 </code></pre>
-
 <p>should become</p>
-
 <pre><code>▾ &lt;root&gt;/
     ▾ static/
         ▾ images/
             logo.png
 </code></pre>
-
 <p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
-
 <h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
-
 <p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="https://horizono.github.io/overview/configuration/">Hugo configuration documentation</a> for details.</p>
-
-<h2 id="set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></h2>
-
+<h2 id="set-your-configuration-publish-folder-to-_site">Set your configuration publish folder to <code>_site</code></h2>
 <p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
-
 <ol>
-<li><p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
-
-<pre><code>git submodule deinit _site
-git rm _site
-git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-</code></pre></li>
-
-<li><p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
-
-<pre><code>{
-    ..
-    &quot;publishdir&quot;: &quot;_site&quot;,
-    ..
-}
-</code></pre></li>
+<li>
+<p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<pre><code> git submodule deinit _site
+ git rm _site
+ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
+</code></pre>
+</li>
+<li>
+<p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<pre><code> {
+     ..
+     &quot;publishdir&quot;: &quot;_site&quot;,
+     ..
+ }
+</code></pre>
+</li>
 </ol>
-
 <h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
-
 <p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="https://horizono.github.io/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
-
 <p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
-
 <h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
-
 <p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="https://horizono.github.io/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
-
 <h3 id="implementation">Implementation</h3>
-
 <p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
-
 <p>Jekyll&rsquo;s plugin:</p>
-
 <pre><code>module Jekyll
   class ImageTag &lt; Liquid::Tag
     @url = nil
@@ -478,9 +458,7 @@ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
 end
 Liquid::Template.register_tag('image', Jekyll::ImageTag)
 </code></pre>
-
 <p>is written as this Hugo shortcode:</p>
-
 <pre><code>&lt;!-- image --&gt;
 &lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
     {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
@@ -500,33 +478,20 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 &lt;/figure&gt;
 &lt;!-- image --&gt;
 </code></pre>
-
 <h3 id="usage">Usage</h3>
-
 <p>I simply changed:</p>
-
 <pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
 </code></pre>
-
 <p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
-
 <pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
 </code></pre>
-
 <p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
-
 <h2 id="finishing-touches">Finishing touches</h2>
-
 <h3 id="fix-content">Fix content</h3>
-
 <p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
-
 <h3 id="clean-up">Clean up</h3>
-
 <p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
-
 <h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
-
 <p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
 
           </div>
@@ -643,7 +608,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#set-your-configuration-publish-folder-to-site">
+						 					<a class="nav-link" href="#set-your-configuration-publish-folder-to-_site">
 												 Set your configuration publish folder to _site
 											</a>
 										</li>

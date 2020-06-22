@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebLearnings on Horizon&#39;s  坚果壳</title>
@@ -53,7 +53,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/04-html%E6%A0%87%E7%AD%BE%E6%8E%92%E7%89%88%E6%A0%87%E7%AD%BE/</guid>
-      <description>本文主要内容 排版标签： &amp;lt;h1&amp;gt; &amp;lt;p&amp;gt; &amp;lt;hr /&amp;gt; &amp;lt;br /&amp;gt; &amp;lt;div&amp;gt; &amp;lt;span&amp;gt; &amp;lt;center&amp;gt; &amp;lt;pre&amp;gt; 下面来详细介绍一下排版标签。 标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。 代码举例： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2</description>
+      <description>本文主要内容 排版标签： &amp;lt;h1&amp;gt; &amp;lt;p&amp;gt; &amp;lt;hr /&amp;gt; &amp;lt;br /&amp;gt; &amp;lt;div&amp;gt; &amp;lt;span&amp;gt; &amp;lt;center&amp;gt; &amp;lt;pre&amp;gt; 下面来详细介绍一下排版标签。 标题标签 标题使用&amp;lt;h1&amp;gt;至&amp;lt;h6&amp;gt;标签进行定义。&amp;lt;h1&amp;gt;定义最大的标题，&amp;lt;h6&amp;gt;定义最小的标题。具有align属性，属性值可以是：left、center、right。 代码举例： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;H1：千古壹号，永不止步&amp;lt;/h1&amp;gt; &amp;lt;h2</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/06-html%E6%A0%87%E7%AD%BE%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE/</guid>
-      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下： &amp;lt;img src=&amp;quot;图片的URL&amp;quot; /&amp;gt; 能插入的图片类型 能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。 不能往网页中插入的图片格式是：psd、ai等。 HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上</description>
+      <description>img标签介绍 介绍 img: 英文全称 image（图像），代表的是一张图片。 如果要想在网页中显示图像，就可以使用img 标签，它是一个单标签。语法如下： &amp;lt;img src=&amp;#34;图片的URL&amp;#34; /&amp;gt; 能插入的图片类型 能够插入的图片类型是：jpg(jpeg)、gif、png、bmp等。 不能往网页中插入的图片格式是：psd、ai等。 HTML页面不是直接插入图片，而是插入图片的引用地址，所以要先把图片上传到服务器上。 i</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/09-html5%E4%B8%BE%E4%BE%8B%E7%AE%80%E5%8D%95%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</guid>
-      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。 index.html的代码如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;quot;Microsoft Yahei&amp;quot;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .controls{ width: 700px; height:40px; background-color: rgba(255, 255, 0, 0.3); position: absolute; bottom:10px; left:10px; border-radius: 10px; } /*开关*/ .switch{ position: absolute; width: 20px; height: 20px; left:10px; top:10px; text-align: center; line-height: 20px; color:yellow; } /*进度条*/ .progress{ width: 432px; height: 10px; position: absolute; background-color: rgba(255,255,255,0.4); left:40px; top:15px; border-radius: 4px; overflow: hidden; } /* 当</description>
+      <description>我们采用 Bootstrap 网站的图标字体，作为播放器的按钮图标。 index.html的代码如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt; &amp;lt;!-- 引入字体图标的文件--&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;/&amp;gt; &amp;lt;style&amp;gt; *{ margin: 0; padding: 0; } /*多媒体标题*/ figcaption{ text-align: center; line-height: 150px; font-family: &amp;#34;Microsoft Yahei&amp;#34;; font-size:24px; } /* 播放器*/ .palyer{ width: 720px; height: 360px; margin:10px auto; border: 1px solid #000; background: url(images/loading.gif) center no-repeat #000; background-size:auto 100%; position: relative; border-radius: 20px; } .palyer video{ height:100%; display: block; margin:0 auto; /*display: none;*/ } /* 控制条*/ .controls{ width: 700px; height:40px; background-color: rgba(255, 255, 0, 0.3); position: absolute; bottom:10px; left:10px; border-radius: 10px; } /*开关*/ .switch{ position: absolute; width: 20px; height: 20px; left:10px; top:10px; text-align: center; line-height: 20px; color:yellow; } /*进度条*/ .progress{ width: 432px; height: 10px; position: absolute; background-color: rgba(255,255,255,0.4); left:40px; top:15px; border-radius: 4px; overflow: hidden; } /* 当</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/10-html5%E8%AF%A6%E8%A7%A3%E4%BA%8C/</guid>
-      <description>本文主要内容 拖拽 历史 地理位置 全屏 拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。 在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。 1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。 举例如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;css/font-awesome.min.css&amp;quot;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;quot;box1&amp;quot; draggable=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果如下： 上图中，我们给 box1 增加了draggable=</description>
+      <description>本文主要内容 拖拽 历史 地理位置 全屏 拖拽 如上图所示，我们可以拖拽博客园网站里的图片和超链接。 在HTML5的规范中，我们可以通过为元素增加 draggable=&amp;quot;true&amp;quot; 来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启拖拽的。 1、拖拽元素 页面中设置了 draggable=&amp;quot;true&amp;quot; 属性的元素。 举例如下： &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/font-awesome.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .box1{ width: 200px; height: 200px; background-color: green; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!--给 box1 增加拖拽的属性--&amp;gt; &amp;lt;div class=&amp;#34;box1&amp;#34; draggable=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 效果如下： 上图中，我们给 box1 增加了draggable=</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@
       <pubDate>Sat, 09 May 2020 18:38:58 +0800</pubDate>
       
       <guid>https://horizono.github.io/weblearning/12-html%E5%9F%BA%E7%A1%80%E5%9B%9E%E9%A1%BE/</guid>
-      <description>本文主要内容 html 的常见元素 html 元素的分类 html 元素的嵌套关系 html 元素的默认样式和 CSS Reset html 常见面试题 html 的常见元素 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。 1、head 区域的 html 元素 head 区域的 html 元素，不会在页面上留下直接的内容。 meta title style link script base base元素的介绍： &amp;lt;base href=&amp;quot;/&amp;quot;&amp;gt; base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。 2、html 元素（body 区域） body 区域的 html 元素</description>
+      <description>本文主要内容 html 的常见元素 html 元素的分类 html 元素的嵌套关系 html 元素的默认样式和 CSS Reset html 常见面试题 html 的常见元素 html 的常见元素主要分为两类：head 区域的元素、body 区域的元素。下面来分别介绍。 1、head 区域的 html 元素 head 区域的 html 元素，不会在页面上留下直接的内容。 meta title style link script base base元素的介绍： &amp;lt;base href=&amp;#34;/&amp;#34;&amp;gt; base 标签用于指定基础的路径。指定之后，所有的 a 链接都是以这个路径为基准。 2、html 元素（body 区域） body 区域的 html 元素</description>
     </item>
     
   </channel>
