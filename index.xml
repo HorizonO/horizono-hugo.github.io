@@ -6,10 +6,19 @@
     <description>Recent content on Horizon&#39;s  Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Mon, 22 Jun 2020 22:52:47 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 22:51:33 +0800</lastBuildDate>
     
 	<atom:link href="https://horizono.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>让一个元素水平垂直居中</title>
+      <link>https://horizono.github.io/weblearning/vertical_layout/</link>
+      <pubDate>Wed, 19 Aug 2020 22:51:33 +0800</pubDate>
+      
+      <guid>https://horizono.github.io/weblearning/vertical_layout/</guid>
+      <description>如何让一个行内元素（文字、图片等）水平垂直居中 行内元素的居中问题比较简单。 行内元素水平居中 给父容器设置： text-align: center; 行内元素垂直居中 让文字的行高 等于 盒子的高度，可以让单行文本垂直居中。比如： .father { height: 20px; line-height: 20px; } 如何让一个块级元素水平垂直居中 这一段是本文的核心。如何让一个块级的子元素在父容器里水平垂直居中？有好几种写法。我们一起来看看。 margin: auto 的问题 在 CSS 中对元素进行水平居中是非常简单的：如果它是一个行内元素，就对它的</description>
+    </item>
     
     <item>
       <title>About-2020</title>
