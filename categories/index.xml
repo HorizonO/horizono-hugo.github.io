@@ -5,10 +5,6 @@
     <link>https://horizono.github.io/categories/</link>
     <description>Recent content in Categories on Horizon&#39;s  Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zn-Hans</language>
-    
-	<atom:link href="https://horizono.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zn-Hans</language><atom:link href="https://horizono.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
